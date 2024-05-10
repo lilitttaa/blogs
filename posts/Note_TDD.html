@@ -955,7 +955,6 @@ accessManager<span class="token operator">-&gt;</span><span class="token functio
 <span class="token comment">//如果accessManager-&gt;hasAccess没有使得mockAuthenticator使用参数USER_ID调用authenticate，这个测试就会失败</span>
 </code></pre><p><strong>Stubbing和Interaction Testing通常是通过Mocking框架完成的。</strong></p>
 <p>Stubbing与Interaction Testing编写起来比Faking要容易得多。它们使得针对独立的代码段编写高度集中的测试变得非常简单，而不必担心如何构建代码的依赖关系。但随着时间移动，被Mocking的对象API需要发生改变时，散落在代码库中的各个Stubbing和Interaction Testing将会带来很大的阻碍。因此，在Google，许多工程师开始转向编写更真实的测试。</p>
-<p>谷歌的天平现在开始向另一个方向摆动，许多工程师避免mocking框架，转而编写更真实的测试。如果在测试中使用真实实现是不可行的，那么最好的选择通常是使用伪造实现。与其他测试替代技术相比，伪造测试技术更受欢迎，因为它的行为类似于真实实现。</p>
 <h2 id="为什么要使用-tdd">为什么要使用 TDD? </h2>
 <ul>
 <li>
