@@ -1,0 +1,980 @@
+<!DOCTYPE html><html><head>
+      <title>Pub_Frame_Piano</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+
+      </style>
+      </head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<div class="md-toc">
+<details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#钢琴学习指南" class="md-toc-link"><p>钢琴学习指南</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#分析问题" class="md-toc-link">
+            <p>分析问题</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#如何解决问题" class="md-toc-link"><p>如何解决问题</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#钢琴教学网站" class="md-toc-link">
+            <p>钢琴教学网站</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#练习网站" class="md-toc-link">
+            <p>练习网站</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#书籍" class="md-toc-link">
+            <p>书籍</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#社交网络教程" class="md-toc-link">
+            <p>社交网络教程</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#博客" class="md-toc-link">
+            <p>博客</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#学术文章与论文" class="md-toc-link">
+            <p>学术文章与论文</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#专有名词" class="md-toc-link">
+            <p>专有名词</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#问题" class="md-toc-link"><p>问题</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#c-调g-调本质是什么" class="md-toc-link">
+            <p>c 调,g 调本质是什么</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#音乐理论中关于调性的分类是如何产生的-为什么产生的-为了解决什么问题" class="md-toc-link">
+            <p>音乐理论中关于调性的分类是如何产生的, 为什么产生的, 为了解决什么问题？</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#各个调是怎么命名的-怎么确定大调小调-怎么确定调中音阶的音程关系" class="md-toc-link"><p>各个调是怎么命名的, 怎么确定大调小调, 怎么确定调中音阶的音程关系？</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#调性的命名" class="md-toc-link">
+            <p>调性的命名</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#确定大调或小调" class="md-toc-link">
+            <p>确定大调或小调</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#确定调中音阶的音程关系" class="md-toc-link">
+            <p>确定调中音阶的音程关系</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#主音跟根音是一个东西吗有什么区别" class="md-toc-link">
+            <p>主音跟根音是一个东西吗,有什么区别？</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#什么是自然小调跟和声小调-有什么区别" class="md-toc-link"><p>什么是自然小调跟和声小调, 有什么区别？</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#自然小调natural-minor" class="md-toc-link">
+            <p>自然小调（Natural Minor）</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#和声小调harmonic-minor" class="md-toc-link">
+            <p>和声小调（Harmonic Minor）</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#旋律小调melodic-minor" class="md-toc-link">
+            <p>旋律小调（Melodic Minor）</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#自然小调与和声小调的区别" class="md-toc-link">
+            <p>自然小调与和声小调的区别</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#什么是-12-平均律" class="md-toc-link"><p>什么是 12 平均律？</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#12-平均律的基本原理" class="md-toc-link">
+            <p>12 平均律的基本原理</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#12-平均律的历史" class="md-toc-link">
+            <p>12 平均律的历史</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#12-平均律的优点" class="md-toc-link">
+            <p>12 平均律的优点</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#12-平均律的缺点" class="md-toc-link">
+            <p>12 平均律的缺点</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#频率相差两倍为什么是八度而不是七度为什么十二平均律十二个数是由八度来刻画其中还引入了升降符-而不是由-12-个数来刻画" class="md-toc-link">
+            <p>频率相差两倍为什么是八度而不是七度？为什么十二平均律十二个数是由八度来刻画,其中还引入了升降符, 而不是由 12 个数来刻画？</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#肌肉记忆是什么" class="md-toc-link">
+            <p>肌肉记忆是什么？</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#如何增强肌肉记忆" class="md-toc-link">
+            <p>如何增强肌肉记忆?</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#钢琴中的演奏训练非乐理部分通常要包含哪些部分" class="md-toc-link">
+            <p>钢琴中的演奏训练（非乐理部分）通常要包含哪些部分?</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#什么是切分音" class="md-toc-link">
+            <p>什么是切分音?</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#奏鸣曲是什么协奏曲是什么还有哪些其他的类型他们的区别是啥" class="md-toc-link"><p>奏鸣曲是什么，协奏曲是什么，还有哪些其他的类型，他们的区别是啥?</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#奏鸣曲sonata" class="md-toc-link">
+            <p>奏鸣曲（Sonata）</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#协奏曲concerto" class="md-toc-link">
+            <p>协奏曲（Concerto）</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#其他类型的音乐形式" class="md-toc-link">
+            <p>其他类型的音乐形式</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#区别" class="md-toc-link">
+            <p>区别</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#二度音程是相邻两个白键可是这样在不同位置声音的频率比不就不同了吗" class="md-toc-link">
+            <p>二度音程是相邻两个白键，可是这样在不同位置声音的频率比不就不同了吗？</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#什么是主音什么是属音" class="md-toc-link"><p>什么是主音什么是属音？</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#主音tonic" class="md-toc-link">
+            <p>主音（Tonic）</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#属音dominant" class="md-toc-link">
+            <p>属音（Dominant）</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#6-级和弦是什么" class="md-toc-link">
+            <p>6 级和弦是什么？</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#有哪些钢琴演奏风格" class="md-toc-link">
+            <p>有哪些钢琴演奏风格?</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#有哪些很棒的乐手" class="md-toc-link">
+            <p>有哪些很棒的乐手?</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#如何练习视奏" class="md-toc-link">
+            <p>如何练习视奏?</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#如何练耳" class="md-toc-link">
+            <p>如何练耳?</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#tips" class="md-toc-link">
+            <p>Tips</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#roadmap" class="md-toc-link">
+            <p>RoadMap</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#notion" class="md-toc-link">
+            <p>Notion</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#分解练习" class="md-toc-link">
+            <p>分解练习</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#无线谱上的标识符" class="md-toc-link">
+            <p>无线谱上的标识符</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#todo" class="md-toc-link">
+            <p>TODO</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+</div>
+<h1 id="钢琴学习指南">钢琴学习指南 </h1>
+<h2 id="分析问题">分析问题 </h2>
+<ol>
+<li>整理钢琴学习中的 RoadMap,乐理,视奏,练耳,技巧,曲目</li>
+<li>如何更科学高效的练习</li>
+<li>针对每个子任务安排练习</li>
+</ol>
+<h2 id="如何解决问题">如何解决问题 </h2>
+<h3 id="钢琴教学网站">钢琴教学网站 </h3>
+<p><a href="https://www.pianote.com/start-here">https://www.pianote.com/start-here</a></p>
+<h3 id="练习网站">练习网站 </h3>
+<p><a href="https://www.notationtraining.com/treble-clef-practice">https://www.notationtraining.com/treble-clef-practice</a></p>
+<p><a href="https://www.musictheory.net/exercises">https://www.musictheory.net/exercises</a></p>
+<p><a href="https://tonedear.com/ear-training/intervals">https://tonedear.com/ear-training/intervals</a></p>
+<p>听节奏练习:<a href="https://www.therhythmtrainer.com/">https://www.therhythmtrainer.com/</a></p>
+<h3 id="书籍">书籍 </h3>
+<p>音乐与数学：<a href="https://book.douban.com/subject/34812785/">https://book.douban.com/subject/34812785/</a></p>
+<p>钢琴学习指南: <a href="https://book.douban.com/subject/1092039/">https://book.douban.com/subject/1092039/</a></p>
+<p>不朽的钢琴家: <a href="https://book.douban.com/subject/25894782/">https://book.douban.com/subject/25894782/</a></p>
+<p>DK 古典音乐大百科: <a href="https://book.douban.com/subject/30339303/">https://book.douban.com/subject/30339303/</a></p>
+<p>聆听音乐: <a href="https://book.douban.com/subject/10590165/">https://book.douban.com/subject/10590165/</a></p>
+<p>现代钢琴演奏技巧: <a href="https://book.douban.com/subject/1163193/">https://book.douban.com/subject/1163193/</a></p>
+<h3 id="社交网络教程">社交网络教程 </h3>
+<p>音乐与测度论（3blue1Brown）：<a href="https://www.youtube.com/watch?v=cyW5z-M2yzw">https://www.youtube.com/watch?v=cyW5z-M2yzw</a></p>
+<p>乐理冰山：<a href="https://www.youtube.com/watch?v=NmeogiNhdHI">https://www.youtube.com/watch?v=NmeogiNhdHI</a></p>
+<p><a href="https://www.youtube.com/watch?v=f2O6mQkFiiw">How to practice effectively...for just about anything - Annie Bosler and Don Greene</a></p>
+<h3 id="博客">博客 </h3>
+<p>基础乐理与数学: <a href="https://ffjet.github.io/2018/08/31/%E5%9F%BA%E7%A1%80%E4%B9%90%E7%90%86%E4%B8%8E%E6%95%B0%E5%AD%A6%EF%BC%88%E4%B8%80%EF%BC%89/">https://ffjet.github.io/2018/08/31/基础乐理与数学（一）/</a></p>
+<h3 id="学术文章与论文">学术文章与论文 </h3>
+<p><a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2020.00394/full">运动想象与认知过程</a></p>
+<h2 id="专有名词">专有名词 </h2>
+<ul>
+<li>sheet music/notation: 五线谱</li>
+<li>riff: 重复的旋律</li>
+<li>scale: 音阶</li>
+<li>chord: 和弦</li>
+<li>arpeggio: 分解和弦</li>
+<li>progression: 和弦进行</li>
+</ul>
+<h2 id="问题">问题 </h2>
+<h3 id="c-调g-调本质是什么">c 调,g 调本质是什么 </h3>
+<p>C 调和 G 调是音乐中两种不同的调性，它们的本质区别在于主音（Tonic）的不同。</p>
+<ol>
+<li>
+<p><strong>C 调</strong>：C 调的主音是 C，它是一个没有升号（♯）也没有降号（♭）的调性，因此也被称为 C 大调。C 大调的音阶是 C-D-E-F-G-A-B-C。C 调的色彩通常被认为是明亮和欢快的。</p>
+</li>
+<li>
+<p><strong>G 调</strong>：G 调的主音是 G，它有一个升号（♯F），因此也被称为 G 大调。G 大调的音阶是 G-A-B-C-D-E-F♯-G。G 调的色彩通常比 C 调稍微温暖一些。</p>
+</li>
+</ol>
+<p>在音乐理论中，不同的调性会因为它们各自的音阶结构和和声特性而产生不同的情感色彩和音乐效果。C 调和 G 调都属于大调，它们的音阶结构相似，都是由全音和半音交替构成的，但起始音和升号/降号的数量不同，这导致了它们在音乐表达上的差异。</p>
+<p>在实际演奏中，选择不同的调性可以适应不同乐器的音域特性，或者为了适应演唱者的音域，或者为了创造特定的音乐氛围。</p>
+<h3 id="音乐理论中关于调性的分类是如何产生的-为什么产生的-为了解决什么问题">音乐理论中关于调性的分类是如何产生的, 为什么产生的, 为了解决什么问题？ </h3>
+<p>音乐理论中关于调性的分类产生于音乐的发展过程中，它是为了解决音乐创作、演奏和分析中的一系列问题而逐渐形成的。以下是调性分类产生的主要原因和解决的问题：</p>
+<ol>
+<li>
+<p><strong>组织音阶</strong>：在音乐的早期发展阶段，人们发现通过将音高按照特定的顺序排列，可以形成具有特定情感色彩和音乐效果的音阶。这些音阶后来被分类为不同的调性，以便于音乐家们理解和使用。</p>
+</li>
+<li>
+<p><strong>和声理论</strong>：随着音乐的进一步发展，人们开始探索不同音阶中的和声关系，即不同音符如何组合在一起形成和谐的音响效果。调性分类有助于理解和应用和声理论，指导音乐家如何构建和弦、进行和声进行等。</p>
+</li>
+<li>
+<p><strong>音乐形式</strong>：音乐家们发现，通过在不同的调性之间转换，可以创造出丰富的音乐形式和结构。调性分类提供了一种系统化的方法来分析和构建音乐作品，如奏鸣曲式、回旋曲式等。</p>
+</li>
+<li>
+<p><strong>作曲技巧</strong>：调性分类为作曲家提供了一种语言，使他们能够在创作过程中有意识地使用不同的调性来表达特定的情感或营造特定的氛围。</p>
+</li>
+<li>
+<p><strong>演奏和即兴</strong>：对于演奏者来说，了解调性分类有助于他们更好地理解和记忆乐谱，提高演奏技巧。同时，调性知识也是即兴演奏的基础，演奏者可以根据调性来即兴创作旋律。</p>
+</li>
+<li>
+<p><strong>音乐分析</strong>：调性分类为音乐分析提供了一个框架，使音乐理论家和批评家能够更深入地研究音乐作品的结构、风格和表现手法。</p>
+</li>
+<li>
+<p><strong>音乐教育</strong>：调性分类为音乐教育提供了一套标准化的教学内容和方法，有助于学生系统地学习音乐理论和实践。</p>
+</li>
+</ol>
+<p>总之，调性分类的产生是为了帮助音乐家更好地组织和理解音乐，提高创作、演奏和分析的效率。它为音乐提供了一种通用的语言和框架，使音乐家能够在不同的文化和时代背景下进行交流和创作。</p>
+<h3 id="各个调是怎么命名的-怎么确定大调小调-怎么确定调中音阶的音程关系">各个调是怎么命名的, 怎么确定大调小调, 怎么确定调中音阶的音程关系？ </h3>
+<p>音乐中的调性是根据音阶的主音（Tonic）和音阶的类型（如大调或小调）来命名的。以下是关于调性命名、确定大调小调以及确定调中音阶的音程关系的详细解释：</p>
+<h4 id="调性的命名">调性的命名 </h4>
+<ol>
+<li>
+<p><strong>主音</strong>：调性的名称通常来自于其音阶的主音，即音阶的第一个音符。例如，如果一个音阶从 C 开始并以 C 结束，那么这个音阶就是 C 调。</p>
+</li>
+<li>
+<p><strong>大调与小调</strong>：调性可以进一步分为大调（Major）和小调（Minor）。大调通常具有明亮、欢快的感觉，而小调则给人较为柔和、深沉或忧郁的感觉。</p>
+</li>
+</ol>
+<h4 id="确定大调或小调">确定大调或小调 </h4>
+<ol>
+<li>
+<p><strong>大调音阶</strong>：大调音阶遵循特定的全音和半音的模式。以 C 大调为例，其音阶为 C-D-E-F-G-A-B-C，这个模式可以总结为全全半全全全半。</p>
+</li>
+<li>
+<p><strong>小调音阶</strong>：小调音阶同样有其特定的全音和半音模式。以 A 小调为例，其自然小调音阶为 A-B-C-D-E-F-G-A，这个模式可以总结为全半全全半全全。</p>
+</li>
+<li>
+<p><strong>和声小调与旋律小调</strong>：小调还有两种变体，即和声小调和旋律小调，它们在某些音级的升降上有所不同，用以适应和声或旋律的需要。</p>
+</li>
+</ol>
+<h4 id="确定调中音阶的音程关系">确定调中音阶的音程关系 </h4>
+<p>音程关系是指音阶中各音符之间的距离，通常以度（如大二度、小三度）来衡量。以下是如何确定一个调中音阶的音程关系：</p>
+<ol>
+<li>
+<p><strong>主音（Tonic）</strong>：音阶的第一个音符，所有其他音符都相对于它来确定。</p>
+</li>
+<li>
+<p><strong>上主音（Supertonic）</strong>：主音之上的第二个音符，与主音形成大二度。</p>
+</li>
+<li>
+<p><strong>中音（Mediant）</strong>：主音之上的第三个音符，与主音形成大三度。</p>
+</li>
+<li>
+<p><strong>下属音（Subdominant）</strong>：主音之上的第四个音符，与主音形成纯四度。</p>
+</li>
+<li>
+<p><strong>属音（Dominant）</strong>：主音之上的第五个音符，与主音形成纯五度。</p>
+</li>
+<li>
+<p><strong>下中音（Submediant）</strong>：主音之上的第六个音符，与主音形成小六度。</p>
+</li>
+<li>
+<p><strong>导音（Leading Tone）</strong>：主音之上的第七个音符，与主音形成大七度，通常是一个半音，它有强烈的解决到主音的倾向。</p>
+</li>
+<li>
+<p><strong>八度（Octave）</strong>：主音之上或之下的相同音符，与主音形成纯八度。</p>
+</li>
+</ol>
+<p>通过这些音程关系，音乐家可以分析和理解音乐作品的结构，以及不同音符如何相互作用以产生特定的和声效果和旋律线条。这些关系对于作曲、演奏和音乐分析都是至关重要的。</p>
+<h3 id="主音跟根音是一个东西吗有什么区别">主音跟根音是一个东西吗,有什么区别？ </h3>
+<p>在音乐理论中，主音（Tonic）和根音（Root）是两个不同的概念，它们在音乐结构和功能上有所区别：</p>
+<ol>
+<li>
+<p><strong>主音（Tonic）</strong>：</p>
+<ul>
+<li>主音是音阶的第一个音，也是调性感觉的中心点。</li>
+<li>在大调或小调音阶中，主音是音阶循环的起始点和结束点，给人以稳定和解决的感觉。</li>
+<li>主音确定了音阶的调性，比如 C 大调的主音是 C，A 小调的主音是 A。</li>
+</ul>
+</li>
+<li>
+<p><strong>根音（Root）</strong>：</p>
+<ul>
+<li>根音是和弦的基础音，它决定了和弦的名称和基本性质。</li>
+<li>在和弦中，根音是构成和弦的最低音，其他和弦音（如三度、五度、七度等）都是在根音的基础上叠加形成的。</li>
+<li>根音对于和弦的识别和分类至关重要，比如一个 C 和弦的根音是 C，一个 G7 和弦的根音是 G。</li>
+</ul>
+</li>
+</ol>
+<p><strong>区别</strong>：</p>
+<ul>
+<li>主音强调的是音阶中的起始音和调性中心，而根音强调的是和弦的基础音和和弦类型。</li>
+<li>在一首音乐作品中，主音通常是最稳定的音，给人带来一种“回家”的感觉，而根音则是构成和弦的起始点，决定了和弦的色彩和功能。</li>
+<li>在和声进行中，根音的移动可以产生不同的和声效果，而主音则常常作为和声进行的终点或起点。</li>
+</ul>
+<p>尽管主音和根音在概念上不同，但在某些情况下它们可能是相同的音。例如，在 C 大调音阶中，主音 C 同时也是 C 大三和弦的根音。然而，即使在这种情况下，它们在音乐理论中的角色和功能仍然是不同的。理解这两个概念及其区别对于深入学习音乐理论和分析音乐作品非常重要。</p>
+<h3 id="什么是自然小调跟和声小调-有什么区别">什么是自然小调跟和声小调, 有什么区别？ </h3>
+<p>自然小调、和声小调和旋律小调是西方音乐理论中三种主要的小调音阶，它们各自有不同的结构和用途。以下是对这三种小调音阶的解释以及自然小调和和声小调之间的区别：</p>
+<h4 id="自然小调natural-minor">自然小调（Natural Minor） </h4>
+<p>自然小调音阶是由全半全全半全全的音程构成的，它没有升号或降号。自然小调音阶的特点是它有一个小七度，这使得它听起来比大调音阶更柔和、更忧郁。自然小调的音阶形式如下：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>A B C D E F G A
+</code></pre><p>以 A 自然小调为例，其音阶为 A-B-C-D-E-F-G-A。</p>
+<h4 id="和声小调harmonic-minor">和声小调（Harmonic Minor） </h4>
+<p>和声小调音阶是自然小调音阶的一种变体，它在自然小调的基础上，将第七个音升高了半音，从而产生一个大三度，这使得和声小调听起来比自然小调更加明亮和稳定。和声小调的音阶形式如下：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>A B C D E F G# A
+</code></pre><p>以 A 和声小调为例，其音阶为 A-B-C-D-E-F-G#-A。</p>
+<h4 id="旋律小调melodic-minor">旋律小调（Melodic Minor） </h4>
+<p>旋律小调音阶是另一种变体，它在自然小调的基础上，将第六和第七个音都升高了半音，当旋律向上进行时使用。然而，当旋律向下进行时，通常使用自然小调音阶下行。旋律小调的音阶形式如下：</p>
+<p>上升：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>A B C D E F# G# A
+</code></pre><p>下降：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>A G F E D C B A
+</code></pre><p>以 A 旋律小调为例，上升时的音阶为 A-B-C-D-E-F#-G#-A，而下降时则回到自然小调的音阶。</p>
+<h4 id="自然小调与和声小调的区别">自然小调与和声小调的区别 </h4>
+<ol>
+<li>
+<p><strong>音程变化</strong>：自然小调保持了自然小音阶的全半全全半全全的音程结构，而和声小调则将第七个音升高了半音，变为大三度。</p>
+</li>
+<li>
+<p><strong>和声功能</strong>：和声小调由于其升高的七度，常用于和声分析中，特别是在需要解决到主音的属功能和弦之后。</p>
+</li>
+<li>
+<p><strong>情感表达</strong>：自然小调通常被认为具有更忧郁、更柔和的情感色彩，而和声小调由于升高的七度，提供了一种更为紧张、期待解决的感觉。</p>
+</li>
+<li>
+<p><strong>使用场合</strong>：自然小调常用于民谣、流行音乐和一些古典音乐作品中，而和声小调则常见于古典音乐，尤其是在巴洛克和古典时期的作品中。</p>
+</li>
+</ol>
+<p>了解这些不同的小调音阶对于音乐创作、演奏和理论分析都是非常重要的。每种音阶都有其独特的情感表达和音乐功能。</p>
+<h3 id="什么是-12-平均律">什么是 12 平均律？ </h3>
+<p>12 平均律（Twelve-tone Equal Temperament）是一种音乐调音系统，它将八度音（一个完整的音阶循环，如从 C 到下一个 C）平均分成 12 个等份，每个等份之间的频率比是相同的。这种调音系统是目前西方音乐中最常用的，它允许任何两个音之间的音程都是半音关系，从而使得各种调性的音乐作品能够在任何调上演奏而不会失真。</p>
+<h4 id="12-平均律的基本原理">12 平均律的基本原理 </h4>
+<p>在 12 平均律中，八度音被分成 12 个半音，每个半音之间的频率比是 2 的 12 次方根，大约为 1.059463（或分数形式的 16/15）。这意味着，例如，从 C 到 C#的频率比与从 E 到 F 的频率比是相同的。这种均匀分割的方式使得所有调性的音乐作品在理论上都可以在任何调上演奏，而不会改变作品的基本结构和和声关系。</p>
+<h4 id="12-平均律的历史">12 平均律的历史 </h4>
+<p>12 平均律的概念最早可以追溯到 16 世纪，但直到 19 世纪，它才成为西方音乐的主流调音系统。在此之前，使用的是纯律（Just Intonation）和五度相生律（Meantone Temperament）等其他调音系统，这些系统在某些方面更为自然，但在转调时会产生音程上的不和谐。</p>
+<h4 id="12-平均律的优点">12 平均律的优点 </h4>
+<ol>
+<li>
+<p><strong>转调自由</strong>：12 平均律允许音乐家在任何调上演奏音乐作品，而不必担心音程的不和谐。</p>
+</li>
+<li>
+<p><strong>和声丰富</strong>：它支持复杂的和声结构和丰富的调性变化，为作曲家提供了更大的创作自由。</p>
+</li>
+<li>
+<p><strong>乐器调音</strong>：大多数键盘乐器（如钢琴）都是按照 12 平均律调音的，这使得它们能够演奏各种调性的音乐。</p>
+</li>
+</ol>
+<h4 id="12-平均律的缺点">12 平均律的缺点 </h4>
+<ol>
+<li>
+<p><strong>纯度损失</strong>：为了实现转调自由，12 平均律牺牲了某些音程的自然纯度，特别是在纯律中非常和谐的三度和五度。</p>
+</li>
+<li>
+<p><strong>数学上的妥协</strong>：12 平均律并不是一个完美的数学系统，它在数学上是对自然音程的某种程度的妥协。</p>
+</li>
+</ol>
+<p>尽管存在一些缺点，12 平均律由于其转调自由和适应性，已成为现代音乐中的标准调音系统。它极大地丰富了音乐的表现力，为音乐创作和演奏提供了无限的可能性。</p>
+<h3 id="频率相差两倍为什么是八度而不是七度为什么十二平均律十二个数是由八度来刻画其中还引入了升降符-而不是由-12-个数来刻画">频率相差两倍为什么是八度而不是七度？为什么十二平均律十二个数是由八度来刻画,其中还引入了升降符, 而不是由 12 个数来刻画？ </h3>
+<p><a href="https://www.zhihu.com/question/388126984">https://www.zhihu.com/question/388126984</a><br>
+<a href="https://morven.life/posts/why-12-notes-in-music/">https://morven.life/posts/why-12-notes-in-music/</a></p>
+<h3 id="肌肉记忆是什么">肌肉记忆是什么？ </h3>
+<p><a href="https://physiopointtherapy.com/what-is-muscle-memory/">https://physiopointtherapy.com/what-is-muscle-memory/</a><br>
+<strong>翻译：</strong><br>
+作为一名奥运会运动员，我的教练过去经常谈论“建立肌肉记忆”。</p>
+<p>作为皇冠点 PhysioPoint 理疗中心的物理治疗博士，许多不同年龄的患者向我询问类似的概念，以提高或恢复到高中体育、高尔夫或其他爱好的水平。肌肉记忆这个术语其实是一个误称——毕竟，每个肌肉里面并没有一个微型大脑！</p>
+<p>那么，肌肉记忆到底意味着什么？<br>
+肌肉记忆与协调运动有关。例如，要求你的身体挥动高尔夫球杆，需要你全身的肌肉以协调的方式收缩。这是如何发生的？你的肌肉之所以收缩，是因为你的大脑和神经系统告诉它们这样做。</p>
+<p>对于复杂的动作，这需要你的大脑获得许多肌肉收缩的确切顺序和力量。哪怕只有一点点偏差，你最终可能会打出一记偏球。</p>
+<p>基本上，肌肉记忆是大脑和神经系统更好地激发肌肉的能力。<br>
+你越是做一个特定的动作，你的大脑就越擅长与肌肉沟通。建立肌肉记忆的过程被称为神经可塑性——大脑实际上会发生变化！</p>
+<p>想想当你学习一项新技能时。起初，这需要时间和大量的有意识思考，而且动作可能看起来笨拙或不协调。你的大脑正在从所有这些动作中接收反馈，并微调动作。随着你越来越多地做这个动作，它需要的思考越来越少，你可以更快、更顺畅地完成动作。</p>
+<p>除了体育之外，肌肉记忆的这个概念在物理治疗中也有几种相关方式。<br>
+例如，如果你每次抬起手臂过头时都有疼痛的肩膀，你的身体可能会通过耸肩来补偿以避免疼痛。身体非常擅长找出无痛苦移动的方式。如果你这样做的时间足够长，它就会变成一个习惯，尽管这是一种最终会导致其他问题的功能失调动作。</p>
+<p>许多人听说过“熟能生巧”，但我的奥运教练过去常常宣扬“完美练习才能生巧”。<br>
+这是因为大脑不在乎动作是什么；它会帮助建立那个动作的肌肉记忆。高尔夫挥杆有巨大的运动模式变化，你实际上可以加强不良的肌肉记忆。如果你能在练习场上每次都打出偏球，你就会为那个特定的（不良的）动作建立肌肉记忆。幸运的是，大脑可以朝一个方向改变，意味着它也可以朝另一个方向改变。</p>
+<p>希望有意识地关注你的动作将帮助你在你的运动或爱好中。</p>
+<h3 id="如何增强肌肉记忆">如何增强肌肉记忆? </h3>
+<p><a href="https://healthylife-performance.com/utilize-muscle-memory/">https://healthylife-performance.com/utilize-muscle-memory/</a></p>
+<p>神经可塑性：<a href="https://www.scienceforsport.com/neuroplasticity/">https://www.scienceforsport.com/neuroplasticity/</a></p>
+<h3 id="钢琴中的演奏训练非乐理部分通常要包含哪些部分">钢琴中的演奏训练（非乐理部分）通常要包含哪些部分? </h3>
+<p>钢琴演奏训练是一个复杂而全面的过程，它不仅包括乐理知识，还涉及到技术、表现力、音乐理解等多个方面。以下是钢琴演奏训练中非乐理部分的一些关键要素：</p>
+<ol>
+<li>
+<p><strong>技术练习</strong>：包括音阶、琶音、和弦、八度、颤音、装饰音等基本技术练习，这些是提高手指灵活性和独立性的基础。</p>
+</li>
+<li>
+<p><strong>指法训练</strong>：正确的指法对于演奏的流畅性和准确性至关重要。</p>
+</li>
+<li>
+<p><strong>速度练习</strong>：通过逐渐加快速度的练习来提高演奏速度。</p>
+</li>
+<li>
+<p><strong>力度控制</strong>：练习不同力度的演奏，从极弱到极强，以及渐强和渐弱的控制。</p>
+</li>
+<li>
+<p><strong>节奏感</strong>：通过练习不同的节奏模式和复杂的节奏变化来提高节奏感。</p>
+</li>
+<li>
+<p><strong>音色训练</strong>：探索和练习不同的音色，包括如何通过不同的触键方式和踏板使用来改变音色。</p>
+</li>
+<li>
+<p><strong>踏板技巧</strong>：正确使用延音踏板和软音踏板，以增强音乐的表现力。</p>
+</li>
+<li>
+<p><strong>视奏能力</strong>：提高对新乐谱的阅读和理解速度。</p>
+</li>
+<li>
+<p><strong>音乐表达</strong>：学习如何通过音乐表达情感，包括动态、节奏、音色和乐句的处理。</p>
+</li>
+<li>
+<p><strong>作品分析</strong>：深入分析乐曲的结构、风格和表现意图，以更好地理解和演绎作品。</p>
+</li>
+<li>
+<p><strong>即兴演奏</strong>：培养即兴创作和演奏的能力，这对于提高音乐创造力和表现力非常有帮助。</p>
+</li>
+<li>
+<p><strong>身体协调性</strong>：练习身体各部分的协调性，包括手臂、手腕、手指和脚部的协调。</p>
+</li>
+<li>
+<p><strong>耐力训练</strong>：长时间的练习需要良好的体力支持，因此耐力训练也是必不可少的。</p>
+</li>
+<li>
+<p><strong>心理准备</strong>：学习如何在压力下保持冷静，以及如何在舞台上表现自如。</p>
+</li>
+<li>
+<p><strong>音乐欣赏</strong>：广泛地聆听不同风格的音乐，以提高音乐鉴赏能力和灵感来源。</p>
+</li>
+</ol>
+<p>这些训练部分相互关联，共同构成了一个钢琴演奏者全面的演奏技能。通过持续和有目的的训练，钢琴演奏者可以不断提高自己的演奏水平。</p>
+<h3 id="什么是切分音">什么是切分音? </h3>
+<p>切分音（Syncopation）是一种音乐节奏技巧，它通过强调通常不被强调的音符，以及弱化通常被强调的音符，从而创造出一种节奏上的意外感或“切分”效果。在音乐中，切分音通常用于增加旋律的动感和趣味性，它可以使音乐听起来更加活泼和有节奏感。</p>
+<p>切分音的实现方式可以有多种，以下是一些常见的形式：</p>
+<ol>
+<li>
+<p><strong>节奏切分</strong>：在一个固定的节拍模式中，通过改变音符的时值，使得某些音符落在非主要节拍上，从而产生切分效果。</p>
+</li>
+<li>
+<p><strong>重音切分</strong>：在一段旋律中，将通常不会强调的音符赋予重音，而将通常的重音音符轻弹或不弹，从而产生切分效果。</p>
+</li>
+<li>
+<p><strong>跨小节切分</strong>：在两个小节之间，音符的时值跨越小节线，从而在节奏上产生一种“错位”的感觉。</p>
+</li>
+<li>
+<p><strong>切分节奏</strong>：在鼓点或其他打击乐器中，通过在非主要节拍上敲击，产生一种节奏上的切分感。</p>
+</li>
+</ol>
+<p>切分音在各种音乐风格中都有应用，包括古典音乐、爵士乐、摇滚乐和流行音乐等。通过使用切分音，作曲家和演奏者能够创造出更加丰富和有趣的音乐表达。</p>
+<h3 id="奏鸣曲是什么协奏曲是什么还有哪些其他的类型他们的区别是啥">奏鸣曲是什么，协奏曲是什么，还有哪些其他的类型，他们的区别是啥? </h3>
+<p>奏鸣曲（Sonata）和协奏曲（Concerto）都是古典音乐中常见的音乐形式，它们各自有独特的结构和特点。除此之外，还有许多其他类型的古典音乐形式，如交响曲、室内乐、组曲等。下面我将分别介绍奏鸣曲、协奏曲以及其他类型的音乐形式，并说明它们之间的区别。</p>
+<h4 id="奏鸣曲sonata">奏鸣曲（Sonata） </h4>
+<p>奏鸣曲是一种多乐章的器乐作品，通常由一位独奏者演奏。它起源于 17 世纪，18 世纪达到鼎盛。奏鸣曲通常包含三个或四个乐章，每个乐章有不同的速度和风格。奏鸣曲的结构通常遵循以下模式：</p>
+<ol>
+<li><strong>第一乐章</strong>：快板，奏鸣曲式（Sonata form）</li>
+<li><strong>第二乐章</strong>：慢板，如抒情的行板或广板</li>
+<li><strong>第三乐章</strong>：快板或中板，如小步舞曲或谐谑曲</li>
+<li><strong>第四乐章</strong>（如果有）：快板，回旋曲式或奏鸣曲式</li>
+</ol>
+<h4 id="协奏曲concerto">协奏曲（Concerto） </h4>
+<p>协奏曲是一种由独奏者与管弦乐队共同演奏的作品。它起源于 16 世纪，17 世纪开始流行。协奏曲通常包含三个乐章，结构与奏鸣曲相似，但独奏者与乐队之间有更明显的互动。协奏曲的结构通常如下：</p>
+<ol>
+<li><strong>第一乐章</strong>：快板，双呈示部（乐队先演奏主题，然后独奏者加入）</li>
+<li><strong>第二乐章</strong>：慢板，如广板或柔板</li>
+<li><strong>第三乐章</strong>：快板，如回旋曲式或奏鸣曲式</li>
+</ol>
+<h4 id="其他类型的音乐形式">其他类型的音乐形式 </h4>
+<ol>
+<li>
+<p><strong>交响曲（Symphony）</strong>：一种大型的管弦乐作品，通常包含四个乐章，由多位演奏者共同演奏。交响曲的结构与奏鸣曲相似，但规模更大，乐队编制更丰富。</p>
+</li>
+<li>
+<p><strong>室内乐（Chamber Music）</strong>：一种小型的器乐作品，通常由几位演奏者在较小的空间内演奏。室内乐的特点是亲密、细腻，强调不同乐器之间的对话。</p>
+</li>
+<li>
+<p><strong>组曲（Suite）</strong>：一种由多个短小的舞曲组成的作品，每个舞曲有不同的风格和节奏。组曲起源于巴洛克时期，是当时流行的宫廷音乐形式。</p>
+</li>
+</ol>
+<h3 id="区别">区别 </h3>
+<ul>
+<li><strong>独奏与合奏</strong>：奏鸣曲通常由一位独奏者演奏，而协奏曲则由独奏者与管弦乐队共同演奏。</li>
+<li><strong>互动性</strong>：协奏曲中的独奏者与乐队之间有更多的互动，而奏鸣曲则更注重独奏者的个人表现。</li>
+<li><strong>乐队编制</strong>：协奏曲的乐队编制通常比奏鸣曲更丰富，包括弦乐、木管、铜管和打击乐器等。</li>
+<li><strong>乐章数量</strong>：奏鸣曲和协奏曲通常都包含三个或四个乐章，但其他类型的音乐作品，如组曲，可能包含更多的乐章或段落。</li>
+</ul>
+<p>这些音乐形式各有特色，它们在音乐史上都占有重要的地位，为后世留下了丰富的音乐遗产。</p>
+<h3 id="二度音程是相邻两个白键可是这样在不同位置声音的频率比不就不同了吗">二度音程是相邻两个白键，可是这样在不同位置声音的频率比不就不同了吗？ </h3>
+<p>二度音程也分为大二度和小二度，大二度是由两个全音组成，小二度是由一个全音和一个半音组成。在钢琴上，相邻的两个白键之间的音程有时是大二度，有时是小二度，取决于它们之间的音程关系。例如，从 C 到 D 是大二度，从 E 到 F 是小二度。<br>
+什么是音程？<a href="https://zhuanlan.zhihu.com/p/22138629">https://zhuanlan.zhihu.com/p/22138629</a></p>
+<h3 id="什么是主音什么是属音">什么是主音什么是属音？ </h3>
+<p>在音乐理论中，“主音”和“属音”是和声功能理论中非常重要的两个概念，它们在西方古典音乐中扮演着核心的角色。下面是对这两个术语的基本解释：</p>
+<h4 id="主音tonic">主音（Tonic） </h4>
+<ul>
+<li><strong>定义</strong>：主音是音阶的第一个音，它通常是一首乐曲的中心音，给人以稳定和结束的感觉。</li>
+<li><strong>作用</strong>：在和声进行中，主音常常作为起始音和结束音，它为乐曲提供了一个“归宿”的感觉，是和声进行的“家”。</li>
+<li><strong>例子</strong>：在 C 大调音阶中，主音就是 C。</li>
+</ul>
+<h4 id="属音dominant">属音（Dominant） </h4>
+<ul>
+<li><strong>定义</strong>：属音是音阶的第五个音，它在和声中具有强烈的“紧张”感，常常需要解决到主音或其他音以产生和声的解决。</li>
+<li><strong>作用</strong>：属音在和声中起到引导和推动乐曲向前发展的作用，它常常与主音形成紧张与解决的关系，是和声进行中的关键转折点。</li>
+<li><strong>例子</strong>：在 C 大调音阶中，属音是 G。</li>
+</ul>
+<p>在西方古典音乐中，主音和属音之间的和声关系非常常见，它们之间的转换可以产生一种从紧张到放松的感觉，这是音乐中创造动态和情感表达的重要手段。例如，一个常见的和声进行是从属音到主音（V-I），这种进行在古典音乐中被广泛使用，因为它能够产生强烈的解决感。</p>
+<p>了解这些基本概念对于深入学习音乐理论和分析乐曲结构非常有帮助。</p>
+<h3 id="6-级和弦是什么">6 级和弦是什么？ </h3>
+<p>在音乐理论中，六级和弦（六级三和弦）通常指的是在一个给定的音阶中，以第六个音为根音构成的三和弦。以 C 大调音阶为例，其音阶为 C-D-E-F-G-A-B，那么六级和弦就是以 A 为根音的和弦。</p>
+<p>六级和弦的构成如下：</p>
+<ul>
+<li>在大调中，六级和弦是小三和弦（minor triad），因为它的三度和五度音与根音构成小三度和纯五度。以 C 大调的六级和弦为例，它由 A-C-E 构成，即 A 小调和弦（Am）。</li>
+<li>在小调中，六级和弦是大三和弦（major triad），因为它的三度和五度音与根音构成大三度和纯五度。以 A 小调（自然小调）为例，其音阶为 A-B-C-D-E-F-G，那么六级和弦就是以 F 为根音的和弦，由 F-A-C 构成，即 F 大三和弦（F major）。</li>
+</ul>
+<p>在实际的音乐作品中，六级和弦可以用来增加和声的色彩和紧张感，常用于过渡到其他和弦，如五级和弦，从而创造一种解决感。在和声进行中，六级和弦的使用可以带来丰富的情感表达和音乐动态。</p>
+<h3 id="有哪些钢琴演奏风格">有哪些钢琴演奏风格? </h3>
+<h3 id="有哪些很棒的乐手">有哪些很棒的乐手? </h3>
+<h3 id="如何练习视奏">如何练习视奏? </h3>
+<h3 id="如何练耳">如何练耳? </h3>
+<h2 id="tips">Tips </h2>
+<p>How To Learn Piano as Fast as Humanly Possible: <a href="https://www.youtube.com/@piano-sauce/videos">https://www.youtube.com/@piano-sauce/videos</a></p>
+<ol>
+<li>
+<p>Dont make mistakes: 重复会产生肌肉记忆，不管是正确的还是错误的，因此每次错误的重复都会阻碍你进步的速度。练习时，先不管节奏，慢速，保证能把每个音的顺序弹对。然后添加节拍器，慢速，按照节奏弹对。再逐步加快速度，每个错误都是不能容忍的，必须保证没有错误，才能继续前进。</p>
+</li>
+<li>
+<p>保证睡眠: 肌肉记忆会在睡眠时巩固</p>
+</li>
+<li>
+<p>每日快速复习：保持复习，避免遗忘。</p>
+</li>
+<li>
+<p>针对性突破</p>
+</li>
+</ol>
+<h2 id="roadmap">RoadMap </h2>
+<h2 id="notion">Notion </h2>
+<p><img src="/images/Pub_Frame_Piano/image.png" alt="alt text"></p>
+<h2 id="分解练习">分解练习 </h2>
+<ul>
+<li>五指断奏</li>
+<li>五指连奏（哈农 1）</li>
+<li>第 4 指力量练习</li>
+<li>第 4 指速度练习</li>
+<li>第 45 指切换练习</li>
+<li>哈农 2 练习</li>
+<li>五线谱转音名练习</li>
+<li>五线谱转唱名练习</li>
+<li>唱名转琴键练习</li>
+<li>C-G7 和弦转换</li>
+<li>C-F 和弦转换</li>
+<li>F-G7 和弦转换</li>
+</ul>
+<h2 id="无线谱上的标识符">无线谱上的标识符 </h2>
+<p>f: forte, 强<br>
+mf: mezzo forte, 中强<br>
+mp: mezzo piano, 中弱<br>
+p: piano, 弱<br>
+dim.: diminuendo, 渐弱<br>
+rit.: ritardando, 减速<br>
+dim. e rit.: e 表示 and, 渐弱并减速<br>
+f-p: forte-piano, 第一遍强，第二遍弱</p>
+<h2 id="todo">TODO </h2>
+<p>低音区识谱练习<br>
+和弦整齐性练习<br>
+学习和弦理论<br>
+渐弱渐慢练习</p>
+
+      </div>
+      <div class="md-sidebar-toc">
+<div class="md-toc">
+<details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#钢琴学习指南" class="md-toc-link"><p>钢琴学习指南</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#分析问题" class="md-toc-link">
+            <p>分析问题</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#如何解决问题" class="md-toc-link"><p>如何解决问题</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#钢琴教学网站" class="md-toc-link">
+            <p>钢琴教学网站</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#练习网站" class="md-toc-link">
+            <p>练习网站</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#书籍" class="md-toc-link">
+            <p>书籍</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#社交网络教程" class="md-toc-link">
+            <p>社交网络教程</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#博客" class="md-toc-link">
+            <p>博客</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#学术文章与论文" class="md-toc-link">
+            <p>学术文章与论文</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#专有名词" class="md-toc-link">
+            <p>专有名词</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#问题" class="md-toc-link"><p>问题</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#c-调g-调本质是什么" class="md-toc-link">
+            <p>c 调,g 调本质是什么</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#音乐理论中关于调性的分类是如何产生的-为什么产生的-为了解决什么问题" class="md-toc-link">
+            <p>音乐理论中关于调性的分类是如何产生的, 为什么产生的, 为了解决什么问题？</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#各个调是怎么命名的-怎么确定大调小调-怎么确定调中音阶的音程关系" class="md-toc-link"><p>各个调是怎么命名的, 怎么确定大调小调, 怎么确定调中音阶的音程关系？</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#调性的命名" class="md-toc-link">
+            <p>调性的命名</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#确定大调或小调" class="md-toc-link">
+            <p>确定大调或小调</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#确定调中音阶的音程关系" class="md-toc-link">
+            <p>确定调中音阶的音程关系</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#主音跟根音是一个东西吗有什么区别" class="md-toc-link">
+            <p>主音跟根音是一个东西吗,有什么区别？</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#什么是自然小调跟和声小调-有什么区别" class="md-toc-link"><p>什么是自然小调跟和声小调, 有什么区别？</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#自然小调natural-minor" class="md-toc-link">
+            <p>自然小调（Natural Minor）</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#和声小调harmonic-minor" class="md-toc-link">
+            <p>和声小调（Harmonic Minor）</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#旋律小调melodic-minor" class="md-toc-link">
+            <p>旋律小调（Melodic Minor）</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#自然小调与和声小调的区别" class="md-toc-link">
+            <p>自然小调与和声小调的区别</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#什么是-12-平均律" class="md-toc-link"><p>什么是 12 平均律？</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#12-平均律的基本原理" class="md-toc-link">
+            <p>12 平均律的基本原理</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#12-平均律的历史" class="md-toc-link">
+            <p>12 平均律的历史</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#12-平均律的优点" class="md-toc-link">
+            <p>12 平均律的优点</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#12-平均律的缺点" class="md-toc-link">
+            <p>12 平均律的缺点</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#频率相差两倍为什么是八度而不是七度为什么十二平均律十二个数是由八度来刻画其中还引入了升降符-而不是由-12-个数来刻画" class="md-toc-link">
+            <p>频率相差两倍为什么是八度而不是七度？为什么十二平均律十二个数是由八度来刻画,其中还引入了升降符, 而不是由 12 个数来刻画？</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#肌肉记忆是什么" class="md-toc-link">
+            <p>肌肉记忆是什么？</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#如何增强肌肉记忆" class="md-toc-link">
+            <p>如何增强肌肉记忆?</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#钢琴中的演奏训练非乐理部分通常要包含哪些部分" class="md-toc-link">
+            <p>钢琴中的演奏训练（非乐理部分）通常要包含哪些部分?</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#什么是切分音" class="md-toc-link">
+            <p>什么是切分音?</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#奏鸣曲是什么协奏曲是什么还有哪些其他的类型他们的区别是啥" class="md-toc-link"><p>奏鸣曲是什么，协奏曲是什么，还有哪些其他的类型，他们的区别是啥?</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#奏鸣曲sonata" class="md-toc-link">
+            <p>奏鸣曲（Sonata）</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#协奏曲concerto" class="md-toc-link">
+            <p>协奏曲（Concerto）</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#其他类型的音乐形式" class="md-toc-link">
+            <p>其他类型的音乐形式</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#区别" class="md-toc-link">
+            <p>区别</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#二度音程是相邻两个白键可是这样在不同位置声音的频率比不就不同了吗" class="md-toc-link">
+            <p>二度音程是相邻两个白键，可是这样在不同位置声音的频率比不就不同了吗？</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#什么是主音什么是属音" class="md-toc-link"><p>什么是主音什么是属音？</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#主音tonic" class="md-toc-link">
+            <p>主音（Tonic）</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#属音dominant" class="md-toc-link">
+            <p>属音（Dominant）</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#6-级和弦是什么" class="md-toc-link">
+            <p>6 级和弦是什么？</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#有哪些钢琴演奏风格" class="md-toc-link">
+            <p>有哪些钢琴演奏风格?</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#有哪些很棒的乐手" class="md-toc-link">
+            <p>有哪些很棒的乐手?</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#如何练习视奏" class="md-toc-link">
+            <p>如何练习视奏?</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#如何练耳" class="md-toc-link">
+            <p>如何练耳?</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#tips" class="md-toc-link">
+            <p>Tips</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#roadmap" class="md-toc-link">
+            <p>RoadMap</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#notion" class="md-toc-link">
+            <p>Notion</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#分解练习" class="md-toc-link">
+            <p>分解练习</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#无线谱上的标识符" class="md-toc-link">
+            <p>无线谱上的标识符</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#todo" class="md-toc-link">
+            <p>TODO</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+</div>
+</div>
+      <a id="sidebar-toc-btn">≡</a>
+    
+    
+    
+    
+    
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  
+    </body></html>
