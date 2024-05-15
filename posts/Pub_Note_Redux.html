@@ -1,0 +1,792 @@
+<!DOCTYPE html><html><head>
+      <title>Pub_Note_Redux</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+
+      </style>
+      </head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<div class="md-toc">
+<details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#redux基础" class="md-toc-link"><p>Redux基础</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#redux哲学" class="md-toc-link">
+            <p>Redux哲学</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#redux流程" class="md-toc-link">
+            <p>Redux流程</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#redux核心概念" class="md-toc-link">
+            <p>Redux核心概念</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#redux核心简单实现" class="md-toc-link">
+            <p>Redux核心简单实现</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#redux基础api" class="md-toc-link">
+            <p>Redux基础API</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#react-redux" class="md-toc-link"><p>React-Redux</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#react-reduxapi" class="md-toc-link">
+            <p>React-ReduxAPI</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#redux-toolkit" class="md-toc-link"><p>Redux-Toolkit</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#redux-toolkitapi" class="md-toc-link"><p>Redux-ToolkitAPI</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#configurestoreoptions" class="md-toc-link">
+            <p>configureStore(options)</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#createsliceoptions" class="md-toc-link">
+            <p>createSlice(options)</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#createreducerinitialstate-buildercallback" class="md-toc-link">
+            <p>createReducer(initialState, builderCallback)</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#createasyncthunktypeprefix-payloadcreator-options" class="md-toc-link">
+            <p>createAsyncThunk(typePrefix, payloadCreator, options)</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#createselectorselectors-selectorcreator" class="md-toc-link">
+            <p>createSelector(selectors, selectorCreator)</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#createentityadapteroptions" class="md-toc-link">
+            <p>createEntityAdapter(options)</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#redux实现redoundo" class="md-toc-link">
+            <p>Redux实现Redo/Undo</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#rtk-query" class="md-toc-link">
+            <p>RTK Query</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#redux-typscript" class="md-toc-link">
+            <p>Redux Typscript</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#reference" class="md-toc-link">
+            <p>Reference</p>
+
+          </a></div>
+</div>
+<p>注:文档中涉及到大量的高阶函数,在观看此文档前有必要先熟悉一下JS的连续箭头函数语法.<br>
+JS中箭头函数是一种简化的函数的写法,它的语法如下:</p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token comment">//普通函数</span>
+<span class="token keyword keyword-function">function</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow keyword-return">return</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//箭头函数</span>
+<span class="token keyword keyword-const">const</span> <span class="token function-variable function">add</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
+</code></pre><p>连续箭头函数: 函数的返回值为另一个函数</p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword keyword-const">const</span> <span class="token function-variable function">add</span> <span class="token operator">=</span> <span class="token parameter">a</span> <span class="token arrow operator">=&gt;</span> <span class="token parameter">b</span> <span class="token arrow operator">=&gt;</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
+<span class="token comment">//等价于</span>
+<span class="token keyword keyword-function">function</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token parameter">a</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow keyword-return">return</span> <span class="token keyword keyword-function">function</span><span class="token punctuation">(</span><span class="token parameter">b</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword control-flow keyword-return">return</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="redux基础">Redux基础 </h3>
+<p>Redux是一个状态管理库,它用于管理应用中的状态,使得状态的变化更加可控,更加容易维护.</p>
+<ul>
+<li>不同于一般情况下的状态管理,在Redux中你无法直接修改状态,而是必须通过派发一个action来修改.</li>
+<li>而且Redux中的状态是单一的,即整个应用只有顶层的一个状态,而不是多个状态,这样避免了在UI树中需要不断提升状态层级的问题.另外Redux使用了React中useContext可以在任何地方访问状态,避免了状态向下层层传递的问题.<br>
+<img src="/images/Pub_Note_Redux/Redux.png" alt="Alt text"><br>
+<img src="/images/Pub_Note_Redux/Redux2.png" alt="Alt text"></li>
+</ul>
+<h4 id="redux哲学">Redux哲学 </h4>
+<p>为了直观的理解Redux到底是什么,我首先展示一个Redux应用的Debug工具,它能够展示出Redux到底带来了什么:<br>
+<img src="/images/Pub_Note_Redux/image-2.png" alt=""><br>
+左边是用户的每次的操作,右边是操作执行后应用的状态树.<br>
+你可以查看<strong>任何一次</strong>操作前后的<strong>所有状态</strong>.这就使得整个应用是完全可控,可预测,可追踪的.</p>
+<p>要实现这样一个工具,首先需要保存应用运行过程中的<strong>所有状态备份</strong>,然后需要把<strong>所有的行为</strong>都记录下来,同时应用的状态需要保持为一个<strong>单一的树</strong>.</p>
+<ul>
+<li>所有状态备份: 为了将所有状态备份,需要用到一种叫<strong>Immutable结构</strong>的技术</li>
+<li>所有行为: 要能记录所有行为,Redux中的状态只能通过<strong>派发action</strong>来修改,这样所有改变状态的行为都是统一的,可控的.同时因为<strong>action和事件处理函数分离</strong>了,逻辑的复用性也会提升.</li>
+<li>单一的树: Redux中状态不是分散到各个组件,而是统一存储在<strong>顶层的一个状态树</strong>中,一方面使得状态更容易调试,也避免了状态提升的问题.</li>
+</ul>
+<p>然而Immutable会导致额外的问题,<strong>数据同步问题</strong>:Immutable数据总是创建一个新的数据,如果在应用中有重复状态,尤其是类似于Nodes数组和SelectedNodes数组这样的情况,那么当你修改其中一个数组时,另一个数组也需要修改.</p>
+<p>因此在Redux中,我们需要使用<strong>范式化数据</strong>来解决这个问题:<br>
+真正的数据实体'Entity'只有一份,其他的都是持有实体id的引用.</p>
+<p>除此以外,要使得行为(Action)作用于状态(State)是<strong>可预测</strong>的,Redux中真正的更新状态都是通过Reducer函数来实现,而Reducer函数是纯函数,它的输入和输出都是确定的,这样就使得状态的变化是可预测的.</p>
+<h4 id="redux流程">Redux流程 </h4>
+<p><strong>UI-&gt;事件处理函数-&gt;dispatch(action)-&gt;middleware-&gt;store(reducer)-&gt;UI</strong><br>
+UI通过事件处理函数来派发一个action,action会经过middleware做一些中间处理(记录log,异步函数,请求api等),最终到达store,store会调用reducer来修改状态,状态的变化会触发UI的重新渲染.<br>
+<img src="/images/Pub_Note_Redux/image-1.png" alt="Alt text"></p>
+<h4 id="redux核心概念">Redux核心概念 </h4>
+<ul>
+<li>Action:action是一个普通的JavaScript对象,它是改变state的唯一途径,它描述了发生了什么,包含两个属性:type和payload,playload传递reducer需要的参数</li>
+</ul>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword keyword-const">const</span> action <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'ADD_TODO'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">payload</span><span class="token operator">:</span> <span class="token string">'Buy milk'</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre><ul>
+<li>Reducer:reducer是一个纯函数,它接收旧的state和action,返回新的state.</li>
+</ul>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword keyword-function">function</span> <span class="token function">todosReducer</span><span class="token punctuation">(</span><span class="token parameter">state <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> action</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow keyword-switch">switch</span> <span class="token punctuation">(</span>action<span class="token punctuation">.</span><span class="token property-access">type</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-case">case</span> <span class="token string">'ADD_TODO'</span><span class="token operator">:</span>
+      <span class="token keyword control-flow keyword-return">return</span> <span class="token punctuation">[</span><span class="token spread operator">...</span>state<span class="token punctuation">,</span> action<span class="token punctuation">.</span><span class="token property-access">payload</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword module keyword-default">default</span><span class="token operator">:</span>
+      <span class="token keyword control-flow keyword-return">return</span> state<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><ul>
+<li>Store:store用于封装state和reducer,它提供了一些API来访问state,派发action,添加监听器.</li>
+</ul>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token punctuation">{</span> createStore <span class="token punctuation">}</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">'redux'</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-const">const</span> store <span class="token operator">=</span> <span class="token function">createStore</span><span class="token punctuation">(</span>reducer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><ul>
+<li>Dispatch:dispatch用于从外部将action派发到store,触发state的变化.</li>
+</ul>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code>store<span class="token punctuation">.</span><span class="token method function property-access">dispatch</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'ADD_TODO'</span><span class="token punctuation">,</span> <span class="token literal-property property">payload</span><span class="token operator">:</span> <span class="token string">'Buy milk'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><ul>
+<li>Subscribe:subscribe是一个函数,它用于添加一个监听器,当state发生变化时,会触发监听器.</li>
+</ul>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword keyword-const">const</span> unsubscribe <span class="token operator">=</span> store<span class="token punctuation">.</span><span class="token method function property-access">subscribe</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>store<span class="token punctuation">.</span><span class="token method function property-access">getState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//取消监听</span>
+<span class="token function">unsubscribe</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><ul>
+<li>Selector:selector是一个函数,它用于从state中获取数据.随着应用变得越来越大,会遇到应用程序的不同部分需要读取相同的数据,selector 可以避免重复这样的读取逻辑：</li>
+</ul>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword keyword-const">const</span> <span class="token function-variable function">todos</span> <span class="token operator">=</span> <span class="token parameter">state</span> <span class="token arrow operator">=&gt;</span> state<span class="token punctuation">.</span><span class="token property-access">todos</span><span class="token punctuation">;</span>
+</code></pre><ul>
+<li>StoreEnhancer:storeEnhancer用来增强store的功能,接收createStore作为参数,返回一个新的createStore.<br>
+例如下面的storeEnhancer用来在dispatch前后打印日志.</li>
+</ul>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword keyword-const">const</span> <span class="token function-variable function">storeEnhancer</span> <span class="token operator">=</span> <span class="token parameter">createStore</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">(</span><span class="token parameter">reducer<span class="token punctuation">,</span> preloadedState<span class="token punctuation">,</span> enhancer</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-const">const</span> store <span class="token operator">=</span> <span class="token function">createStore</span><span class="token punctuation">(</span>reducer<span class="token punctuation">,</span> preloadedState<span class="token punctuation">,</span> enhancer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-const">const</span> originalDispatch <span class="token operator">=</span> store<span class="token punctuation">.</span><span class="token property-access">dispatch</span><span class="token punctuation">;</span>
+  store<span class="token punctuation">.</span><span class="token method-variable function-variable method function property-access">dispatch</span> <span class="token operator">=</span> <span class="token parameter">action</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token string">'dispatching'</span><span class="token punctuation">,</span> action<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-let">let</span> result <span class="token operator">=</span> <span class="token function">originalDispatch</span><span class="token punctuation">(</span>action<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token string">'next state'</span><span class="token punctuation">,</span> store<span class="token punctuation">.</span><span class="token method function property-access">getState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword control-flow keyword-return">return</span> result<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword control-flow keyword-return">return</span> store<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre><ul>
+<li>Middleware:用于增强store的功能,能够在dispatch一个action和reducer之间执行一些额外的操作.它是storeEnhancer的一种应用方式.applyMiddleware的返回值就是一个storeEnhancer.</li>
+</ul>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword keyword-const">const</span> <span class="token function-variable function">loggerMiddleware</span> <span class="token operator">=</span> <span class="token parameter">store</span> <span class="token arrow operator">=&gt;</span> <span class="token parameter">next</span> <span class="token arrow operator">=&gt;</span> <span class="token parameter">action</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token string">'dispatching'</span><span class="token punctuation">,</span> action<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-let">let</span> result <span class="token operator">=</span> <span class="token function">next</span><span class="token punctuation">(</span>action<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token string">'next state'</span><span class="token punctuation">,</span> store<span class="token punctuation">.</span><span class="token method function property-access">getState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword control-flow keyword-return">return</span> result<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre><ul>
+<li>ThunkMiddleware:thunkMiddleware是middleware的一种,它用于处理异步操作.</li>
+</ul>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword keyword-const">const</span> <span class="token function-variable function">thunkMiddleware</span> <span class="token operator">=</span> <span class="token parameter">store</span> <span class="token arrow operator">=&gt;</span> <span class="token parameter">next</span> <span class="token arrow operator">=&gt;</span> <span class="token parameter">action</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span><span class="token keyword keyword-typeof">typeof</span> action <span class="token operator">===</span> <span class="token string">'function'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword control-flow keyword-return">return</span> <span class="token function">action</span><span class="token punctuation">(</span>store<span class="token punctuation">.</span><span class="token property-access">dispatch</span><span class="token punctuation">,</span> store<span class="token punctuation">.</span><span class="token property-access">getState</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword control-flow keyword-return">return</span> <span class="token function">next</span><span class="token punctuation">(</span>action<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre><p>这样当你dispatch一个函数时,thunkMiddleware会将dispatch和getState作为参数来执行这个函数</p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword keyword-const">const</span> <span class="token function-variable function">exampleThunkFunction</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">dispatch<span class="token punctuation">,</span> getState</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-const">const</span> stateBefore <span class="token operator">=</span> <span class="token function">getState</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Counter before: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>stateBefore<span class="token punctuation">.</span><span class="token property-access">counter</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+  <span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token function">increment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token keyword keyword-const">const</span> stateAfter <span class="token operator">=</span> <span class="token function">getState</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Counter after: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>stateAfter<span class="token punctuation">.</span><span class="token property-access">counter</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre><p>另外Redux中还存在一些概念用于更便捷的编写Redux代码:</p>
+<ul>
+<li>ActionCreator:用于创建action.</li>
+</ul>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword keyword-const">const</span> <span class="token function-variable function">addTodo</span> <span class="token operator">=</span> <span class="token parameter">todo</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'ADD_TODO'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">payload</span><span class="token operator">:</span> todo
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><p>Dispatch使用ActionCreator</p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code>store<span class="token punctuation">.</span><span class="token method function property-access">dispatch</span><span class="token punctuation">(</span><span class="token function">addTodo</span><span class="token punctuation">(</span><span class="token string">'Buy milk'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><ul>
+<li>ThunkActionCreator:用于创建thunkAction.</li>
+</ul>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword keyword-const">const</span> <span class="token function-variable function">incrementAsync</span> <span class="token operator">=</span> <span class="token parameter">amount</span> <span class="token arrow operator">=&gt;</span> <span class="token parameter">dispatch</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token function">incrementByAmount</span><span class="token punctuation">(</span>amount<span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre><p>这样异步逻辑使用起来跟普通action一样</p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code>store<span class="token punctuation">.</span><span class="token method function property-access">dispatch</span><span class="token punctuation">(</span><span class="token function">incrementAsync</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre><p>总的来说,前几个概念:action,dispatch,store,selector,sbuscribe用于在限制下的对于状态的访问,修改,监听.<br>
+而后面的storyeEnhancer,middleware,thunkMiddleware用于在限制外提供了一些灵活性.</p>
+<h4 id="redux核心简单实现">Redux核心简单实现 </h4>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword keyword-function">function</span> <span class="token function">createStore</span><span class="token punctuation">(</span><span class="token parameter">reducer</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-let">let</span> state<span class="token punctuation">;</span>
+  <span class="token keyword keyword-let">let</span> listeners <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-const">const</span> <span class="token function-variable function">getState</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> state<span class="token punctuation">;</span>
+  <span class="token keyword keyword-const">const</span> <span class="token function-variable function">dispatch</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">action</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+    state <span class="token operator">=</span> <span class="token function">reducer</span><span class="token punctuation">(</span>state<span class="token punctuation">,</span> action<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    listeners<span class="token punctuation">.</span><span class="token method function property-access">forEach</span><span class="token punctuation">(</span><span class="token parameter">listener</span> <span class="token arrow operator">=&gt;</span> <span class="token function">listener</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-const">const</span> <span class="token function-variable function">subscribe</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">listener</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+    listeners<span class="token punctuation">.</span><span class="token method function property-access">push</span><span class="token punctuation">(</span>listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword control-flow keyword-return">return</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+      listeners <span class="token operator">=</span> listeners<span class="token punctuation">.</span><span class="token method function property-access">filter</span><span class="token punctuation">(</span><span class="token parameter">l</span> <span class="token arrow operator">=&gt;</span> l <span class="token operator">!==</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword control-flow keyword-return">return</span> <span class="token punctuation">{</span> getState<span class="token punctuation">,</span> dispatch<span class="token punctuation">,</span> subscribe <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword keyword-function">function</span> <span class="token function">appReducer</span><span class="token punctuation">(</span><span class="token parameter">state <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> action</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow keyword-switch">switch</span> <span class="token punctuation">(</span>action<span class="token punctuation">.</span><span class="token property-access">type</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-case">case</span> <span class="token string">'ADD_TODO'</span><span class="token operator">:</span>
+      <span class="token keyword control-flow keyword-return">return</span> <span class="token punctuation">{</span>
+        <span class="token spread operator">...</span>state<span class="token punctuation">,</span>
+        <span class="token literal-property property">todos</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token spread operator">...</span>state<span class="token punctuation">.</span><span class="token property-access">todos</span><span class="token punctuation">,</span> action<span class="token punctuation">.</span><span class="token property-access">todo</span><span class="token punctuation">]</span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword module keyword-default">default</span><span class="token operator">:</span>
+      <span class="token keyword control-flow keyword-return">return</span> state<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h4 id="redux基础api">Redux基础API </h4>
+<ul>
+<li>createStore(reducer, [preloadedState], [enhancer]):创建一个Redux store来存放应用中所有的state,应用中应有且仅有一个store.</li>
+</ul>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token punctuation">{</span> createStore <span class="token punctuation">}</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">'redux'</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-const">const</span> store <span class="token operator">=</span> <span class="token function">createStore</span><span class="token punctuation">(</span>reducer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><ul>
+<li>store.getState():获取当前的state.</li>
+</ul>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword keyword-const">const</span> state <span class="token operator">=</span> store<span class="token punctuation">.</span><span class="token method function property-access">getState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><ul>
+<li>store.dispatch(action):派发一个action,触发state的变化.</li>
+</ul>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code>store<span class="token punctuation">.</span><span class="token method function property-access">dispatch</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'ADD_TODO'</span><span class="token punctuation">,</span> <span class="token literal-property property">todo</span><span class="token operator">:</span> <span class="token string">'Buy milk'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><ul>
+<li>store.subscribe(listener):添加一个监听器,当state发生变化时,会触发监听器.</li>
+</ul>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword keyword-const">const</span> unsubscribe <span class="token operator">=</span> store<span class="token punctuation">.</span><span class="token method function property-access">subscribe</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>store<span class="token punctuation">.</span><span class="token method function property-access">getState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//取消监听</span>
+<span class="token function">unsubscribe</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><ul>
+<li>combineReducers(reducers):将多个reducer合并成一个reducer.</li>
+</ul>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token punctuation">{</span> combineReducers <span class="token punctuation">}</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">'redux'</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-const">const</span> rootReducer <span class="token operator">=</span> <span class="token function">combineReducers</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">todos</span><span class="token operator">:</span> todosReducer<span class="token punctuation">,</span>
+  <span class="token literal-property property">visibilityFilter</span><span class="token operator">:</span> visibilityFilterReducer
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//等价于</span>
+<span class="token keyword keyword-function">function</span> <span class="token function">rootReducer</span><span class="token punctuation">(</span><span class="token parameter">state <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> action</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow keyword-return">return</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">todos</span><span class="token operator">:</span> <span class="token function">todosReducer</span><span class="token punctuation">(</span>state<span class="token punctuation">.</span><span class="token property-access">todos</span><span class="token punctuation">,</span> action<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">visibilityFilter</span><span class="token operator">:</span> <span class="token function">visibilityFilterReducer</span><span class="token punctuation">(</span>state<span class="token punctuation">.</span><span class="token property-access">visibilityFilter</span><span class="token punctuation">,</span> action<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><ul>
+<li>applyMiddleware(...middlewares):使用中间件来增强store的功能,返回一个storeEnhancer.</li>
+</ul>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token punctuation">{</span> createStore<span class="token punctuation">,</span> applyMiddleware <span class="token punctuation">}</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">'redux'</span><span class="token punctuation">;</span>
+<span class="token keyword module keyword-import">import</span> <span class="token imports">thunkMiddleware</span> <span class="token keyword module keyword-from">from</span> <span class="token string">'redux-thunk'</span><span class="token punctuation">;</span>
+<span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token punctuation">{</span> createLogger <span class="token punctuation">}</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">'redux-logger'</span><span class="token punctuation">;</span>
+<span class="token keyword module keyword-import">import</span> <span class="token imports">rootReducer</span> <span class="token keyword module keyword-from">from</span> <span class="token string">'./reducers'</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-const">const</span> loggerMiddleware <span class="token operator">=</span> <span class="token function">createLogger</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-const">const</span> store <span class="token operator">=</span> <span class="token function">createStore</span><span class="token punctuation">(</span>
+  rootReducer<span class="token punctuation">,</span>
+  <span class="token function">applyMiddleware</span><span class="token punctuation">(</span>
+    thunkMiddleware<span class="token punctuation">,</span>
+    loggerMiddleware
+  <span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h3 id="react-redux">React-Redux </h3>
+<p>React-Redux库是一个React的UI绑定库,它将Redux和React连接起来</p>
+<h4 id="react-reduxapi">React-ReduxAPI </h4>
+<ul>
+<li>Provider:Provider是一个React组件,它接收一个store作为props,并将其存储在context中,使得子组件可以直接访问store.</li>
+</ul>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token punctuation">{</span> <span class="token maybe-class-name">Provider</span> <span class="token punctuation">}</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">'react-redux'</span><span class="token punctuation">;</span>
+<span class="token keyword module keyword-import">import</span> <span class="token imports">store</span> <span class="token keyword module keyword-from">from</span> <span class="token string">'./store'</span><span class="token punctuation">;</span>
+<span class="token maybe-class-name">ReactDOM</span><span class="token punctuation">.</span><span class="token method function property-access">render</span><span class="token punctuation">(</span>
+  <span class="token operator">&lt;</span><span class="token maybe-class-name">Provider</span> store<span class="token operator">=</span><span class="token punctuation">{</span>store<span class="token punctuation">}</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token maybe-class-name">App</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span><span class="token maybe-class-name">Provider</span><span class="token operator">&gt;</span><span class="token punctuation">,</span>
+  <span class="token dom variable">document</span><span class="token punctuation">.</span><span class="token method function property-access">getElementById</span><span class="token punctuation">(</span><span class="token string">'root'</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><ul>
+<li>useSelector(selector, equalityFn):useSelector用来从store中获取部分数据,它接收一个selector函数和一个equalityFn函数,返回selector函数的返回值.<br>
+重要的是要注意每当 useSelector 返回的值为新引用时，组件就会重新渲染。所以组件应始终尝试从 store 中选择它们需要的尽可能少的数据，这将有助于确保它仅在实际需要时才渲染。</li>
+</ul>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token punctuation">{</span> useSelector <span class="token punctuation">}</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">'react-redux'</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-const">const</span> todos <span class="token operator">=</span> <span class="token function">useSelector</span><span class="token punctuation">(</span><span class="token parameter">state</span> <span class="token arrow operator">=&gt;</span> state<span class="token punctuation">.</span><span class="token property-access">todos</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><ul>
+<li>useDispatch():useDispatch是一个React Hook,它返回store的dispatch方法.</li>
+</ul>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token punctuation">{</span> useDispatch <span class="token punctuation">}</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">'react-redux'</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-const">const</span> dispatch <span class="token operator">=</span> <span class="token function">useDispatch</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'ADD_TODO'</span><span class="token punctuation">,</span> <span class="token literal-property property">todo</span><span class="token operator">:</span> <span class="token string">'Buy milk'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h3 id="redux-toolkit">Redux-Toolkit </h3>
+<p>Redux-Toolkit是一个官方推荐的Redux工具包,它提供了一些工具函数来简化Redux的使用.事实上官方更推荐使用Redux-Toolkit来编写Redux代码而不是使用基础Redux.</p>
+<h4 id="redux-toolkitapi">Redux-ToolkitAPI </h4>
+<p>创建Store:</p>
+<h5 id="configurestoreoptions">configureStore(options) </h5>
+<p>configureStore接收一个options对象,返回一个Redux store.</p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token punctuation">{</span> configureStore <span class="token punctuation">}</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">'@reduxjs/toolkit'</span><span class="token punctuation">;</span>
+<span class="token keyword module keyword-import">import</span> <span class="token imports">rootReducer</span> <span class="token keyword module keyword-from">from</span> <span class="token string">'./reducers'</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-const">const</span> store <span class="token operator">=</span> <span class="token function">configureStore</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">reducer</span><span class="token operator">:</span> rootReducer
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><p>在复杂应用中通常会构建多个reducer分别负责不同的部分,configureStore可以接收一个reducer,也可以接收一个reducer对象,它会自动调用combineReducers来合并reducer.</p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword keyword-const">const</span> store <span class="token operator">=</span> <span class="token function">configureStore</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">reducer</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">todos</span><span class="token operator">:</span> todosReducer<span class="token punctuation">,</span>
+    <span class="token literal-property property">visibilityFilter</span><span class="token operator">:</span> visibilityFilterReducer
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><p>创建Reducer和Action:</p>
+<h5 id="createsliceoptions">createSlice(options) </h5>
+<p>createSlice用于创建一个reducer和action,它<br>
+接收一个options对象,返回一个包含reducer和action的对象.</p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token punctuation">{</span> createSlice <span class="token punctuation">}</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">'@reduxjs/toolkit'</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-const">const</span> todosSlice <span class="token operator">=</span> <span class="token function">createSlice</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'todos'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">initialState</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">reducers</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">addTodo</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> action</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+      state<span class="token punctuation">.</span><span class="token method function property-access">push</span><span class="token punctuation">(</span>action<span class="token punctuation">.</span><span class="token property-access">payload</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-const">const</span> <span class="token punctuation">{</span> addTodo <span class="token punctuation">}</span> <span class="token operator">=</span> todosSlice<span class="token punctuation">.</span><span class="token property-access">actions</span><span class="token punctuation">;</span> 
+<span class="token keyword keyword-const">const</span> todosReducer <span class="token operator">=</span> todosSlice<span class="token punctuation">.</span><span class="token property-access">reducer</span><span class="token punctuation">;</span>
+</code></pre><p>createSlice也支持定义ActionCreator</p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token keyword keyword-const">const</span> postsSlice <span class="token operator">=</span> <span class="token function">createSlice</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    name<span class="token operator">:</span> <span class="token string">'posts'</span><span class="token punctuation">,</span>
+    initialState<span class="token punctuation">,</span>
+    reducers<span class="token operator">:</span> <span class="token punctuation">{</span>
+        postsAdded<span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token function">reducer</span><span class="token punctuation">(</span>state<span class="token punctuation">,</span> action<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                state<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>action<span class="token punctuation">.</span>payload<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token function">prepare</span><span class="token punctuation">(</span>title<span class="token punctuation">,</span> content<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword keyword-return">return</span> <span class="token punctuation">{</span>
+                    payload<span class="token operator">:</span> <span class="token punctuation">{</span>
+                        id<span class="token operator">:</span> <span class="token function">nanoid</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                        title<span class="token punctuation">,</span>
+                        content<span class="token punctuation">,</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><p>createSlice中可以添加extraReducers,它可以用来处理其他的action,例如处理createAsyncThunk中生成的action.</p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword keyword-const">const</span> todosSlice <span class="token operator">=</span> <span class="token function">createSlice</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'todos'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">initialState</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">reducers</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">extraReducers</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">builder</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+        builder<span class="token punctuation">.</span><span class="token method function property-access">addCase</span><span class="token punctuation">(</span>fetchPosts<span class="token punctuation">.</span><span class="token property-access">pending</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> action</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+            state<span class="token punctuation">.</span><span class="token property-access">status</span> <span class="token operator">=</span> <span class="token string">'loading'</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        builder<span class="token punctuation">.</span><span class="token method function property-access">addCase</span><span class="token punctuation">(</span>fetchPosts<span class="token punctuation">.</span><span class="token property-access">fulfilled</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> action</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+            state<span class="token punctuation">.</span><span class="token property-access">status</span> <span class="token operator">=</span> <span class="token string">'idle'</span><span class="token punctuation">;</span>
+            state<span class="token punctuation">.</span><span class="token property-access">items</span> <span class="token operator">=</span> state<span class="token punctuation">.</span><span class="token property-access">items</span><span class="token punctuation">.</span><span class="token method function property-access">concat</span><span class="token punctuation">(</span>action<span class="token punctuation">.</span><span class="token property-access">payload</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        builder<span class="token punctuation">.</span><span class="token method function property-access">addCase</span><span class="token punctuation">(</span>fetchPosts<span class="token punctuation">.</span><span class="token property-access">rejected</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> action</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+            state<span class="token punctuation">.</span><span class="token property-access">status</span> <span class="token operator">=</span> <span class="token string">'failed'</span><span class="token punctuation">;</span>
+            state<span class="token punctuation">.</span><span class="token property-access">error</span> <span class="token operator">=</span> action<span class="token punctuation">.</span><span class="token property-access">error</span><span class="token punctuation">.</span><span class="token property-access">message</span><span class="token operator">?</span> action<span class="token punctuation">.</span><span class="token property-access">error</span><span class="token punctuation">.</span><span class="token property-access">message</span> <span class="token operator">:</span> <span class="token string">'Error'</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h5 id="createreducerinitialstate-buildercallback">createReducer(initialState, builderCallback) </h5>
+<p>createReducer用于创建一个reducer,它接收一个initialState和一个builderCallback,返回一个reducer.</p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token punctuation">{</span> createReducer <span class="token punctuation">}</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">'@reduxjs/toolkit'</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-const">const</span> todosReducer <span class="token operator">=</span> <span class="token function">createReducer</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">addTodo</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> action</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+    state<span class="token punctuation">.</span><span class="token method function property-access">push</span><span class="token punctuation">(</span>action<span class="token punctuation">.</span><span class="token property-access">payload</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><p>在createReducer中使用了Immer库,它允许你用直接修改state的方式去编写Immutable代码,而createSlice中使用了createReducer,所以createSlice也支持Immer.</p>
+<p>创建异步Action:</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>export const incrementAsync = amount =&gt; dispatch =&gt; {
+  setTimeout(() =&gt; {
+    dispatch(incrementByAmount(amount))
+  }, 1000)
+}
+</code></pre><p>要使用incrementAsync,需要在store中支持thunkMiddleware,这样就能像使用普通action一样使用异步action了.<br>
+store.dispatch(incrementAsync(10))<br>
+这里再展示一下thunkMiddleware的实现,以便能更清晰的理解它们是如何一起工作的.</p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword keyword-const">const</span> <span class="token function-variable function">thunkMiddleware</span> <span class="token operator">=</span> <span class="token parameter">store</span> <span class="token arrow operator">=&gt;</span> <span class="token parameter">next</span> <span class="token arrow operator">=&gt;</span> <span class="token parameter">action</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span><span class="token keyword keyword-typeof">typeof</span> action <span class="token operator">===</span> <span class="token string">'function'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword control-flow keyword-return">return</span> <span class="token function">action</span><span class="token punctuation">(</span>store<span class="token punctuation">.</span><span class="token property-access">dispatch</span><span class="token punctuation">,</span> store<span class="token punctuation">.</span><span class="token property-access">getState</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword control-flow keyword-return">return</span> <span class="token function">next</span><span class="token punctuation">(</span>action<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre><h5 id="createasyncthunktypeprefix-payloadcreator-options">createAsyncThunk(typePrefix, payloadCreator, options) </h5>
+<p>createAsyncThunk用于创建一个异步action,它接收一个typePrefix,一个payloadCreator和一个options,返回一个异步action.</p>
+<p>如何发起一个异步请求?</p>
+<ul>
+<li>在请求之前 dispatch 请求“开始”的 action，以指示请求正在进行中。这可用于跟踪加载状态以允许跳过重复请求或在 UI 中显示加载中提示。</li>
+<li>发出异步请求</li>
+<li>根据请求结果，异步逻辑 dispatch 包含结果数据的“成功” action 或包含错误详细信息的 “失败” action。在这两种情况下，reducer 逻辑都会清除加载状态，并且要么展示成功案例的结果数据，要么保存错误值并在需要的地方展示。</li>
+</ul>
+<p>通常我们会写成下面的形式:</p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword keyword-const">const</span> <span class="token function-variable function">getRepoDetailsStarted</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'repoDetails/fetchStarted'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-const">const</span> <span class="token function-variable function">getRepoDetailsSuccess</span> <span class="token operator">=</span> <span class="token parameter">repoDetails</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'repoDetails/fetchSucceeded'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">payload</span><span class="token operator">:</span> repoDetails
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-const">const</span> <span class="token function-variable function">getRepoDetailsFailed</span> <span class="token operator">=</span> <span class="token parameter">error</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'repoDetails/fetchFailed'</span><span class="token punctuation">,</span>
+  error
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-const">const</span> <span class="token function-variable function">fetchIssuesCount</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">org<span class="token punctuation">,</span> repo</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token keyword keyword-async">async</span> <span class="token parameter">dispatch</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token function">getRepoDetailsStarted</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token keyword control-flow keyword-try">try</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-const">const</span> repoDetails <span class="token operator">=</span> <span class="token keyword control-flow keyword-await">await</span> <span class="token function">getRepoDetails</span><span class="token punctuation">(</span>org<span class="token punctuation">,</span> repo<span class="token punctuation">)</span>
+    <span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token function">getRepoDetailsSuccess</span><span class="token punctuation">(</span>repoDetails<span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span> <span class="token keyword control-flow keyword-catch">catch</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token function">getRepoDetailsFailed</span><span class="token punctuation">(</span>err<span class="token punctuation">.</span><span class="token method function property-access">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><p>createAsyncThunk可以帮助我们简化这个过程,它接收一个typePrefix,一个payloadCreator和一个options,返回一个异步action.</p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword keyword-const">const</span> fetchIssuesCount <span class="token operator">=</span> <span class="token function">createAsyncThunk</span><span class="token punctuation">(</span>
+  <span class="token string">'repoDetails/fetch'</span><span class="token punctuation">,</span> <span class="token comment">// 用来生成action的type</span>
+  <span class="token keyword keyword-async">async</span> <span class="token punctuation">(</span><span class="token parameter">repo<span class="token punctuation">,</span> thunkAPI</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-const">const</span> repoDetails <span class="token operator">=</span> <span class="token keyword control-flow keyword-await">await</span> <span class="token function">getRepoDetails</span><span class="token punctuation">(</span>repo<span class="token punctuation">)</span>
+    <span class="token keyword control-flow keyword-return">return</span> repoDetails
+  <span class="token punctuation">}</span>
+<span class="token punctuation">)</span>
+</code></pre><p>repo是action的payload,thunkAPI是一个对象,包含dispatch,getState等方法.</p>
+<p>Thunk 可以返回 promise。 具体对于createAsyncThunk，你可以await dispatch(someThunk()).unwrap()来处理组件级别的请求成功或失败。</p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword control-flow keyword-try">try</span> <span class="token punctuation">{</span>
+  <span class="token function">setAddRequestStatus</span><span class="token punctuation">(</span><span class="token string">'pending'</span><span class="token punctuation">)</span>
+  <span class="token keyword control-flow keyword-await">await</span> <span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token function">addNewPost</span><span class="token punctuation">(</span><span class="token punctuation">{</span> title<span class="token punctuation">,</span> content<span class="token punctuation">,</span> <span class="token literal-property property">user</span><span class="token operator">:</span> userId <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">unwrap</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token function">setTitle</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span>
+  <span class="token function">setContent</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span>
+  <span class="token function">setUserId</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span> <span class="token keyword control-flow keyword-catch">catch</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">error</span><span class="token punctuation">(</span><span class="token string">'Failed to save the post: '</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span>
+<span class="token punctuation">}</span> <span class="token keyword control-flow keyword-finally">finally</span> <span class="token punctuation">{</span>
+  <span class="token function">setAddRequestStatus</span><span class="token punctuation">(</span><span class="token string">'idle'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre><h5 id="createselectorselectors-selectorcreator">createSelector(selectors, selectorCreator) </h5>
+<p>createSelector用于创建记忆化的selector,它接收一个selectors数组和一个selectorCreator,返回一个selector.常用于性能优化.</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript js"><code>  <span class="token keyword keyword-const">const</span> postsForUser <span class="token operator">=</span> <span class="token function">useSelector</span><span class="token punctuation">(</span><span class="token parameter">state</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-const">const</span> allPosts <span class="token operator">=</span> <span class="token function">selectAllPosts</span><span class="token punctuation">(</span>state<span class="token punctuation">)</span>
+    <span class="token keyword control-flow keyword-return">return</span> allPosts<span class="token punctuation">.</span><span class="token method function property-access">filter</span><span class="token punctuation">(</span><span class="token parameter">post</span> <span class="token arrow operator">=&gt;</span> post<span class="token punctuation">.</span><span class="token property-access">user</span> <span class="token operator">===</span> userId<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre><p>上面这段函数调用了filter,这使得每次返回的一定是一个新的数组,哪怕数组中的元素没有发生变化,也会导致重新渲染.<br>
+事实上只要posts和users如果没有发生变化,那么postsForUser就不会发生变化.</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript js"><code><span class="token keyword module keyword-export">export</span> <span class="token keyword keyword-const">const</span> <span class="token function-variable function">selectAllPosts</span> <span class="token operator">=</span> <span class="token parameter">state</span> <span class="token arrow operator">=&gt;</span> state<span class="token punctuation">.</span><span class="token property-access">posts</span><span class="token punctuation">.</span><span class="token property-access">posts</span>
+
+<span class="token keyword module keyword-export">export</span> <span class="token keyword keyword-const">const</span> <span class="token function-variable function">selectPostById</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> postId</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span>
+  state<span class="token punctuation">.</span><span class="token property-access">posts</span><span class="token punctuation">.</span><span class="token property-access">posts</span><span class="token punctuation">.</span><span class="token method function property-access">find</span><span class="token punctuation">(</span><span class="token parameter">post</span> <span class="token arrow operator">=&gt;</span> post<span class="token punctuation">.</span><span class="token property-access">id</span> <span class="token operator">===</span> postId<span class="token punctuation">)</span>
+
+<span class="token keyword module keyword-export">export</span> <span class="token keyword keyword-const">const</span> selectPostsByUser <span class="token operator">=</span> <span class="token function">createSelector</span><span class="token punctuation">(</span>
+  <span class="token punctuation">[</span>selectAllPosts<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> userId</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> userId<span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">(</span><span class="token parameter">posts<span class="token punctuation">,</span> userId</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> posts<span class="token punctuation">.</span><span class="token method function property-access">filter</span><span class="token punctuation">(</span><span class="token parameter">post</span> <span class="token arrow operator">=&gt;</span> post<span class="token punctuation">.</span><span class="token property-access">user</span> <span class="token operator">===</span> userId<span class="token punctuation">)</span>
+<span class="token punctuation">)</span>
+</code></pre><p>只有在第一个数组中的元素发生变化时才会重新计算结果</p>
+<h5 id="createentityadapteroptions">createEntityAdapter(options) </h5>
+<p>createEntityAdapter用来范式化数据,它接收一个options对象,返回一个entityAdapter对象.</p>
+<ol>
+<li>范式化数据<br>
+在Redux中所有状态都是immutable的,如果存在重复状态,那么当你修改其中一个状态时,另一个状态也需要修改,这就是数据同步问题.<br>
+范式化数据的目的就是为了解决这个问题,它将真正的数据实体'Entity'只有一份,其他的都是持有实体id的引用.</li>
+</ol>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword keyword-const">const</span> initialState <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">posts</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">ids</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'1'</span><span class="token punctuation">,</span> <span class="token string">'2'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">entities</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string-property property">'1'</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token string">'1'</span><span class="token punctuation">,</span> <span class="token literal-property property">title</span><span class="token operator">:</span> <span class="token string">'First Post'</span><span class="token punctuation">,</span> <span class="token literal-property property">content</span><span class="token operator">:</span> <span class="token string">'Hello!'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token string-property property">'2'</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token string">'2'</span><span class="token punctuation">,</span> <span class="token literal-property property">title</span><span class="token operator">:</span> <span class="token string">'Second Post'</span><span class="token punctuation">,</span> <span class="token literal-property property">content</span><span class="token operator">:</span> <span class="token string">'More text'</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><p>createEntityAdapter用来辅助创建范式化数据,它接收一个options对象,返回一个entityAdapter对象.</p>
+<p>createEntityAdapter 接受一个选项对象，该对象可能包含一个 sortComparer 函数，该函数将用于通过比较两个项目来保持项目 id 数组的排序(工作方式与 array.sort() 相同)。</p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token punctuation">{</span> createEntityAdapter <span class="token punctuation">}</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">'@reduxjs/toolkit'</span>
+<span class="token keyword keyword-const">const</span> postsAdapter <span class="token operator">=</span> <span class="token function">createEntityAdapter</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token function-variable function">sortComparer</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> b<span class="token punctuation">.</span><span class="token property-access">date</span><span class="token punctuation">.</span><span class="token method function property-access">localeCompare</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span><span class="token property-access">date</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre><p>adapter 对象有一个 getInitialState 函数,可以添加额外的数据</p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token keyword keyword-const">const</span> postsAdapter <span class="token operator">=</span> <span class="token function">createEntityAdapter</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token function-variable function">sortComparer</span><span class="token operator">:</span> <span class="token punctuation">(</span>a<span class="token operator">:</span> IPostItem<span class="token punctuation">,</span> b<span class="token operator">:</span> IPostItem<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> b<span class="token punctuation">.</span>date<span class="token punctuation">.</span><span class="token function">localeCompare</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span>date<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token keyword keyword-const">const</span> testState <span class="token operator">=</span> postsAdapter<span class="token punctuation">.</span><span class="token function">getInitialState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    status<span class="token operator">:</span> <span class="token string">'idle'</span><span class="token punctuation">,</span>
+    error<span class="token operator">:</span> <span class="token keyword keyword-null">null</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"testState"</span><span class="token punctuation">,</span> testState<span class="token punctuation">)</span>
+</code></pre><p><img src="/images/Pub_Note_Redux/image-3.png" alt="Alt text"></p>
+<p>adapter对象提供了一些预定义的reducer函数<br>
+<img src="/images/Pub_Note_Redux/image-4.png" alt="Alt text"></p>
+<p>adapter 对象也有一个 getSelectors 函数。你可以传入一个 selector，它从 Redux 根 state 返回这个特定的 state slice，它会生成类似于 selectAll 和 selectById 的选择器。</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript js"><code><span class="token keyword module keyword-export">export</span> <span class="token keyword keyword-const">const</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">selectAll</span><span class="token operator">:</span> selectAllPosts<span class="token punctuation">,</span>
+  <span class="token literal-property property">selectById</span><span class="token operator">:</span> selectPostById<span class="token punctuation">,</span>
+  <span class="token literal-property property">selectIds</span><span class="token operator">:</span> selectPostIds
+  <span class="token comment">// Pass in a selector that returns the posts slice of state</span>
+<span class="token punctuation">}</span> <span class="token operator">=</span> postsAdapter<span class="token punctuation">.</span><span class="token method function property-access">getSelectors</span><span class="token punctuation">(</span><span class="token parameter">state</span> <span class="token arrow operator">=&gt;</span> state<span class="token punctuation">.</span><span class="token property-access">posts</span><span class="token punctuation">)</span>
+</code></pre><p><img src="/images/Pub_Note_Redux/image-5.png" alt="Alt text"></p>
+<h3 id="redux实现redoundo">Redux实现Redo/Undo </h3>
+<p>通过直接包装reducer函数实现</p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token keyword module keyword-import">import</span> <span class="token imports"><span class="token punctuation">{</span> <span class="token maybe-class-name">Action</span><span class="token punctuation">,</span> <span class="token maybe-class-name">AnyAction</span><span class="token punctuation">,</span> <span class="token maybe-class-name">Reducer</span> <span class="token punctuation">}</span></span> <span class="token keyword module keyword-from">from</span> <span class="token string">"@reduxjs/toolkit"</span><span class="token punctuation">;</span>
+
+<span class="token keyword module keyword-export">export</span> <span class="token keyword keyword-function">function</span> undoable<span class="token operator">&lt;</span><span class="token constant">S</span> <span class="token operator">=</span> any<span class="token punctuation">,</span> <span class="token constant">A</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">Action</span> <span class="token operator">=</span> <span class="token maybe-class-name">AnyAction</span><span class="token operator">&gt;</span><span class="token punctuation">(</span>reducer<span class="token operator">:</span> <span class="token maybe-class-name">Reducer</span><span class="token operator">&lt;</span><span class="token constant">S</span><span class="token punctuation">,</span> <span class="token constant">A</span><span class="token operator">&gt;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-let">let</span> initialState <span class="token operator">=</span> <span class="token function">reducer</span><span class="token punctuation">(</span><span class="token keyword nil keyword-undefined">undefined</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">''</span> <span class="token punctuation">}</span> <span class="token keyword module keyword-as">as</span> <span class="token constant">A</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-let">let</span> <span class="token literal-property property">historyQueue</span><span class="token operator">:</span> any<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span>initialState<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-let">let</span> historyIndex <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token comment">// 返回处理撤消和重做的 reducer</span>
+    <span class="token keyword control-flow keyword-return">return</span> <span class="token keyword keyword-function">function</span> <span class="token punctuation">(</span><span class="token parameter">state <span class="token operator">=</span> initialState<span class="token punctuation">,</span> <span class="token literal-property property">action</span><span class="token operator">:</span> <span class="token maybe-class-name">AnyAction</span></span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token constant">S</span> <span class="token punctuation">{</span>
+        <span class="token keyword control-flow keyword-switch">switch</span> <span class="token punctuation">(</span>action<span class="token punctuation">.</span><span class="token property-access">type</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword keyword-case">case</span> <span class="token string">'UNDO'</span><span class="token operator">:</span>
+                <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>historyQueue<span class="token punctuation">)</span>
+                <span class="token keyword control-flow keyword-return">return</span> historyIndex <span class="token operator">===</span> <span class="token number">0</span> <span class="token operator">?</span> historyQueue<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">:</span> historyQueue<span class="token punctuation">[</span><span class="token operator">--</span>historyIndex<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token keyword keyword-case">case</span> <span class="token string">'REDO'</span><span class="token operator">:</span>
+                <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>historyQueue<span class="token punctuation">)</span>
+                <span class="token keyword control-flow keyword-return">return</span> historyIndex <span class="token operator">===</span> historyQueue<span class="token punctuation">.</span><span class="token property-access">length</span> <span class="token operator">-</span> <span class="token number">1</span> <span class="token operator">?</span> historyQueue<span class="token punctuation">[</span>historyQueue<span class="token punctuation">.</span><span class="token property-access">length</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">:</span> historyQueue<span class="token punctuation">[</span><span class="token operator">++</span>historyIndex<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token keyword module keyword-default">default</span><span class="token operator">:</span>
+                <span class="token comment">// 代理传给 reducer 的 action</span>
+                <span class="token keyword keyword-const">const</span> newState <span class="token operator">=</span> <span class="token function">reducer</span><span class="token punctuation">(</span>state<span class="token punctuation">,</span> action <span class="token keyword module keyword-as">as</span> <span class="token constant">A</span><span class="token punctuation">)</span>
+                <span class="token comment">// 抛弃所有Index之后的历史记录</span>
+                historyQueue <span class="token operator">=</span> historyQueue<span class="token punctuation">.</span><span class="token method function property-access">slice</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> historyIndex <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span>action<span class="token operator">?.</span>payload<span class="token operator">?.</span>recordInHistory <span class="token operator">===</span> <span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">//根据action中的标志位判断是否记录历史</span>
+                    historyQueue<span class="token punctuation">.</span><span class="token method function property-access">push</span><span class="token punctuation">(</span>newState<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    historyIndex <span class="token operator">=</span> historyQueue<span class="token punctuation">.</span><span class="token property-access">length</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
+                    <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>historyQueue<span class="token punctuation">)</span>
+                    <span class="token keyword control-flow keyword-return">return</span> newState<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                <span class="token keyword control-flow keyword-else">else</span> <span class="token punctuation">{</span>
+                    <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>historyQueue<span class="token punctuation">)</span>
+                    <span class="token keyword control-flow keyword-return">return</span> newState<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword module keyword-export">export</span> <span class="token keyword keyword-function">function</span> <span class="token function">undo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword control-flow keyword-return">return</span> <span class="token punctuation">{</span> <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'UNDO'</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword module keyword-export">export</span> <span class="token keyword keyword-function">function</span> <span class="token function">redo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword control-flow keyword-return">return</span> <span class="token punctuation">{</span> <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'REDO'</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre><h3 id="rtk-query">RTK Query </h3>
+<p>xxx</p>
+<h3 id="redux-typscript">Redux Typscript </h3>
+<p>导出dispatch 类型<br>
+导出state 类型</p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token keyword keyword-export">export</span> <span class="token keyword keyword-type">type</span> <span class="token class-name">AppDispatch</span> <span class="token operator">=</span> <span class="token keyword keyword-typeof">typeof</span> store<span class="token punctuation">.</span>dispatch<span class="token punctuation">;</span>
+<span class="token keyword keyword-export">export</span> <span class="token keyword keyword-type">type</span> <span class="token class-name">RootState</span> <span class="token operator">=</span> ReturnType<span class="token operator">&lt;</span><span class="token keyword keyword-typeof">typeof</span> store<span class="token punctuation">.</span>getState<span class="token operator">&gt;</span><span class="token punctuation">;</span>
+</code></pre><p>导出useDispatch,useSelector</p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token keyword keyword-export">export</span> <span class="token keyword keyword-const">const</span> <span class="token function-variable function">useAppDispatch</span><span class="token operator">:</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span>AppDispatch <span class="token operator">=</span> useDispatch<span class="token punctuation">;</span>
+<span class="token keyword keyword-export">export</span> <span class="token keyword keyword-const">const</span> useAppSelector<span class="token operator">:</span> TypedUseSelectorHook<span class="token operator">&lt;</span>RootState<span class="token operator">&gt;</span> <span class="token operator">=</span> useSelector<span class="token punctuation">;</span>
+</code></pre><p>createSlice中使用prepare需要指定Action类型</p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token keyword keyword-const">const</span> postsSlice <span class="token operator">=</span> <span class="token function">createSlice</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    name<span class="token operator">:</span> <span class="token string">'posts'</span><span class="token punctuation">,</span>
+    initialState<span class="token punctuation">,</span>
+    reducers<span class="token operator">:</span> <span class="token punctuation">{</span>
+        postsAdded<span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token function">reducer</span><span class="token punctuation">(</span>state<span class="token punctuation">,</span> action<span class="token operator">:</span> PayloadAction<span class="token operator">&lt;</span><span class="token punctuation">{</span> id<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> title<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> content<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token punctuation">}</span><span class="token operator">&gt;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                state<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>action<span class="token punctuation">.</span>payload<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token function">prepare</span><span class="token punctuation">(</span>title<span class="token operator">:</span><span class="token builtin">string</span><span class="token punctuation">,</span> content<span class="token operator">:</span><span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword keyword-return">return</span> <span class="token punctuation">{</span>
+                    payload<span class="token operator">:</span> <span class="token punctuation">{</span>
+                        id<span class="token operator">:</span> <span class="token function">nanoid</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                        title<span class="token punctuation">,</span>
+                        content<span class="token punctuation">,</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                    type<span class="token operator">:</span> <span class="token string">'posts/postsAdded'</span><span class="token punctuation">,</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h3 id="reference">Reference </h3>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=9boMnm5X9ak&amp;list=PLC3y8-rFHvwheJHvseC3I0HuYI2f46oAK&amp;index=1">https://www.youtube.com/watch?v=9boMnm5X9ak&amp;list=PLC3y8-rFHvwheJHvseC3I0HuYI2f46oAK&amp;index=1</a></li>
+<li><a href="https://cn.redux.js.org/">https://cn.redux.js.org/</a></li>
+<li><a href="https://blog.isquaredsoftware.com/2018/03/presentation-reactathon-redux-fundamentals/">https://blog.isquaredsoftware.com/2018/03/presentation-reactathon-redux-fundamentals/</a></li>
+</ul>
+
+      </div>
+      <div class="md-sidebar-toc">
+<div class="md-toc">
+<details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#redux基础" class="md-toc-link"><p>Redux基础</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#redux哲学" class="md-toc-link">
+            <p>Redux哲学</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#redux流程" class="md-toc-link">
+            <p>Redux流程</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#redux核心概念" class="md-toc-link">
+            <p>Redux核心概念</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#redux核心简单实现" class="md-toc-link">
+            <p>Redux核心简单实现</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#redux基础api" class="md-toc-link">
+            <p>Redux基础API</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#react-redux" class="md-toc-link"><p>React-Redux</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#react-reduxapi" class="md-toc-link">
+            <p>React-ReduxAPI</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#redux-toolkit" class="md-toc-link"><p>Redux-Toolkit</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#redux-toolkitapi" class="md-toc-link"><p>Redux-ToolkitAPI</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#configurestoreoptions" class="md-toc-link">
+            <p>configureStore(options)</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#createsliceoptions" class="md-toc-link">
+            <p>createSlice(options)</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#createreducerinitialstate-buildercallback" class="md-toc-link">
+            <p>createReducer(initialState, builderCallback)</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#createasyncthunktypeprefix-payloadcreator-options" class="md-toc-link">
+            <p>createAsyncThunk(typePrefix, payloadCreator, options)</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#createselectorselectors-selectorcreator" class="md-toc-link">
+            <p>createSelector(selectors, selectorCreator)</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#createentityadapteroptions" class="md-toc-link">
+            <p>createEntityAdapter(options)</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#redux实现redoundo" class="md-toc-link">
+            <p>Redux实现Redo/Undo</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#rtk-query" class="md-toc-link">
+            <p>RTK Query</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#redux-typscript" class="md-toc-link">
+            <p>Redux Typscript</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#reference" class="md-toc-link">
+            <p>Reference</p>
+
+          </a></div>
+</div>
+</div>
+      <a id="sidebar-toc-btn">≡</a>
+    
+    
+    
+    
+    
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  
+    </body></html>
