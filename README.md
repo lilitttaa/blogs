@@ -1,1 +1,1 @@
-The is the repo Where I store my blogs.
+The is the repo where I store my blogs.
