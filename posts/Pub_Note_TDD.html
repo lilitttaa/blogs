@@ -475,8 +475,24 @@ TDD 用真实的用例来定义行为，这比抽象的思考要容易。并且�
 <p>另外，长函数通常还会包含大量的<strong>嵌套</strong>，这使得代码的圈复杂度变得非常高。</p>
 <p><strong>圈复杂度</strong>：1976 年 12 月，Thomas J. McCabe 在他的论文《复杂性度量》中最早提出圈复杂度的概念，它代表代码中的路径数量。当只有一个条件时，代码的圈复杂度是 2，表示代码中有两种可能的路径。嵌套两个时复杂度就变为 4，以此类推，这种增长是指数级的。</p>
 <p>多数人都无法处理太多的条件判断，<strong>圈复杂度越高的代码出 bug 的概率也越高。</strong></p>
-<p>除了提取函数，<strong>多态</strong>也是一种有效降低圈复杂度的方法。甚至在激进的 OOP 布道者看来，除了构造时使用的分支，其他的都应该用多态消除。</p>
-<p>人们对付复杂性的唯一方法就是利用更高的抽象层次避免它。与操纵变量和控制流相比，如果通过组合现有的的组件来编程，我们就能做更多事。</p>
+<p>降低圈复杂度最简单的方法是拆分函数，除此之外<strong>多态</strong>也是一种有效降低圈复杂度的方法。甚至在激进的 OOP 布道者看来，除了构造时使用的分支，其他的都应该用多态消除。</p>
+<p>也可以使用<strong>return</strong>和<strong>assert</strong>，即便没有降低圈复杂度，但是减少嵌套也能有效提高代码的可读性，类似于这样：</p>
+<pre data-role="codeBlock" data-info="C++" class="language-cpp C++"><code><span class="token keyword keyword-void">void</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword keyword-if">if</span><span class="token punctuation">(</span>condition1<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword keyword-if">if</span><span class="token punctuation">(</span>condition2<span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token keyword keyword-if">if</span><span class="token punctuation">(</span><span class="token operator">!</span>condition3<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">error</span><span class="token punctuation">(</span><span class="token string">"condition3 failed"</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><p>可以改写为：</p>
+<pre data-role="codeBlock" data-info="C++" class="language-cpp C++"><code><span class="token keyword keyword-void">void</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword keyword-if">if</span><span class="token punctuation">(</span><span class="token operator">!</span>condition1<span class="token punctuation">)</span> <span class="token keyword keyword-return">return</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-if">if</span><span class="token punctuation">(</span><span class="token operator">!</span>condition2<span class="token punctuation">)</span> <span class="token keyword keyword-return">return</span><span class="token punctuation">;</span>
+  <span class="token function">assert</span><span class="token punctuation">(</span>condition3<span class="token punctuation">,</span> <span class="token string">"condition3 failed"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><p>人们对付复杂性的唯一方法就是利用更高的抽象层次避免它。与操纵变量和控制流相比，如果通过组合现有的的组件来编程，我们就能做更多事。</p>
 <p>所以，理想情况下，一个好的系统应该是由一系列的小函数组成，每个函数都有一个明确的职责，每个函数由几个清晰的步骤组成。众多的小函数促进了功能的组合和复用，构成了上层的抽象，并且<strong>良好命名的小函数形成了代码的自文档。</strong></p>
 <p><strong>"写非常小的函数——通常只有几行的长度。一个函数一旦超过 6 行，就开始散发臭味." -Martin Fowler</strong></p>
 <p>与之相对应的<strong>大类</strong>是我们下一步消除的对象，大类通常承担了过多的功能，这使得它的职责变得模糊，难以理解，也难以复用。另外大类提供了过多的上下文，既难使用，也使得多态的替换变得困难。</p>
