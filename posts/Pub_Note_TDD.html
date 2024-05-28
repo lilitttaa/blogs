@@ -346,7 +346,7 @@
 <p>我们想要实现一个 TODO 中添加一个任务的功能</p>
 <p>第一步 Red, 先写一个测试用例, 测试用例会失败:</p>
 <pre data-role="codeBlock" data-info="cpp" class="language-cpp cpp"><code><span class="token comment">// test.cpp</span>
-<span class="token keyword keyword-void">void</span> <span class="token function">Test_GivenTodoApp_WhenAddTask_ThenHasTask</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+<span class="token keyword keyword-void">void</span> <span class="token function">Test_Given_TodoApp_When_AddTask_Then_HasTask</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
   TodoApp todoApp<span class="token punctuation">;</span>
   todoApp<span class="token punctuation">.</span><span class="token function">addTask</span><span class="token punctuation">(</span><span class="token string">"task1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token function">assert</span><span class="token punctuation">(</span>todoApp<span class="token punctuation">.</span><span class="token function">hasTask</span><span class="token punctuation">(</span><span class="token string">"task1"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -356,7 +356,7 @@
 <li>测试用例的名称要能清晰的表达出测试的功能, 命名可以比较长, 建议参考 BDD 的命名规范.即: <strong>Given-When-Then</strong>(假设有一个 TodoApp, 当我添加一个任务的时候, 那么任务列表中应该有个任务)</li>
 <li>测试代码应当跟测试名表现出一种一致性. 给出一个反面例子:</li>
 </ol>
-<pre data-role="codeBlock" data-info="cpp" class="language-cpp cpp"><code><span class="token keyword keyword-void">void</span> <span class="token function">Test_GivenTodoApp_WhenAddTask_ThenHasTask</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+<pre data-role="codeBlock" data-info="cpp" class="language-cpp cpp"><code><span class="token keyword keyword-void">void</span> <span class="token function">Test_Given_TodoApp_When_AddTask_Then_HasTask</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
   TodoApp todoApp<span class="token punctuation">;</span>
   todoApp<span class="token punctuation">.</span><span class="token function">addTask</span><span class="token punctuation">(</span><span class="token string">"task1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token function">assert</span><span class="token punctuation">(</span>todoApp<span class="token punctuation">.</span><span class="token function">taskCount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 这里的表达没有跟命名产生一致性</span>
