@@ -353,13 +353,13 @@
 <span class="token punctuation">}</span>
 </code></pre><p>Red 阶段我们并没有实现 TodoApp 类, 所以测试用例会失败. 在这个阶段根据需求来编写测试码,其中最重要的有两件事:</p>
 <ol>
-<li>测试用例的名称要能清晰的表达出测试的功能, 命名可以比较长, 建议参考 BDD 的命名规范.即: <strong>Given-When-Then</strong>(假设有一个 TodoApp, 当我添加一个任务的时候, 那么任务列表中应该有个任务)</li>
+<li>测试用例的名称要能清晰的表达出测试的功能, 命名可以比较长, 建议参考 BDD 的命名规范.即: <strong>Given-When-Then</strong>(给定一个 TodoApp, 当添加一个任务, 然后任务列表中应该有个任务)</li>
 <li>测试代码应当跟测试名表现出一种一致性. 给出一个反面例子:</li>
 </ol>
 <pre data-role="codeBlock" data-info="cpp" class="language-cpp cpp"><code><span class="token keyword keyword-void">void</span> <span class="token function">Test_Given_TodoApp_When_AddTask_Then_HasTask</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
   TodoApp todoApp<span class="token punctuation">;</span>
   todoApp<span class="token punctuation">.</span><span class="token function">addTask</span><span class="token punctuation">(</span><span class="token string">"task1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token function">assert</span><span class="token punctuation">(</span>todoApp<span class="token punctuation">.</span><span class="token function">taskCount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 这里的表达没有跟命名产生一致性</span>
+  <span class="token function">assert</span><span class="token punctuation">(</span>todoApp<span class="token punctuation">.</span><span class="token function">taskCount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 对比前面，这里的表达没有跟命名产生一致性</span>
 <span class="token punctuation">}</span>
 </code></pre><p>第二步 Green, 编写实现代码, 使得测试通过:</p>
 <pre data-role="codeBlock" data-info="cpp" class="language-cpp cpp"><code><span class="token keyword keyword-class">class</span> <span class="token class-name">TodoApp</span><span class="token punctuation">{</span>
@@ -373,7 +373,7 @@
 <span class="token keyword keyword-private">private</span><span class="token operator">:</span>
   map<span class="token operator">&lt;</span>string<span class="token punctuation">,</span> <span class="token keyword keyword-bool">bool</span><span class="token operator">&gt;</span> tasks<span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code></pre><p>此时测试用例会通过, 但事情并没有结束, 还剩下非常重要的的一步—— 重构（Refactor）。重构应当保证少量多批的增量式修改, 每次重构后运行测试代码确保安全, 然后提交代码。</p>
+</code></pre><p>此时测试用例会通过, 但事情并没有结束, 还剩下非常重要的的一步——重构（Refactor）。重构应当保证少量多批的增量式修改, 每次重构后运行测试代码确保安全, 然后提交代码。</p>
 <h2 id="tdd-驱动设计">TDD 驱动设计 </h2>
 <h3 id="保持简单简单设计原则">保持简单(简单设计原则) </h3>
 <ol>
@@ -459,9 +459,10 @@ TDD 用真实的用例来定义行为，这比抽象的思考要容易。并且�
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre><p><strong>过长命名</strong>，可能意味着系统中缺乏特定的抽象，导致我们只能依靠在命名中添加额外的字段来补充上下文信息。(并不绝对，保持警惕)</p>
 <p><strong>编写注释</strong>在通常意义上都被认为是一个好习惯，然而在这里却把它列入了 Bad Smell，真正的问题在于，注释被广泛的滥用了。</p>
-<p>很多时候你会发现，注释仅仅被用来说明下面的代码做了什么，而不是为什么这么做，它只是用来掩盖代码不够清晰的坏味道。并且使用注释而不是函数，往往意味着你放弃了拆分逻辑，增加代码可重用性，以及进而建立新的抽象的机会。同时，没有及时更新的注释往往更具有误导性。</p>
+<p>很多时候你会发现，注释仅仅被用来说明下面的代码做了什么，而不是为什么这么做，它只是用来掩盖代码不够清晰的坏味道。并且使用注释而不是函数，往往意味着你放弃了拆分逻辑，增加代码可重用性，以及进而建立新的抽象的机会。过度使用注释的代码库，往往可重用性差，代码重复度高。</p>
+<p>同时，没有及时更新的注释往往更具有误导性。</p>
 <p>所以，一旦你发现存在一处注释仅用来解释一块代码做了什么，不如试试将其提炼为一个新的函数，然后为这个函数取上一个好名字。</p>
-<p>注释真正的价值应该在于对代码的补充，例如，说明当时为什么要这么做而不是那么做、标记 TODO 等等。</p>
+<p>注释真正的价值不在于表达语义，而在于补充信息，例如，说明当时为什么要这么做而不是那么做、标记 TODO 等等。</p>
 <p><strong>建议</strong>: 函数名——<strong>做什么（What）</strong>，函数体——<strong>怎样做（How）</strong>，注释——<strong>为什么这样做（Why）</strong>。</p>
 <h3 id="重复代码dry">重复代码（DRY） </h3>
 <p>DRY（Don't Repeat Yourself）：<strong>每一段知识都应该有且只有一个表述。</strong></p>
@@ -551,7 +552,7 @@ loader<span class="token punctuation">.</span><span class="token function">load<
 <p>基于这一点，正如 Object Calisthenics 中所建议的，<strong>我们应该在编码中更谨慎的使用返回值</strong>。返回值使得系统的操作和状态被分享到除了调用外的其他地方，<strong>而通过消除返回值的能力，迫使我们依靠而不是询问对象来实施行为。</strong></p>
 <p>另一个关于对象交互之间的原则是<strong>迪米特法则（The Law of Demeter）</strong>：形象的说法是，你可以玩你的玩具、你制作的玩具以及别人给你的玩具，但你永远、永远不要玩你玩具的玩具。更具体来说就是，不要连续使用多个点操作符。</p>
 <pre data-role="codeBlock" data-info="C++" class="language-cpp C++"><code>studentModel<span class="token punctuation">.</span><span class="token function">getDepartment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getHead</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getAddress</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getCity</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre><p>而是直接通过你的邻居直接完成工作。</p>
+</code></pre><p>而是直接通过你的邻居完成工作。</p>
 <pre data-role="codeBlock" data-info="C++" class="language-cpp C++"><code>studentModel<span class="token punctuation">.</span><span class="token function">printCity</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre><p>不过，这个法则存在一些争议，有人认为它会导致系统中出现大量的中介类，使得系统变得更加复杂。在使用这个法则时，你需要权衡一下。不管怎么样，看到连续的点操作符，保持警惕。</p>
 <h2 id="重构-1">重构 </h2>
