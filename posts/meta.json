@@ -1,0 +1,77 @@
+{
+  "Pub_Note_Redux.md": {
+    "title": "Redux 简单教程",
+    "created_at": "2024-03-10T06:51:41.747Z"
+  },
+  "Pub_Note_React.md": {
+    "title": "React学习笔记",
+    "created_at": "2024-03-10T06:51:28.126Z"
+  },
+  "Pub_Frame_Piano.md": {
+    "title": "钢琴学习指南",
+    "created_at": "2024-06-04T00:29:48.226Z"
+  },
+  "Pub_Note_Routine.md": {
+    "title": "Routine Of One Day",
+    "created_at": "2024-04-06T12:07:09.789Z"
+  },
+  "Pub_Note_Productivity.md": {
+    "title": "如何提高效率?",
+    "created_at": "2024-05-31T10:48:20.490Z"
+  },
+  "Pub_Frame_UnrealTest.md": {
+    "title": "Unreal 自动化测试源码分析",
+    "created_at": "2024-04-06T06:10:52.859Z"
+  },
+  "Pub_Frame_AutomationTest.md": {
+    "title": "游戏自动化测试研究",
+    "created_at": "2024-05-09T15:27:18.972Z"
+  },
+  "Pub_Frame_EnglishLearning.md": {
+    "title": "English Learning",
+    "created_at": "2024-05-21T01:17:38.097Z"
+  },
+  "Pub_Note_TDD.md": {
+    "title": "TDD 一种改变编程范式的开发方法",
+    "created_at": "2024-05-10T01:13:06.169Z"
+  },
+  "Pub_nips_2023_poster_abstract.md": {
+    "title": "NeurIPS 2023 Poster Abstracts(Reinforcement Learning)",
+    "**Author**": "Eric Eaton · Marcel Hussing · Michael Kearns · Jessica Sorrell",
+    "**Abstract**": "The replicability crisis in the social, behavioral, and data sciences has led to the formulation of algorithm frameworks for replicability --- i.e., a requirement that an algorithm produce identical outputs (with high probability) when run on two different samples from the same underlying distribution. While still in its infancy, provably replicable algorithms have been developed for many fundamental tasks in machine learning and statistics, including statistical query learning, the heavy hitters problem, and distribution testing. In this work we initiate the study of replicable reinforcement learning, providing a provably replicable algorithm for parallel value iteration, and a provably replicable version of R-Max in the episodic setting. These are the first formal replicability results for control problems, which present different challenges for replication than batch learning settings.",
+    "**Abstract(Chinese)**": "社会、行为和数据科学领域中的可复制性危机导致了针对可复制性的算法框架的制定 --- 即，要求算法在从相同潜在分布中抽取的两个不同样本上运行时产生相同输出（很高的概率）。虽然这一领域仍处于起步阶段，但已经为许多机器学习和统计学中的基本任务开发了可以证明可复制性的算法，包括统计查询学习、重点问题和分布测试。在这项工作中，我们开始研究可复制性强化学习，提供了并行价值迭代的可证复制算法，并在情景设置中提供了R-Max的可证复制版本。这是控制问题的首个正式可复制性结果，这些问题对复制提出了与批量学习设置不同的挑战。",
+    "**URL**": "https",
+    "## When Demonstrations meet Generative World Models": "A Maximum Likelihood Framework for Offline Inverse Reinforcement Learning",
+    "## Accountability in Offline Reinforcement Learning": "Explaining Decisions with a Corpus of Examples",
+    "## Train Once, Get a Family": "State-Adaptive Balances for Offline-to-Online Reinforcement Learning",
+    "## Interpretable Reward Redistribution in Reinforcement Learning": "A Causal Approach",
+    "## The Benefits of Being Distributional": "Small-Loss Bounds for Reinforcement Learning",
+    "## DIFFER": "Decomposing Individual Reward for Fair Experience Replay in Multi-Agent Reinforcement Learning",
+    "## Train Hard, Fight Easy": "Robust Meta Reinforcement Learning",
+    "## Waypoint Transformer": "Reinforcement Learning via Supervised Learning with Intermediate Targets",
+    "## Two Heads are Better Than One": "A Simple Exploration Framework for Efficient Multi-Agent Reinforcement Learning",
+    "## MAG-GNN": "Reinforcement Learning Boosted Graph Neural Network",
+    "## For SALE": "State-Action Representation Learning for Deep Reinforcement Learning",
+    "## RiskQ": "Risk-sensitive Multi-Agent Reinforcement Learning Value Factorization",
+    "## Reward-agnostic Fine-tuning": "Provable Statistical Benefits of Hybrid Reinforcement Learning",
+    "## Double Pessimism is Provably Efficient for Distributionally Robust Offline Reinforcement Learning": "Generic Algorithm and Robust Partial Coverage",
+    "## Unified Off-Policy Learning to Rank": "a Reinforcement Learning Perspective",
+    "## Seeing is not Believing": "Robust Reinforcement Learning against Spurious Correlation",
+    "## VOCE": "Variational Optimization with Conservative Estimation for Offline Safe Reinforcement Learning",
+    "## BIRD": "Generalizable Backdoor Detection and Removal for Deep Reinforcement Learning",
+    "## Tackling Heavy-Tailed Rewards in Reinforcement Learning with Function Approximation": "Minimax Optimal and Instance-Dependent Regret Bounds",
+    "## Safety Gymnasium": "A Unified Safe Reinforcement Learning Benchmark",
+    "## Semantic HELM": "A Human-Readable Memory for Reinforcement Learning",
+    "## Hokoff": "Real Game Dataset from Honor of Kings and its Offline Reinforcement Learning Benchmarks",
+    "## Decision Stacks": "Flexible Reinforcement Learning via Modular Generative Models",
+    "## RL-ViGen": "A Reinforcement Learning Benchmark for Visual Generalization",
+    "## Pitfall of Optimism": "Distributional Reinforcement Learning by Randomizing Risk Criterion",
+    "## On Sample-Efficient Offline Reinforcement Learning": "Data Diversity, Posterior Sampling and Beyond",
+    "## SMACv2": "An Improved Benchmark for Cooperative Multi-Agent Reinforcement Learning",
+    "created_at": "2024-05-15T07:14:34.105Z"
+  },
+  "Pub_Frame_ReinforcementLearning.md": {
+    "title": "The Roadmap of Reinforcement Learning",
+    "created_at": "2024-03-15T02:03:11.419Z"
+  }
+}
