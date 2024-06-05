@@ -1,41 +1,41 @@
 {
-  "Pub_Note_Redux.md": {
+  "Pub_Note_Redux": {
     "title": "Redux 简单教程",
     "created_at": "2024-03-10T06:51:41.747Z"
   },
-  "Pub_Note_React.md": {
-    "title": "React学习笔记",
+  "Pub_Note_React": {
+    "title": "React 学习笔记",
     "created_at": "2024-03-10T06:51:28.126Z"
   },
-  "Pub_Frame_Piano.md": {
+  "Pub_Frame_Piano": {
     "title": "钢琴学习指南",
     "created_at": "2024-06-04T00:29:48.226Z"
   },
-  "Pub_Note_Routine.md": {
+  "Pub_Note_Routine": {
     "title": "Routine Of One Day",
     "created_at": "2024-04-06T12:07:09.789Z"
   },
-  "Pub_Note_Productivity.md": {
+  "Pub_Note_Productivity": {
     "title": "如何提高效率?",
     "created_at": "2024-05-31T10:48:20.490Z"
   },
-  "Pub_Frame_UnrealTest.md": {
+  "Pub_Frame_UnrealTest": {
     "title": "Unreal 自动化测试源码分析",
     "created_at": "2024-04-06T06:10:52.859Z"
   },
-  "Pub_Frame_AutomationTest.md": {
+  "Pub_Frame_AutomationTest": {
     "title": "游戏自动化测试研究",
     "created_at": "2024-05-09T15:27:18.972Z"
   },
-  "Pub_Frame_EnglishLearning.md": {
+  "Pub_Frame_EnglishLearning": {
     "title": "English Learning",
     "created_at": "2024-05-21T01:17:38.097Z"
   },
-  "Pub_Note_TDD.md": {
+  "Pub_Note_TDD": {
     "title": "TDD 一种改变编程范式的开发方法",
     "created_at": "2024-05-10T01:13:06.169Z"
   },
-  "Pub_nips_2023_poster_abstract.md": {
+  "Pub_nips_2023_poster_abstract": {
     "title": "NeurIPS 2023 Poster Abstracts(Reinforcement Learning)",
     "**Author**": "Eric Eaton · Marcel Hussing · Michael Kearns · Jessica Sorrell",
     "**Abstract**": "The replicability crisis in the social, behavioral, and data sciences has led to the formulation of algorithm frameworks for replicability --- i.e., a requirement that an algorithm produce identical outputs (with high probability) when run on two different samples from the same underlying distribution. While still in its infancy, provably replicable algorithms have been developed for many fundamental tasks in machine learning and statistics, including statistical query learning, the heavy hitters problem, and distribution testing. In this work we initiate the study of replicable reinforcement learning, providing a provably replicable algorithm for parallel value iteration, and a provably replicable version of R-Max in the episodic setting. These are the first formal replicability results for control problems, which present different challenges for replication than batch learning settings.",
@@ -70,7 +70,7 @@
     "## SMACv2": "An Improved Benchmark for Cooperative Multi-Agent Reinforcement Learning",
     "created_at": "2024-05-15T07:14:34.105Z"
   },
-  "Pub_Frame_ReinforcementLearning.md": {
+  "Pub_Frame_ReinforcementLearning": {
     "title": "The Roadmap of Reinforcement Learning",
     "created_at": "2024-03-15T02:03:11.419Z"
   }
