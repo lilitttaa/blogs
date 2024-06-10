@@ -50,3 +50,32 @@
   .lightText {
     color: #999;
   }
+
+  .imgText{
+	top: 4rem;
+	position: absolute; /* 文本绝对定位 */
+	color: rgb(0, 0, 0); /* 文本颜色，根据背景调整 */
+	font-size: 2rem; /* 文本大小 */
+	text-align: center; /* 文本水平居中 */
+  }
+
+  .img{
+	width: 60%;
+	height: 30rem;
+	background-image: url('/images/bg.png');
+	object-fit: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	overflow: hidden;
+	object-position: 0 100%;
+  }
+
+  .imgContainer{
+	height: 30rem;
+	width: 100%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	background-image: linear-gradient(to right, rgb(240,240,240), rgb(239,238,241));
+	user-select: none;
+  }
