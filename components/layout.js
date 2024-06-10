@@ -1,19 +1,20 @@
 import Head from 'next/head'
-import styles from './layout.module.css'
-import utilStyles from '../styles/utils.module.css'
+// import styles from './layout.module.css'
+// import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
+import Header from '../components/header';
 
 const name = 'Mr. Robot'
 export const siteTitle = 'Next.js Sample Website'
 
 export default function Layout({ children, home }) {
   return (
-    <div className={styles.container}>
+    <div className={''}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="Learn how to build a personal website using Next.js"
+          content="Mr. Robert's personal blog."
         />
         <meta
           property="og:image"
@@ -24,41 +25,42 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={styles.header}>
+	  <Header>…</Header>
+      {/* <header className={''}>
         {home ? (
           <>
             <img
               src="/images/profile.png"
-              className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
+              className={`${''} ${''}`}
               alt={name}
             />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <h1 className={''}>{name}</h1>
           </>
         ) : (
           <>
             <Link href="/">
             <img
                   src="/images/profile.png"
-                  className={`${styles.headerImage} ${utilStyles.borderCircle}`}
+                  className={`${''} ${''}`}
                   alt={name}
                 />
             </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link className={utilStyles.colorInherit} href="/">
+            <h2 className={''}>
+              <Link className={''} href="/">
                 {name}
               </Link>
             </h2>
           </>
         )}
-      </header>
+      </header> */}
       <main>{children}</main>
-      {!home && (
-        <div className={styles.backToHome}>
+      {/* {!home && (
+        <div className={''}>
           <Link href="/">
           ← Back to home
           </Link>
         </div>
-      )}
+      )} */}
     </div>
   )
 }

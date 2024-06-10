@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-html,
+/* html,
 body {
   padding: 0;
   margin: 0;
@@ -38,4 +38,4 @@ ul {
 button {
   padding: 0.5rem 1rem;
   font-weight: bold;
-}
+} */

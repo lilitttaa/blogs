@@ -1,4 +1,4 @@
-import Head from 'next/head';
+// import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import Link from 'next/link';
 import Layout, { siteTitle } from '../components/layout';
@@ -9,7 +9,6 @@ export default function Home({ allPostsData }) {
   console.log(allPostsData)
   return (
     <Layout home>
-      {/* <Head>…</Head> */}
       {/* <section className={utilStyles.headingMd}>…</section> */}
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blogs</h2>
