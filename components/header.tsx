@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import React from 'react'
 export default function Header () {
   return (
     <header className='flex flex-row pl-[24%] pr-80 pt-4 pb-4 justify-start'>

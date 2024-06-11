@@ -7,8 +7,15 @@ import { getSortedPostsData } from '../lib/posts'
 import { useRouter } from 'next/router'
 import Avatar from '@mui/material/Avatar'
 import Divider from '@mui/material/Divider'
+import { GetStaticProps } from 'next'
 
-export default function Home ({ allPostsData }) {
+export default function Home({ allPostsData }: {
+  allPostsData: {
+    date: string
+    title: string
+    id: string
+  }[]
+}) {
   console.log(allPostsData)
   const router = useRouter()
   return (
@@ -70,7 +77,16 @@ export default function Home ({ allPostsData }) {
   )
 }
 
-export async function getStaticProps () {
+// export async function getStaticProps () {
+//   const allPostsData = getSortedPostsData()
+//   return {
+//     props: {
+//       allPostsData
+//     }
+//   }
+// }
+
+export const getStaticProps: GetStaticProps = async (context) => {
   const allPostsData = getSortedPostsData()
   return {
     props: {

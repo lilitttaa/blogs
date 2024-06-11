@@ -6,7 +6,7 @@ import { marked } from 'marked'
 
 const postsDirectory = path.join(process.cwd(), 'posts')
 
-const htmlFilter = (fileNames) => {
+const htmlFilter = (fileNames:string[]) => {
   return fileNames.filter(fileName =>
     fileName.endsWith('.html')
   )
@@ -26,7 +26,8 @@ export function getSortedPostsData () {
 
     return {
       id,
-      title:title
+      title: title,
+      date:1 // TODO: get date from file
     }
   })
   // Sort posts by date
@@ -39,7 +40,7 @@ export function getSortedPostsData () {
   })
 }
 
-export async function getPostData (id) {
+export async function getPostData (id:string) {
   const fullPath = path.join(postsDirectory, `${id}.html`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
 
