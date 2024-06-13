@@ -33,7 +33,7 @@ export default function Home({ allPostsData }: {
             {allPostsData.map(({ id, date, title }) => (
               <li key={id} className='h-[30rem] flex flex-row '>
                 <img
-                  src='/images/bg.png'
+                  src={'/images/'+id+'/cover.png'}
                   className='object-cover h-full w-[46%] cursor-pointer'
                   onClick={() => router.push(`/posts/${id}`)}
                 ></img>
