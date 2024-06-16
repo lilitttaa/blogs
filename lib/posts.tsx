@@ -19,7 +19,8 @@ export function getSortedPostsData () {
   const metaInfo = JSON.parse(metaInfoJsonStr)
   const allPostsData = htmlFilter(fileNames).map(fileName => {
     const id = fileName.replace(/\.html$/, '')
-    const title = metaInfo[id].title
+    const title:string = metaInfo[id].title
+	const cover:string = metaInfo[id].cover || ''
     const createdAt = metaInfo[id].created_at
     const fullPath = path.join(postsDirectory, fileName)
     // const fileContents = fs.readFileSync(fullPath, 'utf8')
@@ -27,6 +28,7 @@ export function getSortedPostsData () {
     return {
       id,
       title: title,
+	  cover: cover,
       date:1 // TODO: get date from file
     }
   })

@@ -14,6 +14,7 @@ export default function Home({ allPostsData }: {
     date: string
     title: string
     id: string
+	cover:string
   }[]
 }) {
   console.log(allPostsData)
@@ -30,10 +31,10 @@ export default function Home({ allPostsData }: {
       <main>
         <section className='pt-8 pl-[21%] pr-[21%] w-full'>
           <ul className='flex flex-col gap-8'>
-            {allPostsData.map(({ id, date, title }) => (
+            {allPostsData.map(({ id, date, title,cover }) => (
               <li key={id} className='h-[30rem] flex flex-row '>
                 <img
-                  src={'/images/'+id+'/cover.png'}
+                  src={'/images/covers/'+cover}
                   className='object-cover h-full w-[46%] cursor-pointer'
                   onClick={() => router.push(`/posts/${id}`)}
                 ></img>

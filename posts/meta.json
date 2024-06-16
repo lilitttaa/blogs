@@ -1,90 +1,113 @@
 {
   "Pub_Note_Redux": {
     "title": "Redux 简单教程",
+    "cover": "web_design.png",
     "created_at": "2024-06-04T23:46:12.430Z"
   },
   "Pub_Note_React": {
     "title": "React 学习笔记",
+    "cover": "web_design.png",
     "created_at": "2024-06-05T12:50:25.800Z"
   },
   "Pub_Note_UnderstandingTheMusicStaff": {
     "title": "Understanding The Music Staff（认识五线谱）",
+    "cover": "music_staff.png",
     "created_at": "2024-06-12T00:12:53.421Z"
   },
   "Pub_Note_Syncopation": {
     "title": "Syncopation（切分）",
+    "cover": "music_staff.png",
     "created_at": "2024-06-14T00:38:53.795Z"
   },
   "Pub_Note_Swing": {
     "title": "Swing（摇摆）",
+    "cover": "music_staff.png",
     "created_at": "2024-06-14T00:38:53.812Z"
   },
   "Pub_Note_MusicTheoryRoadMap": {
     "title": "Music Theory Road Map",
+    "cover": "music_staff.png",
     "created_at": "2024-05-01T10:43:00.112Z"
   },
   "Pub_Note_MajorScales": {
     "title": "Major Scales（大调音阶）",
+    "cover": "music_staff.png",
     "created_at": "2024-06-12T00:12:51.786Z"
   },
   "Pub_Note_EnharmonicEquivalents": {
     "title": "Enharmoic Equivalents（同音异名）",
+    "cover": "music_staff.png",
     "created_at": "2024-06-10T01:37:03.062Z"
   },
   "Pub_Note_CountRhythms": {
     "title": "Count Rhythms（节奏记数）",
+    "cover": "music_staff.png",
     "created_at": "2024-06-14T00:38:53.796Z"
   },
   "Pub_Note_ChromaticScales": {
     "title": "Chromatic Scales（半音音阶）",
+    "cover": "music_staff.png",
     "created_at": "2024-06-12T00:12:51.731Z"
   },
   "Pub_Frame_Piano": {
     "title": "钢琴学习指南",
+    "cover": "piano.png",
     "created_at": "2024-06-12T00:12:50.736Z"
   },
   "Pub_Note_TheMapOfMathematics": {
     "title": "The Map of Mathematics（数学地图）",
+    "cover": "math.png",
     "created_at": "2024-06-14T13:50:17.312Z"
   },
   "Pub_Note_Routine": {
     "title": "Routine Of One Day",
+    "cover": "life.png",
     "created_at": "2024-06-04T23:46:16.512Z"
   },
   "Pub_Note_Productivity": {
     "title": "如何提高效率?",
+    "cover": "run.png",
     "created_at": "2024-06-04T23:46:16.961Z"
   },
   "Pub_Frame_UnrealTest": {
     "title": "Unreal 自动化测试源码分析",
+    "cover": "game.png",
     "created_at": "2024-06-05T12:50:25.383Z"
   },
   "Pub_Note_LarianCinematics": {
     "title": "A Top-Down Look at Our Bottom-Up Approach in 'Baldur's Gate 3'",
+    "cover": "game.png",
     "created_at": "2024-06-14T13:50:18.402Z"
   },
   "Pub_Frame_AutomationTest": {
     "title": "游戏自动化测试研究",
+    "cover": "game.png",
     "created_at": "2024-06-04T23:46:16.985Z"
   },
   "Pub_Frame_EnglishLearning": {
     "title": "English Learning",
+    "cover": "english.png",
     "created_at": "2024-06-05T12:50:30.626Z"
   },
   "Pub_Note_TDD": {
     "title": "TDD 一种改变编程范式的开发方法",
+    "cover": "program.png",
+    "desc": "...",
     "created_at": "2024-06-04T23:46:16.973Z"
   },
   "Pub_Note_Traits": {
     "title": "什么是Traits？",
+    "cover": "program.png",
     "created_at": "2024-06-09T12:51:32.491Z"
   },
   "Pub_Note_MoveSemantics": {
     "title": "C++ 移动语义",
+    "cover": "program.png",
     "created_at": "2024-06-06T13:57:46.160Z"
   },
   "Pub_nips_2023_poster_abstract": {
     "title": "NeurIPS 2023 Poster Abstracts(Reinforcement Learning)",
+    "cover": "robot.png",
     "**Author**": "Eric Eaton · Marcel Hussing · Michael Kearns · Jessica Sorrell",
     "**Abstract**": "The replicability crisis in the social, behavioral, and data sciences has led to the formulation of algorithm frameworks for replicability --- i.e., a requirement that an algorithm produce identical outputs (with high probability) when run on two different samples from the same underlying distribution. While still in its infancy, provably replicable algorithms have been developed for many fundamental tasks in machine learning and statistics, including statistical query learning, the heavy hitters problem, and distribution testing. In this work we initiate the study of replicable reinforcement learning, providing a provably replicable algorithm for parallel value iteration, and a provably replicable version of R-Max in the episodic setting. These are the first formal replicability results for control problems, which present different challenges for replication than batch learning settings.",
     "**Abstract(Chinese)**": "社会、行为和数据科学领域中的可复制性危机导致了针对可复制性的算法框架的制定 --- 即，要求算法在从相同潜在分布中抽取的两个不同样本上运行时产生相同输出（很高的概率）。虽然这一领域仍处于起步阶段，但已经为许多机器学习和统计学中的基本任务开发了可以证明可复制性的算法，包括统计查询学习、重点问题和分布测试。在这项工作中，我们开始研究可复制性强化学习，提供了并行价值迭代的可证复制算法，并在情景设置中提供了R-Max的可证复制版本。这是控制问题的首个正式可复制性结果，这些问题对复制提出了与批量学习设置不同的挑战。",
@@ -120,6 +143,7 @@
   },
   "Pub_Frame_ReinforcementLearning": {
     "title": "The Roadmap of Reinforcement Learning",
+    "cover": "robot.png",
     "created_at": "2024-06-04T23:46:16.030Z"
   }
 }
