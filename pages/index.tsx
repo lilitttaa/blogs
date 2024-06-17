@@ -3,18 +3,24 @@ import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import Layout, { siteTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
-import { getSortedPostsData } from '../lib/posts'
+import { getCollectionsInfo, getSortedPostsData } from '../lib/posts'
 import { useRouter } from 'next/router'
 import Avatar from '@mui/material/Avatar'
 import Divider from '@mui/material/Divider'
 import { GetStaticProps } from 'next'
 
-export default function Home({ allPostsData }: {
+export default function Home({ allPostsData,collectionsInfo }: {
   allPostsData: {
     date: string
     title: string
     id: string
 	cover:string
+  }[],
+  collectionsInfo: {
+	Name: string
+	Description: string
+	Cover: string,
+	List:string[]
   }[]
 }) {
   console.log(allPostsData)
@@ -31,12 +37,13 @@ export default function Home({ allPostsData }: {
       <main>
         <section className='pt-8 pl-[21%] pr-[21%] w-full'>
           <ul className='flex flex-col gap-8'>
-            {allPostsData.map(({ id, date, title,cover }) => (
-              <li key={id} className='h-[30rem] flex flex-row '>
+            {collectionsInfo.map(({ Name, Description, Cover }) => (
+              <li className='h-[30rem] flex flex-row '>
                 <img
-                  src={'/images/covers/'+cover}
+                  src={'/images/covers/'+Cover}
                   className='object-cover h-full w-[46%] cursor-pointer'
-                  onClick={() => router.push(`/posts/${id}`)}
+                  onClick={() => router.push(`/collections/${Name}`)
+				}
                 ></img>
 
                 <div className='flex flex-col border-[1px] w-full border-gray-300 pt-4 pb-8 pl-12 pr-12 gap-2'>
@@ -48,11 +55,11 @@ export default function Home({ allPostsData }: {
                     </div>
                   </div>
                   <div className='h-[60%]'>
-                    <Link href={`/posts/${id}`}>
+                    <Link href={`/collections/${Name}`}>
                       <div className='flex flex-col gap-4 items-start'>
-                        <div className='text-3xl font-serif'>{title}</div>
+                        <div className='text-3xl font-serif'>{Name}</div>
                         <div className='text-xl font-serif'>
-                          {'……'}
+                          {Description}
                         </div>
                       </div>
                     </Link>
@@ -60,7 +67,7 @@ export default function Home({ allPostsData }: {
                   <div className='h-[10%]'>
                     <div className='left-10 bg-slate-500 w-full h-[0.05rem]'></div>
 					<div className=' text-lg font-serif'>
-                          {'TAGS: #tag1 #tag2 #tag3'}
+                          {/* {'TAGS: #tag1 #tag2 #tag3'} */}
                         </div>
                   </div>
                 </div>
@@ -89,9 +96,11 @@ export default function Home({ allPostsData }: {
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const allPostsData = getSortedPostsData()
+  const collectionsInfo = getCollectionsInfo()
   return {
     props: {
-      allPostsData
+      allPostsData,
+	  collectionsInfo
     }
   }
 }

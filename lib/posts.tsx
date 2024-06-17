@@ -42,6 +42,12 @@ export function getSortedPostsData () {
   })
 }
 
+export function getCollectionsInfo(){
+	const collectionsInfoJson = fs.readFileSync(path.join(postsDirectory, 'Collections.json'), 'utf8')
+	const collectionsInfo = JSON.parse(collectionsInfoJson)
+	return collectionsInfo
+}
+
 export async function getPostData (id:string) {
   const fullPath = path.join(postsDirectory, `${id}.html`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
