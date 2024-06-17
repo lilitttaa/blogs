@@ -1,0 +1,18 @@
+[
+	{
+		"Name": "Music Theory",
+		"Description": "Music theory notes",
+		"List": [
+			"Note_ChromaticsScales",
+			"Note_CountRhythms",
+			"Note_EnharmonicEquivalents",
+			"Note_MajorScales",
+			"Note_MusicTheoryRoadMap",
+			"Note_HowToMemorizeGuitarFretboard",
+			"Note_Swing",
+			"Note_Syncopation",
+			"Note_UnderstandingTheMusicStaff"
+		],
+		"Cover": "music_staff.png"
+	}
+]
