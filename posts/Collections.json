@@ -1,17 +1,18 @@
 [
 	{
-		"Name": "Music Theory",
-		"Description": "Music theory notes",
+		"Name": "Music",
+		"Description": "Music",
 		"List": [
-			"Note_ChromaticScales",
-			"Note_CountRhythms",
-			"Note_EnharmonicEquivalents",
-			"Note_MajorScales",
+			"Note_Piano",
 			"Note_MusicTheoryRoadMap",
-			"Note_HowToMemorizeGuitarFretboard",
-			"Note_Swing",
+			"Note_UnderstandingTheMusicStaff",
+			"Note_ChromaticsScales",
+			"Note_MajorScales",
+			"Note_EnharmonicEquivalents",
+			"Note_CountRhythms",
 			"Note_Syncopation",
-			"Note_UnderstandingTheMusicStaff"
+			"Note_Swing",
+			"Note_HowToMemorizeGuitarFretboard"
 		],
 		"Cover": "music_staff.png"
 	}
