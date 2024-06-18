@@ -3,6 +3,7 @@ import path from 'path'
 import matter from 'gray-matter'
 
 import { marked } from 'marked'
+import { Name2Id } from './utils'
 
 const postsDirectory = path.join(process.cwd(), 'posts')
 
@@ -57,9 +58,7 @@ export function getCollectionsInfo(){
 	return collectionsInfo
 }
 
-const Name2Id = (Name: string) => {
-  return Name.replace(/ /g, '-').toLowerCase()
-}
+
 
 export function getCollectionData(id: string) {
   const collectionsInfoJson = fs.readFileSync(path.join(postsDirectory, 'Collections.json'), 'utf8')

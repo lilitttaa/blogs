@@ -8,10 +8,7 @@ import { useRouter } from 'next/router'
 import Avatar from '@mui/material/Avatar'
 import Divider from '@mui/material/Divider'
 import { GetStaticProps } from 'next'
-
-const Name2Id = (Name: string) => {
-  return Name.replace(/ /g, '-').toLowerCase()
-}
+import { Name2Id } from '../lib/utils'
 
 export default function Home({ allPostsData,collectionsInfo }: {
   allPostsData: {
