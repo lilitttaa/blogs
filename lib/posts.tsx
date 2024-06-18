@@ -6,20 +6,29 @@ import { marked } from 'marked'
 
 const postsDirectory = path.join(process.cwd(), 'posts')
 
-const htmlFilter = (fileNames:string[]) => {
+const postFilter = (fileNames:string[]) => {
   return fileNames.filter(fileName =>
-    fileName.endsWith('.html')
+    fileName.endsWith('.md')
   )
 }
+
+const getPostFullPath = (id: string) => {
+  return path.join(postsDirectory, `${id}.md`)
+}
+
+const removeExt=(fileName: string) => {
+  return fileName.replace(/\.md$/, '')
+}
+
 
 export function getSortedPostsData () {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory)
   const metaInfoJsonStr = fs.readFileSync(path.join(postsDirectory, 'meta.json'), 'utf8')
   const metaInfo = JSON.parse(metaInfoJsonStr)
-  const allPostsData = htmlFilter(fileNames).map(fileName => {
-    const id = fileName.replace(/\.html$/, '')
-    const title:string = metaInfo[id].title
+  const allPostsData = postFilter(fileNames).map(fileName => {
+    const id = removeExt(fileName)
+    const title: string = metaInfo[id].title
 	const cover:string = metaInfo[id].cover || ''
     const createdAt = metaInfo[id].created_at
     const fullPath = path.join(postsDirectory, fileName)
@@ -76,8 +85,10 @@ export function getAllCollectionIds() {
   })
 }
 
+
+
 export async function getPostData (id:string) {
-  const fullPath = path.join(postsDirectory, `${id}.html`)
+  const fullPath = getPostFullPath(id)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
 
   // Combine the data with the id and contentHtml
@@ -91,10 +102,10 @@ export async function getPostData (id:string) {
 
 export function getAllPostIds () {
   const fileNames = fs.readdirSync(postsDirectory)
-  return htmlFilter(fileNames).map(fileName => {
+  return postFilter(fileNames).map(fileName => {
     return {
       params: {
-        id: fileName.replace(/\.html$/, '')
+        id: removeExt(fileName)
       }
     }
   })

@@ -36,10 +36,10 @@ export default function Post({ postData }: {
         <div className={utilStyles.lightText}>
           {/* <Date dateString={postData.date} /> */}
         </div>
-        {/* <div id='md'>
-        <Markdown >{markdownTestStr}</Markdown>
-        </div> */}
-        <div className={utilStyles.md} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <div id='md'>
+        <Markdown >{postData.contentHtml}</Markdown>
+        </div>
+        {/* <div className={utilStyles.md} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} /> */}
         
       </article>
     </Layout>
