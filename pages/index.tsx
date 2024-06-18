@@ -30,7 +30,7 @@ export default function Home({ allPostsData,collectionsInfo }: {
     <Layout home>
       <div className={`${utilStyles.imgContainer}`}>
         <span className='text-3xl font-serif absolute top-8'>
-          WELCOME TO MR.ROBERT'S BLOG
+          WELCOME TO MR.ROBOT'S BLOG
         </span>
         <img src='/images/bg.png' className={`${utilStyles.img}`}></img>
       </div>
