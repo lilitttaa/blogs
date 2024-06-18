@@ -57,7 +57,6 @@ export default function Post ({
     return mdStr
   }
 
-
   return (
     <Layout>
       <Head>
@@ -68,59 +67,76 @@ export default function Post ({
         {/* <div className={utilStyles.lightText}>
           <Date dateString={postData.date} />
         </div> */}
-        <div className='pt-12 pl-[25%] pr-[25%]'>
-          <div id='md'>
-            <Markdown
-              className={''}
-              components={{
-                h1: ({ ...data }): JSX.Element => (
-                  <h1 className='text-4xl font-black font-serif mt-2 mb-2' {...data} />
-                ),
-                h2: ({ ...data }): JSX.Element => (
-                  <h2 className='text-2xl font-black font-serif mt-2 mb-2' {...data} />
-                ),
-                h3: ({ ...data }): JSX.Element => (
-                  <h3 className='text-xl font-black font-serif mt-2 mb-2' {...data} />
-                ),
-                h4: ({ ...data }): JSX.Element => (
-                  <h4 className='text-lg font-black font-serif mt-2 mb-2' {...data} />
-                ),
-                p: ({ ...data }): JSX.Element => (
-                  <p className='text-lg font-serif text-justify mt-2 mb-2' {...data} />
-                ),
-                img: ({ ...data }): JSX.Element => (
-                  <img alt={'img'} className='w-[70%]'  {...data} />
-                ),
-                a: ({ ...data }): JSX.Element => (
-                  <a className='text-gray-500 underline' {...data} />
-                ),
-                ul: ({ ...data }): JSX.Element => (
-                  <ul className='list-disc list-inside' {...data} />
-                ),
-                li: ({ ...data }): JSX.Element => (
-                  <li className='text-lg font-serif' {...data} />
-                ),
-                code({  className, children, ...data }): JSX.Element {
-                  const match = /language-(\w+)/.exec(className || '')
-                  return  match ? (
-                    <SyntaxHighlighter
-                      //@ts-ignore
-                      style={oneLight}
-                      language={match[1]}
-                      PreTag="div"
-                      children={String(children).replace(/\n$/, '')}
+        <div className='w-full'>
+          <div className='pt-12 pl-[25%] pr-[25%]'>
+            <div id='md'>
+              <Markdown
+                className={''}
+                components={{
+                  h1: ({ ...data }): JSX.Element => (
+                    <h1
+                      className='text-4xl font-black font-serif mt-4 mb-4'
                       {...data}
                     />
-                  ) : (
-                    <code className={className} {...data}>
-                      {children}
-                    </code>
-                  );
-                }
-              }}
-            >
-              {remapImgSrc(postData.id, removeMeta(postData.contentHtml))}
-            </Markdown>
+                  ),
+                  h2: ({ ...data }): JSX.Element => (
+                    <h2
+                      className='text-2xl font-black font-serif mt-4 mb-4'
+                      {...data}
+                    />
+                  ),
+                  h3: ({ ...data }): JSX.Element => (
+                    <h3
+                      className='text-xl font-black font-serif mt-4 mb-4'
+                      {...data}
+                    />
+                  ),
+                  h4: ({ ...data }): JSX.Element => (
+                    <h4
+                      className='text-lg font-black font-serif mt-4 mb-4'
+                      {...data}
+                    />
+                  ),
+                  p: ({ ...data }): JSX.Element => (
+                    <p
+                      className='text-lg font-serif text-justify mt-2 mb-2'
+                      {...data}
+                    />
+                  ),
+                  img: ({ ...data }): JSX.Element => (
+                    <img alt={'img'} className='w-[70%]' {...data} />
+                  ),
+                  a: ({ ...data }): JSX.Element => (
+                    <a className='text-gray-500 underline' {...data} />
+                  ),
+                  ul: ({ ...data }): JSX.Element => (
+                    <ul className='list-disc list-inside' {...data} />
+                  ),
+                  li: ({ ...data }): JSX.Element => (
+                    <li className='text-lg font-serif' {...data} />
+                  ),
+                  code ({ className, children, ...data }): JSX.Element {
+                    const match = /language-(\w+)/.exec(className || '')
+                    return match ? (
+                      <SyntaxHighlighter
+                        //@ts-ignore
+                        style={oneLight}
+                        language={match[1]}
+                        PreTag='div'
+                        children={String(children).replace(/\n$/, '')}
+                        {...data}
+                      />
+                    ) : (
+                      <code className={className} {...data}>
+                        {children}
+                      </code>
+                    )
+                  }
+                }}
+              >
+                {remapImgSrc(postData.id, removeMeta(postData.contentHtml))}
+              </Markdown>
+            </div>
           </div>
         </div>
 
