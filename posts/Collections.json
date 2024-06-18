@@ -3,7 +3,7 @@
 		"Name": "Music Theory",
 		"Description": "Music theory notes",
 		"List": [
-			"Note_ChromaticsScales",
+			"Note_ChromaticScales",
 			"Note_CountRhythms",
 			"Note_EnharmonicEquivalents",
 			"Note_MajorScales",

@@ -48,6 +48,34 @@ export function getCollectionsInfo(){
 	return collectionsInfo
 }
 
+const Name2Id = (Name: string) => {
+  return Name.replace(/ /g, '-').toLowerCase()
+}
+
+export function getCollectionData(id: string) {
+  const collectionsInfoJson = fs.readFileSync(path.join(postsDirectory, 'Collections.json'), 'utf8')
+  const collectionsInfo = JSON.parse(collectionsInfoJson)
+  const collection = collectionsInfo.find((collection: {
+    Name: string
+  }) => Name2Id(collection.Name) === id)
+  if(!collection) throw new Error('Collection not found')
+  return collection
+}
+
+export function getAllCollectionIds() {
+  const collectionsInfoJson = fs.readFileSync(path.join(postsDirectory, 'Collections.json'), 'utf8')
+  const collectionsInfo = JSON.parse(collectionsInfoJson)
+  return collectionsInfo.map((collection: {
+    Name: string
+  }) => {
+    return {
+      params: {
+        id: Name2Id(collection.Name)
+      }
+    }
+  })
+}
+
 export async function getPostData (id:string) {
   const fullPath = path.join(postsDirectory, `${id}.html`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')

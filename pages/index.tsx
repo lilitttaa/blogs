@@ -9,6 +9,10 @@ import Avatar from '@mui/material/Avatar'
 import Divider from '@mui/material/Divider'
 import { GetStaticProps } from 'next'
 
+const Name2Id = (Name: string) => {
+  return Name.replace(/ /g, '-').toLowerCase()
+}
+
 export default function Home({ allPostsData,collectionsInfo }: {
   allPostsData: {
     date: string
@@ -42,7 +46,7 @@ export default function Home({ allPostsData,collectionsInfo }: {
                 <img
                   src={'/images/covers/'+Cover}
                   className='object-cover h-full w-[46%] cursor-pointer'
-                  onClick={() => router.push(`/collections/${Name}`)
+                  onClick={() => router.push(`/collections/${Name2Id(Name)}`)
 				}
                 ></img>
 
@@ -55,7 +59,7 @@ export default function Home({ allPostsData,collectionsInfo }: {
                     </div>
                   </div>
                   <div className='h-[60%]'>
-                    <Link href={`/collections/${Name}`}>
+                    <Link href={`/collections/${Name2Id(Name)}`}>
                       <div className='flex flex-col gap-4 items-start'>
                         <div className='text-3xl font-serif'>{Name}</div>
                         <div className='text-xl font-serif'>
