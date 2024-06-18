@@ -3,16 +3,16 @@
 		"Name": "Music",
 		"Description": "Music",
 		"List": [
-			"Note_Piano",
-			"Note_MusicTheoryRoadMap",
-			"Note_UnderstandingTheMusicStaff",
-			"Note_ChromaticsScales",
-			"Note_MajorScales",
-			"Note_EnharmonicEquivalents",
-			"Note_CountRhythms",
-			"Note_Syncopation",
-			"Note_Swing",
-			"Note_HowToMemorizeGuitarFretboard"
+			"Pub_Frame_Piano",
+			"Pub_Note_MusicTheoryRoadMap",
+			"Pub_Note_UnderstandingTheMusicStaff",
+			"Pub_Note_ChromaticScales",
+			"Pub_Note_MajorScales",
+			"Pub_Note_EnharmonicEquivalents",
+			"Pub_Note_CountRhythms",
+			"Pub_Note_Syncopation",
+			"Pub_Note_Swing",
+			"Pub_Note_HowToMemorizeGuitarFretboard"
 		],
 		"Cover": "music_staff.png"
 	}

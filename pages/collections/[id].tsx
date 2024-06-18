@@ -41,7 +41,7 @@ export default function Collection ({
                     </div>
                   </div> */}
                   <div className=''>
-                    <Link href={`/posts/Pub_${item}`}>
+                    <Link href={`/posts/${item}`}>
                       <div className='text-2xl font-serif'>{item}</div>
                     </Link>
                   </div>
