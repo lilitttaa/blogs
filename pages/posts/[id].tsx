@@ -8,6 +8,7 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 
 export default function Post({ postData }: {
   postData: {
+    id:string
     title: string
     date: string
     contentHtml: string
@@ -26,6 +27,26 @@ export default function Post({ postData }: {
   }
   \`\`\`
 `
+  
+  const remapImgSrc = (id:string,mdStr: string) => {
+    // 将所有图片url添加images/前缀
+    const reg = /!\[.*\]\((.*)\)/g
+    const regResult = mdStr.match(reg)
+    console.log(regResult)
+    if (regResult) {
+      for (let i = 0; i < regResult.length; i++) {
+        const imgSrc = regResult[i].match(/\((.*)\)/)
+        if (imgSrc) {
+          const newImgSrc = `/images/${id}/` + imgSrc[1]
+          mdStr = mdStr.replace(imgSrc[1], newImgSrc)
+        }
+      }
+    }
+    return mdStr
+    
+    
+  }
+  
   return (
     <Layout>
       <Head>
@@ -37,7 +58,7 @@ export default function Post({ postData }: {
           {/* <Date dateString={postData.date} /> */}
         </div>
         <div id='md'>
-        <Markdown >{postData.contentHtml}</Markdown>
+        <Markdown >{remapImgSrc(postData.id,postData.contentHtml)}</Markdown>
         </div>
         {/* <div className={utilStyles.md} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} /> */}
         
