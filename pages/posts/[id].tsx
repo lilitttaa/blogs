@@ -97,6 +97,9 @@ export default function Post ({
                 ul: ({ ...data }): JSX.Element => (
                   <ul className='list-disc list-inside' {...data} />
                 ),
+                li: ({ ...data }): JSX.Element => (
+                  <li className='text-lg font-serif' {...data} />
+                ),
                 code({  className, children, ...data }): JSX.Element {
                   const match = /language-(\w+)/.exec(className || '')
                   return  match ? (
