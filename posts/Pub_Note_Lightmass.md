@@ -1,5 +1,5 @@
 ---
-title: Lightmass Source Code Analyis
+title: Lightmass Source Code Analysis
 ---
 
 ## Questions?
