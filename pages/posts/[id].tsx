@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Layout from '../../components/layout'
-import { getAllPostIds, getPostData } from '../../lib/posts'
+import { getAllPostIds, getMetaInfo, getPostData } from '../../lib/posts'
 import Date from '../../components/date'
 import Markdown from 'react-markdown'
 import utilStyles from '../../styles/utils.module.css'
@@ -8,13 +8,19 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { oneLight } from 'react-syntax-highlighter/dist/cjs/styles/prism'
 export default function Post ({
-  postData
+  postData,
+  meta
 }: {
   postData: {
     id: string
     title: string
     date: string
     contentHtml: string
+  },
+  meta:{
+	title:string
+	cover:string
+	created_at:string
   }
 }) {
   const markdownTestStr = `
@@ -70,36 +76,34 @@ export default function Post ({
         <div className='w-full'>
           <div className='pt-12 pb-12 pl-[25%] pr-[25%]'>
             <div id='md'>
+				<div className='text-4xl font-black font-sans mt-4 mb-8'>{meta.title}</div>
               <Markdown
                 className={''}
                 components={{
-                  h1: ({ ...data }): JSX.Element => (
-                    <h1
-                      className='text-4xl font-black font-serif mt-4 mb-4'
-                      {...data}
-                    />
-                  ),
-                  h2: ({ ...data }): JSX.Element => (
+                  h2: ({children, ...data }): JSX.Element => (
                     <h2
-                      className='text-2xl font-black font-serif mt-4 mb-4'
+                      className='text-2xl font-black font-sans mt-4 mb-4'
                       {...data}
-                    />
+                    >
+						{'# ' + children}
+					</h2>
                   ),
-                  h3: ({ ...data }): JSX.Element => (
+                  h3: ({children, ...data }): JSX.Element => (
                     <h3
-                      className='text-xl font-black font-serif mt-4 mb-4'
+                      className='text-xl font-black font-sans mt-4 mb-4'
+					  
                       {...data}
-                    />
+                    >{'# ' + children}</h3>
                   ),
-                  h4: ({ ...data }): JSX.Element => (
+                  h4: ({children, ...data }): JSX.Element => (
                     <h4
-                      className='text-lg font-black font-serif mt-4 mb-4'
+                      className='text-lg font-black font-sans mt-4 mb-4'
                       {...data}
-                    />
+                    >{'# ' + children}</h4>
                   ),
                   p: ({ ...data }): JSX.Element => (
                     <p
-                      className='text-lg font-serif text-justify mt-2 mb-2'
+                      className='text-lg font-normal text-justify mt-2 mb-2'
                       {...data}
                     />
                   ),
@@ -175,9 +179,11 @@ export const getStaticProps: GetStaticProps = async context => {
   if (!context.params) throw new Error('No params found')
   if (!context.params.id) throw new Error('No id found')
   const postData = await getPostData(context.params.id as string)
+	const metaInfo = getMetaInfo()
   return {
     props: {
-      postData
+      postData,
+	  meta:metaInfo[context.params.id as string]
     }
   }
 }
