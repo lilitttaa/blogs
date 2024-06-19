@@ -92,7 +92,7 @@ Boom's Taxonomy，学习方法分高低，由低到高：
 
 ### How I Became Fluent in English...FAST
 
-https://www.youtube.com/watch?v=9nnRLBW76TU
+<https://www.youtube.com/watch?v=9nnRLBW76TU>
 
 1. 多说
 2. message focused learning，学好英语的关键是从 form focused learning 转变为 message focused learning。即，更多的关注表达的意思，而不是语法。

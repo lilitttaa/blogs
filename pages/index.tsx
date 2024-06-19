@@ -36,7 +36,7 @@ export default function Home({ allPostsData,collectionsInfo }: {
       </div>
       {/* <section className={utilStyles.headingMd}>…</section> */}
       <main>
-        <section className='pt-8 pl-[21%] pr-[21%] w-full'>
+        <section className='pt-8 pb-8 pl-[21%] pr-[21%] w-full'>
           <ul className='flex flex-col gap-8'>
             {collectionsInfo.map(({ Name, Description, Cover }) => (
               <li className='h-[30rem] flex flex-row '>
