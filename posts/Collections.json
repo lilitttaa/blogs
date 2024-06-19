@@ -1,7 +1,7 @@
 [
 	{
 		"Name": "Music",
-		"Description": "Music",
+		"Description": "This is a collection about music theory from scratch...",
 		"List": [
 			"Pub_Frame_Piano",
 			"Pub_Note_MusicTheoryRoadMap",
@@ -12,8 +12,58 @@
 			"Pub_Note_CountRhythms",
 			"Pub_Note_Syncopation",
 			"Pub_Note_Swing",
-			"Pub_Note_HowToMemorizeGuitarFretboard"
+			"Pub_Note_HowToMemorizeGuitarFretboard",
+			"Pub_Note_PianoVSGuitar"
 		],
 		"Cover": "music_staff.png"
+	},
+	{
+		"Name": "Web Frontend",
+		"Description": "...",
+		"List": [
+			"Pub_Note_Redux",
+			"Pub_Note_React"
+		],
+		"Cover": "web_design.png"
+	},
+	{
+		"Name": "Mathematics",
+		"Description": "...",
+		"List": [
+			"Pub_Note_TheMapOfMathematics"
+		],
+		"Cover": "math.png"
+	},
+	{
+		"Name": "Daily Life",
+		"Description": "...",
+		"List": [
+			"Pub_Note_Routine",
+			"Pub_Note_Productivity"
+		],
+		"Cover": "life.png"
+	},
+	{
+		"Name": "English",
+		"Description": "...",
+		"List": [
+			"Pub_Frame_EnglishLearning"
+		],
+		"Cover": "english.png"
+	},
+	{
+		"Name": "Program",
+		"Description": "...",
+		"List": [
+			"Pub_Frame_UnrealTest",
+			"Pub_Note_LarianCinematics",
+			"Pub_Frame_AutomationTest",
+			"Pub_Note_TDD",
+			"Pub_Note_Traits",
+			"Pub_Note_MoveSemantics",
+			"Pub_nips_2023_poster_abstract",
+			"Pub_Frame_ReinforcementLearning"
+		],
+		"Cover": "program.png"
 	}
 ]
