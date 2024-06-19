@@ -4,6 +4,7 @@ import {
   getAllCollectionIds,
   getAllPostIds,
   getCollectionData,
+  getMetaInfo,
   getPostData
 } from '../../lib/posts'
 import utilStyles from '../../styles/utils.module.css'
@@ -13,12 +14,20 @@ import Avatar from '@mui/material/Avatar'
 import Link from 'next/link'
 
 export default function Collection ({
-  collectionData
+  collectionData,
+  metaInfo
 }: {
   collectionData: {
     Name: string
     Description: string
     List: string[]
+  },
+  metaInfo:{
+	[key:string]:{
+		title:string
+		cover:string
+		created_at:string
+	}
   }
 }) {
   console.log(collectionData)
@@ -42,7 +51,9 @@ export default function Collection ({
                   </div> */}
                   <div className=''>
                     <Link href={`/posts/${item}`}>
-                      <div className='text-2xl font-serif'>{item}</div>
+                      <div className='text-2xl font-serif'>{
+						metaInfo[item].title
+					  }</div>
                     </Link>
                   </div>
                   {/* <div className='h-[10%]'>
@@ -95,9 +106,11 @@ export const getStaticProps: GetStaticProps = async context => {
   console.log(context.params.id)
   if (!context.params.id) throw new Error('No id found')
   const collectionData = await getCollectionData(context.params.id as string)
+	const metaInfo = getMetaInfo()
   return {
     props: {
-      collectionData
+      collectionData,
+	  metaInfo
     }
   }
 }

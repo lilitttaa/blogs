@@ -52,6 +52,12 @@ export function getSortedPostsData () {
   })
 }
 
+export function getMetaInfo(){
+	const metaInfoJsonStr = fs.readFileSync(path.join(postsDirectory, 'meta.json'), 'utf8')
+	const metaInfo = JSON.parse(metaInfoJsonStr)
+	return metaInfo
+}
+
 export function getCollectionsInfo(){
 	const collectionsInfoJson = fs.readFileSync(path.join(postsDirectory, 'Collections.json'), 'utf8')
 	const collectionsInfo = JSON.parse(collectionsInfoJson)
