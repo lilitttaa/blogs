@@ -68,7 +68,7 @@ export default function Post ({
           <Date dateString={postData.date} />
         </div> */}
         <div className='w-full'>
-          <div className='pt-12 pl-[25%] pr-[25%]'>
+          <div className='pt-12 pb-12 pl-[25%] pr-[25%]'>
             <div id='md'>
               <Markdown
                 className={''}

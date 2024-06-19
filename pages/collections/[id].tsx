@@ -28,8 +28,8 @@ export default function Collection ({
         <title>{collectionData.Name}</title>
       </Head>
       <main>
-        <section className='pt-8 pl-[21%] pr-[21%] w-full'>
-          <ul className='flex flex-col gap-4'>
+        <section className='pt-8 pb-8 pl-[21%] pr-[21%] w-full'>
+          <ul className='flex flex-col gap-4 border-[0.01rem]'>
             {collectionData.List.map(item => (
               <li className=' flex flex-row '>
                 <div className='flex flex-col border-[1px] w-full border-gray-300 pt-4 pb-4 pl-12 pr-12 '>
