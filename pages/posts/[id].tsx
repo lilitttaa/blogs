@@ -7,6 +7,7 @@ import utilStyles from '../../styles/utils.module.css'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { oneLight } from 'react-syntax-highlighter/dist/cjs/styles/prism'
+import { ReactNode } from 'react'
 export default function Post ({
   postData,
   meta
@@ -63,6 +64,21 @@ export default function Post ({
     return mdStr
   }
 
+const text2Spans = (pChild: ReactNode) => {
+	if(typeof pChild !== 'string'){
+		return pChild
+	}
+	const text = pChild as string
+	console.log('text:', text)	
+	// 根据换行符分割文本
+	const lines = text.split('\n')
+	const spans = []
+	for (let i = 0; i < lines.length; i++) {
+		spans.push(<p key={i} className='text-lg font-serif mt-1 mb-1'>{lines[i]}</p>)
+	}
+	return spans
+}
+
   return (
     <Layout>
       <Head>
@@ -74,7 +90,7 @@ export default function Post ({
           <Date dateString={postData.date} />
         </div> */}
         <div className='w-full'>
-          <div className='pt-12 pb-12 pl-[25%] pr-[25%]'>
+          <div className='pt-4 pb-12 pl-[25%] pr-[25%]'>
             <div id='md'>
 				<div className='text-4xl font-black font-sans mt-4 mb-8'>{meta.title}</div>
               <Markdown
@@ -101,14 +117,14 @@ export default function Post ({
                       {...data}
                     >{'# ' + children}</h4>
                   ),
-                  p: ({ ...data }): JSX.Element => (
-                    <p
-                      className='text-lg font-normal text-justify mt-2 mb-2'
+                  p: ({children, ...data }): JSX.Element => (
+                    <div
+                      className='mt-2 mb-2'
                       {...data}
-                    />
+                    >{text2Spans(children)}</div>
                   ),
                   img: ({ ...data }): JSX.Element => (
-                    <img alt={'img'} className='w-[70%]' {...data} />
+                    <img alt={'img'} className='w-[100%] mt-2 mb-2' {...data} />
                   ),
                   a: ({ ...data }): JSX.Element => (
                     <a className='text-gray-500 underline' {...data} />
@@ -117,7 +133,7 @@ export default function Post ({
                     <ul className='list-disc list-inside' {...data} />
                   ),
                   li: ({ ...data }): JSX.Element => (
-                    <li className='text-lg font-serif' {...data} />
+                    <li className='text-lg font-serif mt-2 mb-2' {...data} />
                   ),
                   code ({ className, children, ...data }): JSX.Element {
                     const match = /language-(\w+)/.exec(className || '')
