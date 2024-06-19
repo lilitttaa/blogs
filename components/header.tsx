@@ -8,7 +8,7 @@ export default function Header () {
           <div>HOME</div>
         </Link>
         <Link href={`/`}>
-          <div>BLOG</div>
+          <div>COLLECTION</div>
         </Link>
         <Link href={`/portfolio`}>
           <div>PORTFOLIO</div>
