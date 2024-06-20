@@ -56,7 +56,9 @@
 			"Pub_Note_Swing",
 			"Pub_Note_HowToMemorizeGuitarFretboard",
 			"Pub_Note_PianoVSGuitar",
-			"Pub_Note_MeterAndTimeSignatures"
+			"Pub_Note_MeterAndTimeSignatures",
+			"Pub_Note_RhythmPractice",
+			"Pub_Note_LeftRightCoordinatePractice"
 		],
 		"Cover": "music_staff.png"
 	},
