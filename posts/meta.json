@@ -24,6 +24,10 @@
     "cover": "music_staff.png",
     "created_at": "2024-06-14T00:38:53.812Z"
   },
+  "Pub_Note_RhythmPractice": {
+    "title": "Rhythm Practice（节奏练习）",
+    "created_at": "2024-06-20T00:45:24.021Z"
+  },
   "Pub_Note_PianoVSGuitar": {
     "title": "Piano vs Guitar",
     "created_at": "2024-06-17T12:59:33.253Z"
@@ -34,7 +38,7 @@
     "created_at": "2024-05-01T10:43:00.112Z"
   },
   "Pub_Note_MeterAndTimeSignatures": {
-    "title": "Meter And Time Signatures（",
+    "title": "Meter And Time Signatures（拍子与拍号）",
     "created_at": "2024-06-19T00:36:10.637Z"
   },
   "Pub_Note_MajorScales": {

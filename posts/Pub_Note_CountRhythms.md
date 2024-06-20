@@ -2,6 +2,7 @@
 title: Count Rhythms（节奏记数）
 cover: music_staff.png
 ---
+https://www.youtube.com/watch?v=lK0V54_E0bk
 
 ## Count Rhythms（节奏记数）
 

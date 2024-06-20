@@ -1,6 +1,7 @@
 ---
-title: Meter And Time Signatures（
+title: Meter And Time Signatures（拍子与拍号）
 ---
+https://www.youtube.com/watch?v=OgFy_TAFsV0
 
 ![Alt text](image.png)
 

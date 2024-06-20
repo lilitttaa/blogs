@@ -2,6 +2,7 @@
 title: How to Memorize Guitar Fretboard（如何记忆吉他指板）
 cover: music_staff.png
 ---
+https://www.youtube.com/watch?v=jTCyiq5mjn8
 
 ## 认识Guitar Fretboard（吉他指板）
 

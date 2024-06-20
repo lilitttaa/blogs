@@ -2,6 +2,8 @@
 title: Piano vs Guitar
 ---
 
+https://www.youtube.com/watch?v=pyqT2YE-oeU
+
 在吉他弦上移动One Fret（一品）等价于在钢琴上移动One Key，都移动了一个Semitone：
 ![alt text](image.png)
 

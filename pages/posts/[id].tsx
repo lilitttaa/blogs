@@ -8,6 +8,8 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { oneLight } from 'react-syntax-highlighter/dist/cjs/styles/prism'
 import { ReactNode } from 'react'
+import { remark } from 'remark'
+import remarkGfm from 'remark-gfm'
 export default function Post ({
   postData,
   meta
@@ -95,6 +97,7 @@ const text2Spans = (pChild: ReactNode) => {
 				<div className='text-4xl font-black font-sans mt-4 mb-8'>{meta.title}</div>
               <Markdown
                 className={''}
+				remarkPlugins={[remarkGfm]}
                 components={{
                   h2: ({children, ...data }): JSX.Element => (
                     <h2
