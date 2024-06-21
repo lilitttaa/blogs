@@ -3,8 +3,6 @@ title: English Learning
 cover: english.png
 ---
 
-# EnglishLeanring
-
 ## 从话剧中学习
 
 ### 话剧片段

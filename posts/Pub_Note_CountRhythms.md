@@ -2,7 +2,11 @@
 title: Count Rhythms（节奏记数）
 cover: music_staff.png
 ---
-https://www.youtube.com/watch?v=lK0V54_E0bk
+- [Always Count Rhythms Like THIS for Best Accuracy](https://www.youtube.com/watch?v=lK0V54_E0bk)
+- [Counting Complicated Rhythms On Piano](https://www.youtube.com/watch?v=KNeEZhpUY9o)
+- [The Best Way to Count Quarter and Eighth Triplets](https://www.youtube.com/watch?v=fApgTGloMFA)
+- [Counting Rests Made Simple for Beginners](https://www.youtube.com/watch?v=7WSBhck4Mq0)
+- [Fastest Way To Improve Your Rhythm (Piano Lesson)](https://www.youtube.com/watch?v=KKNaT-XYKmw)
 
 ## Count Rhythms（节奏记数）
 

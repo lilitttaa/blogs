@@ -4,8 +4,6 @@ cover: game.png
 ---
 [TOC]
 
-# Unreal Test
-
 ## 分析问题
 
 熟悉Unreal中的Test框架,并在这个基础上进行修改和扩展
@@ -22,6 +20,7 @@ cover: game.png
    3. 因此重要类也分为三类,通用,前端,后端
 2. 测试条目在前端是以ReportRoot表示的树状结构进行存储的,其中每个叶子节点是一个测试条目, 前端的主要行为很大程度上都是对这个树状结构的操作
 3. 自动化测试中的延迟测试的机制是, 每次只会检查头部命令, 如果头部命令没有完成,则不会执行下一个命令.
+
 ## 问题
 
 ### 测试条目是怎么注册上去的?
@@ -99,6 +98,7 @@ FAutomationTestFramework::InternalStopTest
 1. 相关配置
 
 ### IMPLEMENT_SIMPLE_AUTOMATION_TEST
+
 ### IMPLEMENT_COMPLEX_AUTOMATION_TEST
 
 ### 前端

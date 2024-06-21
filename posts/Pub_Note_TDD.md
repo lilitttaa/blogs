@@ -5,8 +5,6 @@ desc: ...
 ---
 [TOC]
 
-# TDD 一种改变编程范式的开发方法
-
 ## 什么是 TDD(Test Driven Development)
 
 TDD 用最简单的话来说,就是实现之前先写测试.

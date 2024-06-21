@@ -5,10 +5,10 @@ cover: run.png
 
 ## 博主推荐
 
-Huberman 切片：[Brain Mindset](https://www.youtube.com/@brain.mindset)
-TED-Ed: [TED-Ed](https://www.youtube.com/@TEDEd)
-各种各样的科学访谈：[The Diary Of A CEO](https://www.youtube.com/@TheDiaryOfACEO)
-Glucose Revolution 作者，饮食与效率: [Glucose Revolution](https://www.youtube.com/@GlucoseRevolution)
+- Huberman 切片：[Brain Mindset](https://www.youtube.com/@brain.mindset)
+- TED-Ed: [TED-Ed](https://www.youtube.com/@TEDEd)
+- 各种各样的科学访谈：[The Diary Of A CEO](https://www.youtube.com/@TheDiaryOfACEO)
+- Glucose Revolution 作者，饮食与效率: [Glucose Revolution](https://www.youtube.com/@GlucoseRevolution)
 
 ## 记录
 
@@ -69,7 +69,7 @@ Glucose Revolution 作者，饮食与效率: [Glucose Revolution](https://www.yo
 
 ### 10 Life-Changing Glucose Hacks: easy tricks that will change how you feel forever | Episode 3 of 18
 
-https://www.youtube.com/watch?v=1PkshTBkWZ8
+<https://www.youtube.com/watch?v=1PkshTBkWZ8>
 
 视频介绍了 10 个 hacks 用来降低 Glucose Spike（葡萄糖峰值）：
 
@@ -87,4 +87,4 @@ https://www.youtube.com/watch?v=1PkshTBkWZ8
 
 ### Beat Acne & Prevent Wrinkles: How Food impacts our Skin | Episode 18 of 18
 
-https://www.youtube.com/watch?v=jbVhiAk1DC0
+<https://www.youtube.com/watch?v=jbVhiAk1DC0>

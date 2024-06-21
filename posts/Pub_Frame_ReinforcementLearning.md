@@ -2,8 +2,6 @@
 title: The Roadmap of Reinforcement Learning
 cover: robot.png
 ---
-# Reinforcement Learning
-
 ## Academic Conference
 
 - [AAAI]<https://aitopics.org/search>

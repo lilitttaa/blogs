@@ -2,8 +2,9 @@
 title: Routine Of One Day
 cover: life.png
 ---
-# Routine Of One Day
-https://www.bilibili.com/video/BV1Cy421v7tj
+
+<https://www.bilibili.com/video/BV1Cy421v7tj>
+
 - **早起补水**（Hydrate）
 - **出去接受10-30分钟的阳光**
 因为每24小时都会有一个皮质醇的高峰，这个高峰会让你的身体更加清醒，所以希望这个时间能出现在更早的时候，如果这个时间出现较晚，你会开始出现抑郁的迹象。另外，早上接受阳光也会启动一个节奏，让褪黑素在16小时后分泌，这样晚上睡觉的时候会更容易入睡。
