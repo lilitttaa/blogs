@@ -58,7 +58,8 @@
 			"Pub_Note_PianoVSGuitar",
 			"Pub_Note_MeterAndTimeSignatures",
 			"Pub_Note_RhythmPractice",
-			"Pub_Note_LeftRightCoordinatePractice"
+			"Pub_Note_LeftRightCoordinatePractice",
+			"Pub_Note_ReadSheetMusicFast"
 		],
 		"Cover": "music_staff.png"
 	},
