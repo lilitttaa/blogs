@@ -25,6 +25,8 @@ cover: piano.png
 
 https://www.musictheory.net/exercises
 
+https://tonesavvy.com/music-practice-exercises/
+
 随机生成Notes：https://random.bretpimentel.com/
 
 听节奏练习：https://www.therhythmtrainer.com/
