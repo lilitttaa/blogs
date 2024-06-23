@@ -41,17 +41,18 @@ cover: english.png
 
 ### 推荐
 
-- 生活播客：[Girls Gone Bible](https://www.youtube.com/@GirlsGoneBible)
+- 生活播客: [Girls Gone Bible](https://www.youtube.com/@GirlsGoneBible)
 - TED-Ed: [TED-Ed](https://www.youtube.com/@TEDEd)
-- 英语学习方法：[KevinFeng 冯凯文](https://www.youtube.com/@IAmKevinFeng)
-- 多语言学习者，英语与效率博主：[Ruri Ohama](https://www.youtube.com/@ruriohama)
-- 英语与效率博主：[Elizabeth Filips](https://www.youtube.com/@elizabethfilips)
-- Huberman 切片：[Brain Mindset](https://www.youtube.com/@brain.mindset)
-- 使用卡通的科普博主：[Sprouts](https://www.youtube.com/@sprouts)
-- 多语言学习者：[Veronika's Language Diaries](https://www.youtube.com/@veronika_languagediaries)
-- English Speak 方法：[EngFluent](https://www.youtube.com/@EngfluentPlus)
-- 科普博主：[Kurzgesagt](https://www.youtube.com/@Kurzgesagt)
+- 英语学习方法: [KevinFeng 冯凯文](https://www.youtube.com/@IAmKevinFeng)
+- 多语言学习者，英语与效率博主: [Ruri Ohama](https://www.youtube.com/@ruriohama)
+- 英语与效率博主: [Elizabeth Filips](https://www.youtube.com/@elizabethfilips)
+- Huberman 切片: [Brain Mindset](https://www.youtube.com/@brain.mindset)
+- 使用卡通的科普博主: [Sprouts](https://www.youtube.com/@sprouts)
+- 多语言学习者: [Veronika's Language Diaries](https://www.youtube.com/@veronika_languagediaries)
+- English Speak 方法: [EngFluent](https://www.youtube.com/@EngfluentPlus)
+- 科普博主: [Kurzgesagt](https://www.youtube.com/@Kurzgesagt)
 - 英语 Speaking: [English Fluency Journey](https://www.youtube.com/@EnglishFluencyJourney)
+- 英语学习方法的博主: [Zoe.languages](https://www.youtube.com/@zoe.languages)
 - 各种学科的通俗易懂的讲解: [CrashCourse](https://www.youtube.com/@crashcourse)
 - 各种知识的普及: [Vox](https://www.youtube.com/@Vox)
 - 文学、历史、哲学、心理学: [Fiction Beast](https://www.youtube.com/@Fiction_Beast)
@@ -62,7 +63,8 @@ cover: english.png
 - 哲学专业学生 Talk: [Celine Marie](https://www.youtube.com/@celine_marie)
 - Physics for Kids: [Physics for Kids](https://www.youtube.com/playlist?list=PLFMuuV5u2TAv6ySNBG0DG-ITNQS8XYqcv)
 - Educational platform for kids: [Smile and Learn - English ](https://www.youtube.com/@SmileandLearnEnglish/playlists)
-
+- The School of Life: [The School of Life](https://www.youtube.com/@theschooloflifetv)
+- English with Cambridge: [English with Cambridge](https://www.youtube.com/@cambridgeenglishtv)
 ### 从英文白痴到流利，你可以复制的逆袭方式（过程全记录）
 
 <https://www.youtube.com/watch?v=b4vbS4mJfRY>
