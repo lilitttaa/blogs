@@ -46,6 +46,7 @@
 		"Description": "This is a collection about music theory from scratch...",
 		"List": [
 			"Pub_Frame_Piano",
+			"Pub_Note_PianoPractice",
 			"Pub_Note_MusicTheoryRoadMap",
 			"Pub_Note_UnderstandingTheMusicStaff",
 			"Pub_Note_ChromaticScales",
@@ -59,7 +60,9 @@
 			"Pub_Note_MeterAndTimeSignatures",
 			"Pub_Note_RhythmPractice",
 			"Pub_Note_LeftRightCoordinatePractice",
-			"Pub_Note_ReadSheetMusicFast"
+			"Pub_Note_ReadSheetMusicFast",
+			"Pub_Note_KeySignature",
+			"Pub_Note_ScaleDegree"
 		],
 		"Cover": "music_staff.png"
 	},

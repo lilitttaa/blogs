@@ -69,11 +69,12 @@ DK 古典音乐大百科: https://book.douban.com/subject/30339303/
 - [ANDREW HUANG](https://www.youtube.com/@andrewhuang)
 - Music Theory: [Music Matters](https://www.youtube.com/@MusicMattersGB)
 - A Pianist: [Learn Piano with Jazer Lee](https://www.youtube.com/@jazerleepiano)
+- A Pianist: [Heart of the Keys](https://www.youtube.com/@heartofthekeys)
 - 钢琴相关: [Pianote](https://www.youtube.com/@PianoteOfficial)
 - 音乐家采访，音乐分析: [Rick Beato](https://www.youtube.com/@RickBeato)
 - 各种音乐教程，编曲、练耳、乐理等: [Max Konyi](https://www.youtube.com/@maxkonyi/featured)
 - 读谱练节奏: [Sight Read Drums](https://www.youtube.com/@SightReadDrums)
-- 乐理、练习技巧: [Brad Harrison Music](https://www.youtube.com/@BradHarrison)
+- 乐理、练习技巧（讲的很清楚）: [Brad Harrison Music](https://www.youtube.com/@BradHarrison)
 - 钢琴教程、练习方法: [Piano Lessons On The Web](https://www.youtube.com/@LessonsOnTheWeb)
 
 ## 专有名词
@@ -489,3 +490,4 @@ f-p: forte-piano, 第一遍强，第二遍弱
 和弦整齐性练习
 学习和弦理论
 渐弱渐慢练习
+
