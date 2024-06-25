@@ -73,12 +73,29 @@ FConsoleCommandExecutor::Exec(const wchar_t *)
 
 主要有两条路径：
 
-- FShaderCompileUtilities::ExecuteShaderCompileJob
-- ProcessCompilationJob
+- FShaderCompileUtilities::ExecuteShaderCompileJob（引擎编译）
+- ProcessCompilationJob（ShaderCompileWorker 编译）
 
-FShaderCompileUtilities::ExecuteShaderCompileJob 从 FShaderCompileThreadRunnableBase::CompilingLoop 而来
+第一条路径，首先会添加编译 Job 到 FShaderCompilingManager 的 Jobs 中去，调用栈如下：
 
-ProcessCompilationJob 的调用栈如下：
+```cpp
+FGlobalShaderTypeCompiler::BeginCompileShader(const FGlobalShaderType *, int, EShaderPlatform, EShaderPermutationFlags, TArray<…> &) ShaderCompiler.cpp:5163
+VerifyGlobalShaders(EShaderPlatform, const ITargetPlatform *, bool, const TArray<…> *, const TArray<…> *) ShaderCompiler.cpp:5318
+[Inlined] RecompileGlobalShaders::__l5::<lambda_cbd342a1...>::operator()(Type) ShaderCompiler.cpp:4951
+[Inlined] UMaterialInterface::IterateOverActiveFeatureLevels(<lambda_cbd342a1...>) MaterialInterface.h:873
+RecompileGlobalShaders() ShaderCompiler.cpp:4947
+RecompileShaders(const wchar_t *, FOutputDevice &) ShaderCompiler.cpp:5081
+[Inlined] UEngine::HandleRecompileShadersCommand(const wchar_t *, FOutputDevice &) UnrealEngine.cpp:4966
+```
+
+这些 Job 会在 FShaderCompilingManager 预先创建好的 FShaderCompileThreadRunnableBase 中被执行：
+
+```cpp
+FShaderCompileThreadRunnable::CompilingLoop() ShaderCompiler.cpp:2267
+FShaderCompileThreadRunnableBase::Run() ShaderCompiler.cpp:1722
+```
+
+第二条路径，ProcessCompilationJob 的调用栈如下：
 
 ```cpp
 FShaderFormatD3D::CompileShader(FName, const FShaderCompilerInput &, FShaderCompilerOutput &, const FString &) ShaderFormatD3D.cpp:50
