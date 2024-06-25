@@ -48,8 +48,8 @@ Shader 分为 Global 和 Material 两种
 
 主要有两条路径：
 
-1. FShaderCompileUtilities::ExecuteShaderCompileJob
-2. ProcessCompilationJob
+- FShaderCompileUtilities::ExecuteShaderCompileJob
+- ProcessCompilationJob
 
 FShaderCompileUtilities::ExecuteShaderCompileJob 从 FShaderCompileThreadRunnableBase::CompilingLoop 而来
 
