@@ -11,7 +11,8 @@
 			"Pub_Note_MoveSemantics",
 			"Pub_nips_2023_poster_abstract",
 			"Pub_Frame_ReinforcementLearning",
-			"Pub_Note_Lightmass"
+			"Pub_Note_Lightmass",
+			"Pub_Note_ShaderCompile"
 		],
 		"Cover": "program.png"
 	},
@@ -62,7 +63,8 @@
 			"Pub_Note_LeftRightCoordinatePractice",
 			"Pub_Note_ReadSheetMusicFast",
 			"Pub_Note_KeySignature",
-			"Pub_Note_ScaleDegree"
+			"Pub_Note_ScaleDegree",
+			"Pub_Note_IntervalAndEmotion"
 		],
 		"Cover": "music_staff.png"
 	},

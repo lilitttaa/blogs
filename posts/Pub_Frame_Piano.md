@@ -76,6 +76,7 @@ DK 古典音乐大百科: https://book.douban.com/subject/30339303/
 - 读谱练节奏: [Sight Read Drums](https://www.youtube.com/@SightReadDrums)
 - 乐理、练习技巧（讲的很清楚）: [Brad Harrison Music](https://www.youtube.com/@BradHarrison)
 - 钢琴教程、练习方法: [Piano Lessons On The Web](https://www.youtube.com/@LessonsOnTheWeb)
+- 作曲: [Composing Academy](https://www.youtube.com/@composingacademy8270/videos)
 
 ## 专有名词
 
