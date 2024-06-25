@@ -65,6 +65,7 @@ cover: english.png
 - Educational platform for kids: [Smile and Learn - English ](https://www.youtube.com/@SmileandLearnEnglish/playlists)
 - The School of Life: [The School of Life](https://www.youtube.com/@theschooloflifetv)
 - English with Cambridge: [English with Cambridge](https://www.youtube.com/@cambridgeenglishtv)
+
 ### 从英文白痴到流利，你可以复制的逆袭方式（过程全记录）
 
 <https://www.youtube.com/watch?v=b4vbS4mJfRY>
@@ -98,3 +99,7 @@ Boom's Taxonomy，学习方法分高低，由低到高：
 2. message focused learning，学好英语的关键是从 form focused learning 转变为 message focused learning。即，更多的关注表达的意思，而不是语法。
 3. Speak english regularly，如果身边没有 native speaker，可以用相机自己录。
 4. 推荐一本英语学习的书：An Introduction to Foreign Language Learning and Teaching
+
+## Cambridge English 分级学习
+
+https://www.cambridgeenglish.org/supporting-learners/?level=basic
