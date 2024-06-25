@@ -25,6 +25,21 @@ title: Unreal Shader Compile
 
 ## Development Environment
 
+### 使用 ShaderCompileWorker 调试编译
+
+要使用 ShaderCompileWorker，首先需要启用中间着色器转储生成调试文件：
+在 ConsoleVariables.ini 中启用 r.ShaderDevelopmentMode=1 。
+
+然后重新编译 Shader，你就能在 Saved 下找到 ShaderDebugInfo 了：
+![alt text](image-3.png)
+
+配置 ShaderCompileWorker 的 Configuration，然后用 Debug 打开：
+![alt text](image-4.png)
+配置参数： {FilePath} -directcompile -format={Format} -{ps/cs/vs/gs/hs/ds} -entry={EntryFunctionName}
+
+这样你就可以在 FShaderFormatVulkan::CompileShader 函数里打断点了。
+![alt text](image-5.png)
+
 ### 编译 Shader 的 Cmd
 
 ```
@@ -49,21 +64,6 @@ FConsoleCommandExecutor::Exec(const wchar_t *)
 例如在执行命令行 RecompileShaders All 后：
 ![alt text](image-1.png)
 首先会通过调用 RecompileGlobalShaders 编译 Global Shader，然后通过 Material->PostEditChange 编译 Material Shader
-
-### 使用 ShaderCompileWorker 调试编译
-
-要使用 ShaderCompileWorker，首先需要启用中间着色器转储生成调试文件：
-在 ConsoleVariables.ini 中启用 r.ShaderDevelopmentMode=1 。
-
-然后重新编译 Shader，你就能在 Saved 下找到 ShaderDebugInfo 了：
-![alt text](image-3.png)
-
-配置 ShaderCompileWorker 的 Configuration，然后用 Debug 打开：
-![alt text](image-4.png)
-配置参数： {FilePath} -directcompile -format={Format} -{ps/cs/vs/gs/hs/ds} -entry={EntryFunctionName}
-
-这样你就可以在 FShaderFormatVulkan::CompileShader 函数里打断点了。
-![alt text](image-5.png)
 
 ## Inside The System
 
@@ -108,4 +108,4 @@ IShaderFormat 决定了使用哪个着色器格式，也决定了是否使用 hl
 - [调试着色器编译过程](https://docs.unrealengine.com/4.27/zh-CN/ProgrammingAndScripting/Rendering/ShaderDevelopment/ShaderCompileProcess/)
 - [HLSL 交叉编译器](https://docs.unrealengine.com/4.27/zh-CN/ProgrammingAndScripting/Rendering/ShaderDevelopment/HLSLCrossCompiler/)
 - [Shader 变体大杀器：Specialization constants](https://blog.uwa4d.com/archives/USparkle_SpecializationConstants.html)
-- [剖析虚幻渲染体系（08）- Shader体系](https://www.cnblogs.com/timlly/p/15092257.html)
+- [剖析虚幻渲染体系（08）- Shader 体系](https://www.cnblogs.com/timlly/p/15092257.html)
