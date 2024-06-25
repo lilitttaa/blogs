@@ -45,3 +45,10 @@ Compound Meter 可以看作是 Simple Meter 的细分，上面的数代表 Beat 
 ![Alt text](image-3.png)
 每个 Meature 有多少 Beat，上面的数 /3。例如：9/8 拍，有 9 个 Beat Division，3 个 Beat。
 每个 Beat 包含 3 个 Beat Division，所以每个 Beat 的时值是 3 \* Beat Division 的时值。例如：9/8 拍，每个 Beat Division 是 Eighth Note，所以每个 Beat 是 Dotted Quarter Note（附点四分音符）。
+
+## 补充
+![alt text](image-6.png)
+上面的Time Signature 叫做 Common Time（常用拍号），等同于 4/4 拍。
+
+![alt text](image-7.png)
+这个叫做 Cut Common Time（削减常用拍号），等同于 2/2 拍。

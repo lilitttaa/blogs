@@ -65,7 +65,8 @@
 			"Pub_Note_ReadSheetMusicFast",
 			"Pub_Note_KeySignature",
 			"Pub_Note_ScaleDegree",
-			"Pub_Note_IntervalAndEmotion"
+			"Pub_Note_IntervalAndEmotion",
+			"Pub_Note_Triads"
 		],
 		"Cover": "music_staff.png"
 	},
