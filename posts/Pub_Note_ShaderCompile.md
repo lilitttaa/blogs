@@ -27,6 +27,8 @@ title: Unreal Shader Compile
 
 ### 使用 ShaderCompileWorker 调试编译
 
+ShaderCompileWorker 是一个独立的进程，用于调试 UE4 的 Shader 编译过程。
+
 要使用 ShaderCompileWorker，首先需要启用中间着色器转储生成调试文件：
 在 ConsoleVariables.ini 中启用 r.ShaderDevelopmentMode=1 。
 
@@ -113,6 +115,15 @@ ShaderCompileWorker -> ShaderCompileCommon -> hlslcc
 
 FGlobalShaderTypeCompiler::BeginCompileShader
 FGlobalShaderTypeCompiler::BeginCompileShaderPipeline
+
+### UE 4.27 的 Shader 跨平台编译流程是怎样的？
+
+这是 4.25 的跨平台流程：
+![alt text](image-9.png)
+
+### 什么是 Uber Shader？UE 是怎么实现的？
+
+Uber Shader：同一个 shader 源文件包含了大量的宏定义，这些宏定义根据不同的值可以组合成各种各样的目标代码。
 
 ## Important Entities
 
