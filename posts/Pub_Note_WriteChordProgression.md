@@ -34,6 +34,6 @@ title: Write Chord Progression（和弦进行）
 有了这个公式，你已经可以开始试着演奏了，像这样一边演奏分解和弦，一边只弹和弦的 Root
 ![Alt text](image-4.png)
 
-G 和弦也是同样的道理：
+G Major 也是同样的道理：
 ![Alt text](image-7.png)
 ![Alt text](image-6.png)
