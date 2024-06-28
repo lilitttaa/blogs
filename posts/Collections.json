@@ -68,7 +68,8 @@
 			"Pub_Note_IntervalAndEmotion",
 			"Pub_Note_Triads",
 			"Pub_Note_MovableChord",
-			"Pub_Note_WriteChordProgression"
+			"Pub_Note_WriteChordProgression",
+			"Pub_Note_PentatonicScale"
 		],
 		"Cover": "music_staff.png"
 	},
