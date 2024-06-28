@@ -36,27 +36,3 @@ cover: robot.png
 ## Competition
 
 [the-neural-mmo-challenge]<https://www.aicrowd.com/challenges/the-neural-mmo-challenge>
-
-## Blogs
-
-## Plan
-
-### 第一阶段(强化学习)
-
-- [ ] 看周博磊的强化学习教程
-- [ ] 理解各种名词和概念,以及各种算法
-- [ ] 用Gym实现一遍, 找找别的代码库参考
-- [ ] 看RL Survey补充一下有没有遗漏的知识点
-
-### 第二阶段(深度强化学习)
-
-- [ ] 看OpenAI的Spinning Up in Deep RL/CS285
-- [ ] Gym实现
-
-### 第三阶段(当前研究前沿)
-
-- [ ] 爬取最新的会议资料
-
-## Questions
-
-### 什么是Inverse reinforcement learning?
