@@ -2,6 +2,8 @@
 title: Suspended Chords（挂留和弦）
 ---
 
+https://www.youtube.com/watch?v=qu49nYaBfdM
+
 让我们先从 Triads 开始，这是 A Major Chord 和 A Minor Chord：
 ![Alt text](image.png)
 
@@ -36,3 +38,12 @@ sus2 中第二个音与 root 保持 2rd 的 interval 关系，sus4 中第二个�
 ![alt text](image-8.png)
 最终，会得到这样一张图：
 ![alt text](image-9.png)
+
+## 编写 Chord Progression
+
+例如现在我们有了这样一段 Chord Progression：
+![Alt text](image-10.png)
+你可以在这个基础上加入一些 suspended chords，让它听起来更丰富一些：
+![Alt text](image-11.png)
+
+Suspended Chords 是很中性的和弦，它很开放，既可以用在 Major Key，也可以用在 Minor Key。

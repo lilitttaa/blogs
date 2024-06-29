@@ -27,7 +27,7 @@ https://www.musictheory.net/exercises
 
 https://tonesavvy.com/music-practice-exercises/
 
-随机生成Notes：https://random.bretpimentel.com/
+随机生成 Notes：https://random.bretpimentel.com/
 
 听节奏练习：https://www.therhythmtrainer.com/
 
@@ -77,6 +77,7 @@ DK 古典音乐大百科: https://book.douban.com/subject/30339303/
 - 乐理、练习技巧（讲的很清楚）: [Brad Harrison Music](https://www.youtube.com/@BradHarrison)
 - 钢琴教程、练习方法: [Piano Lessons On The Web](https://www.youtube.com/@LessonsOnTheWeb)
 - 作曲: [Composing Academy](https://www.youtube.com/@composingacademy8270/videos)
+- 吉他手、职业音乐人: [Neo 牛聖戈](https://space.bilibili.com/284825511?spm_id_from=333.788.0.0)
 
 ## 专有名词
 
@@ -491,4 +492,3 @@ f-p: forte-piano, 第一遍强，第二遍弱
 和弦整齐性练习
 学习和弦理论
 渐弱渐慢练习
-

@@ -65,6 +65,8 @@ cover: english.png
 - Educational platform for kids: [Smile and Learn - English ](https://www.youtube.com/@SmileandLearnEnglish/playlists)
 - The School of Life: [The School of Life](https://www.youtube.com/@theschooloflifetv)
 - English with Cambridge: [English with Cambridge](https://www.youtube.com/@cambridgeenglishtv)
+- 各种概念解释: [The Paint Explainer](https://www.youtube.com/@ThePaintExplainer)
+
 
 ### 从英文白痴到流利，你可以复制的逆袭方式（过程全记录）
 
