@@ -67,7 +67,6 @@ cover: english.png
 - English with Cambridge: [English with Cambridge](https://www.youtube.com/@cambridgeenglishtv)
 - 各种概念解释: [The Paint Explainer](https://www.youtube.com/@ThePaintExplainer)
 
-
 ### 从英文白痴到流利，你可以复制的逆袭方式（过程全记录）
 
 <https://www.youtube.com/watch?v=b4vbS4mJfRY>
@@ -101,6 +100,23 @@ Boom's Taxonomy，学习方法分高低，由低到高：
 2. message focused learning，学好英语的关键是从 form focused learning 转变为 message focused learning。即，更多的关注表达的意思，而不是语法。
 3. Speak english regularly，如果身边没有 native speaker，可以用相机自己录。
 4. 推荐一本英语学习的书：An Introduction to Foreign Language Learning and Teaching
+
+### How I learnt Norwegian on my own
+
+https://www.youtube.com/watch?v=uWQYqcFX8JE
+
+1. Motivation
+2. 向孩子一样学习
+   1. Don't learn grammar.
+   2. Listen alot.
+   3. Read over and over again.
+   4. 摘抄感兴趣的材料，然后用Google Translate学习发音，同时学习听说读写
+   5. 从下上文中学习，获取你想要的单词的上下文，然后大声的读出来
+3. Grammar并非不重要，但你应该在以大量输入学习到一定程度之后再去学习Grammar
+4. 学习说可以从描述自己的一天开始，一开始比较难，写下几句话，然后用Google Translate翻译。之后直接用挪威语写作，然后跟Google Translate的版本做对比。
+5. 边阅读边听材料的音频
+6. 看电影和各种剧，用不同的字幕反复看多次，摘抄其中重要的单词和句子。
+7. 在不看句子的情况下，自己去表达，让大脑学会如何去组织句子。
 
 ## Cambridge English 分级学习
 

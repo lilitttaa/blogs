@@ -70,7 +70,8 @@
 			"Pub_Note_MovableChord",
 			"Pub_Note_WriteChordProgression",
 			"Pub_Note_PentatonicScale",
-			"Pub_Note_SuspenededChords"
+			"Pub_Note_SuspenededChords",
+			"Pub_Note_MinorScale"
 		],
 		"Cover": "music_staff.png"
 	},
