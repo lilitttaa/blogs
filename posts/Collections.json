@@ -71,7 +71,8 @@
 			"Pub_Note_WriteChordProgression",
 			"Pub_Note_PentatonicScale",
 			"Pub_Note_SuspenededChords",
-			"Pub_Note_MinorScale"
+			"Pub_Note_MinorScale",
+			"Pub_Note_WriteChordsInMinorScale"
 		],
 		"Cover": "music_staff.png"
 	},
