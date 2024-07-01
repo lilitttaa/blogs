@@ -78,6 +78,8 @@ DK 古典音乐大百科: https://book.douban.com/subject/30339303/
 - 钢琴教程、练习方法: [Piano Lessons On The Web](https://www.youtube.com/@LessonsOnTheWeb)
 - 作曲: [Composing Academy](https://www.youtube.com/@composingacademy8270/videos)
 - 吉他手、职业音乐人: [Neo 牛聖戈](https://space.bilibili.com/284825511?spm_id_from=333.788.0.0)
+- Music Theory: [Gracie Terzian](https://www.youtube.com/@GracieTerzian)
+- 吉他: [Lauren Bateman](https://www.youtube.com/@LaurenBateman)
 
 ## 专有名词
 
