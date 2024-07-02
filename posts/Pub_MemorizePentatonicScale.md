@@ -1,0 +1,5 @@
+---
+title: Memorize Pentatoic Scale
+---
+
+
