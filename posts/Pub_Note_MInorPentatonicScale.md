@@ -19,3 +19,4 @@ Minor Pentatonic Scale 常用于 Jazz、Blues、Classical Rock 等音乐中
 ![Alt text](image-2.png)
 后续，你可以播放 backing track（伴奏音轨），Youtube 上搜索 backing track a minor pentatonic scale，然后仅使用其中的几个 Note 来练习 Solo：
 ![Alt text](image-3.png)
+
