@@ -2,209 +2,213 @@
   "Pub_Note_Redux": {
     "title": "Redux 简单教程",
     "cover": "web_design.png",
-    "created_at": "2024-06-04T23:46:12.430Z"
+    "created_at": "2024-06-16T14:52:06.545Z"
   },
   "Pub_Note_React": {
     "title": "React 学习笔记",
     "cover": "web_design.png",
-    "created_at": "2024-06-25T23:47:43.734Z"
+    "created_at": "2024-06-16T14:52:54.153Z"
   },
   "Pub_Note_PianoPractice": {
     "title": "How to practice piano effectively",
-    "created_at": "2024-06-23T23:12:35.037Z"
+    "created_at": "2024-06-23T23:19:35.963Z"
   },
   "Pub_Note_WriteChordsInMinorScale": {
     "title": "Write Chords in Minor Scale",
-    "created_at": "2024-07-01T14:48:53.941Z"
+    "created_at": "2024-07-01T23:31:29.770Z"
   },
   "Pub_Note_WriteChordProgression": {
     "title": "Write Chord Progression（和弦进行）",
-    "created_at": "2024-06-27T00:51:52.569Z"
+    "created_at": "2024-06-27T13:20:37.255Z"
   },
   "Pub_Note_UnderstandingTheMusicStaff": {
     "title": "Understanding The Music Staff（认识五线谱）",
     "cover": "music_staff.png",
-    "created_at": "2024-06-12T00:12:53.421Z"
+    "created_at": "2024-06-16T14:31:24.799Z"
   },
   "Pub_Note_Triads": {
     "title": "Triads（三和弦）",
-    "created_at": "2024-06-25T23:48:15.958Z"
+    "created_at": "2024-06-26T13:35:12.611Z"
   },
   "Pub_Note_Syncopation": {
     "title": "Syncopation（切分）",
     "cover": "music_staff.png",
-    "created_at": "2024-06-14T00:38:53.795Z"
+    "created_at": "2024-06-16T14:31:03.542Z"
   },
   "Pub_Note_Swing": {
     "title": "Swing（摇摆）",
     "cover": "music_staff.png",
-    "created_at": "2024-06-14T00:38:53.812Z"
+    "created_at": "2024-06-16T14:30:13.602Z"
   },
   "Pub_Note_SuspendedChords": {
     "title": "Suspended Chords（挂留和弦）",
-    "created_at": "2024-06-28T13:16:14.462Z"
+    "created_at": "2024-06-29T02:44:53.788Z"
   },
   "Pub_Note_ScaleDegree": {
     "title": "Scale Degree（音阶）",
-    "created_at": "2024-06-23T23:19:54.797Z"
+    "created_at": "2024-06-24T15:05:33.699Z"
   },
   "Pub_Note_RhythmPractice": {
     "title": "Rhythm Practice（节奏练习）",
-    "created_at": "2024-06-20T00:45:24.021Z"
+    "created_at": "2024-06-20T00:46:18.228Z"
   },
   "Pub_Note_RelativeMode": {
     "title": "Relative Mode（相对调）",
-    "created_at": "2024-07-04T00:02:55.283Z"
+    "created_at": "2024-07-04T00:25:06.256Z"
   },
   "Pub_Note_ReadSheetMusicFast": {
     "title": "Read Sheet Music Fast（快速读谱）",
-    "created_at": "2024-06-21T00:21:01.914Z"
+    "created_at": "2024-06-22T12:03:30.113Z"
   },
   "Pub_Note_PowerChords": {
     "title": "Power Chords（强力和弦）",
-    "created_at": "2024-07-02T23:43:17.841Z"
+    "created_at": "2024-07-03T00:25:55.212Z"
   },
   "Pub_Note_PianoVSGuitar": {
     "title": "Piano vs Guitar",
-    "created_at": "2024-06-17T12:59:33.253Z"
+    "created_at": "2024-06-20T00:52:28.337Z"
   },
   "Pub_Note_PentatonicScale": {
     "title": "Pentatonic Scale（五声音阶）",
-    "created_at": "2024-06-27T23:19:35.559Z"
+    "created_at": "2024-06-28T00:06:09.843Z"
   },
   "Pub_Note_MusicTheoryRoadMap": {
     "title": "Music Theory Road Map",
     "cover": "music_staff.png",
-    "created_at": "2024-05-01T10:43:00.112Z"
+    "created_at": "2024-06-16T14:31:03.537Z"
   },
   "Pub_Note_MovableChord": {
     "title": "Movable Chord（移调和弦）",
-    "created_at": "2024-06-26T01:11:04.156Z"
+    "created_at": "2024-06-26T01:24:55.452Z"
   },
   "Pub_Note_MinorScale": {
     "title": "Minor Scale（小调音阶）",
-    "created_at": "2024-07-01T13:33:46.993Z"
+    "created_at": "2024-07-01T14:47:32.825Z"
   },
-  "Pub_Note_MinorPentatonicScale": {
+  "Pub_Note_MinorPentatonicScale (1)": {
     "title": "The Minor Pentatonic Scale（小调五声音阶）",
-    "created_at": "2024-07-01T23:38:06.807Z"
+    "created_at": "2024-07-02T00:00:18.902Z"
   },
   "Pub_Note_MeterAndTimeSignatures": {
     "title": "Meter And Time Signatures（拍子与拍号）",
-    "created_at": "2024-06-25T23:48:14.745Z"
+    "created_at": "2024-06-23T22:25:15.918Z"
   },
   "Pub_MemorizePentatonicScale": {
     "title": "Memorize Pentatonic Scale",
-    "created_at": "2024-07-02T23:22:33.964Z"
+    "created_at": "2024-07-02T00:25:10.477Z"
   },
   "Pub_Note_MajorScales": {
     "title": "Major Scales（大调音阶）",
     "cover": "music_staff.png",
-    "created_at": "2024-06-12T00:12:51.786Z"
+    "created_at": "2024-06-16T14:31:03.534Z"
   },
   "Pub_Note_LeftRightCoordinatePractice": {
     "title": "Left-Right Hand Coordinate Practice（左右手协调练习）",
-    "created_at": "2024-06-20T01:08:45.527Z"
+    "created_at": "2024-06-21T01:04:14.029Z"
   },
   "Pub_Note_KeySignature": {
     "title": "Key Signatures（调号）",
-    "created_at": "2024-06-23T22:25:15.137Z"
+    "created_at": "2024-06-25T00:08:55.681Z"
   },
   "Pub_Note_IntervalAndEmotion": {
     "title": "Interval and Emotion（音程与情绪）",
-    "created_at": "2024-06-25T23:48:09.920Z"
+    "created_at": "2024-06-25T00:27:21.272Z"
   },
   "Pub_Note_HowToMemorizeGuitarFretboard": {
     "title": "How to Memorize Guitar Fretboard（如何记忆吉他指板）",
     "cover": "music_staff.png",
-    "created_at": "2024-06-17T12:58:43.444Z"
+    "created_at": "2024-06-20T00:53:09.857Z"
   },
   "Pub_Note_EnharmonicEquivalents": {
     "title": "Enharmoic Equivalents（同音异名）",
     "cover": "music_staff.png",
-    "created_at": "2024-06-10T01:37:03.062Z"
+    "created_at": "2024-06-16T14:31:03.530Z"
   },
   "Pub_Note_EarTraining": {
     "title": "Ear Training",
-    "created_at": "2024-07-02T01:15:37.144Z"
+    "created_at": "2024-07-02T01:20:01.377Z"
   },
   "Pub_Note_CountRhythms": {
     "title": "Count Rhythms（节奏记数）",
     "cover": "music_staff.png",
-    "created_at": "2024-06-14T00:38:53.796Z"
+    "created_at": "2024-06-22T07:06:47.575Z"
   },
   "Pub_Note_ChromaticScales": {
     "title": "Chromatic Scales（半音音阶）",
     "cover": "music_staff.png",
-    "created_at": "2024-06-12T00:12:51.731Z"
+    "created_at": "2024-06-16T14:31:03.523Z"
   },
   "Pub_Frame_Piano": {
     "title": "钢琴学习指南",
     "cover": "piano.png",
-    "created_at": "2024-06-17T12:58:43.425Z"
+    "created_at": "2024-07-04T00:29:04.414Z"
   },
   "Pub_Note_TheMapOfMathematics": {
     "title": "The Map of Mathematics（数学地图）",
     "cover": "math.png",
-    "created_at": "2024-06-14T13:50:17.312Z"
+    "created_at": "2024-06-16T14:54:22.032Z"
   },
   "Pub_Note_Routine": {
     "title": "Routine Of One Day",
     "cover": "life.png",
-    "created_at": "2024-06-21T12:48:43.967Z"
+    "created_at": "2024-06-16T13:56:52.968Z"
   },
   "Pub_Note_Productivity": {
     "title": "如何提高效率?",
     "cover": "run.png",
-    "created_at": "2024-06-21T12:48:43.954Z"
+    "created_at": "2024-06-24T23:44:16.624Z"
+  },
+  "Pub_Note_HowToDoResearch": {
+    "title": "How to Do Research",
+    "created_at": "2024-07-04T02:25:11.255Z"
   },
   "Pub_Note_DoingWellInYourCourse": {
     "title": "Doing Well In Your Course",
-    "created_at": "2024-06-25T23:46:10.199Z"
+    "created_at": "2024-06-25T02:53:08.170Z"
   },
   "Pub_Note_ShaderCompile": {
     "title": "Unreal Shader Compile",
-    "created_at": "2024-06-25T23:46:10.235Z"
+    "created_at": "2024-06-21T08:44:10.235Z"
   },
   "Pub_Note_Lightmass": {
     "title": "Lightmass Source Code Analysis",
-    "created_at": "2024-06-25T23:47:58.786Z"
+    "created_at": "2024-06-19T16:41:09.979Z"
   },
   "Pub_Frame_UnrealTest": {
     "title": "Unreal 自动化测试源码分析",
     "cover": "game.png",
-    "created_at": "2024-06-21T12:48:43.957Z"
+    "created_at": "2024-06-16T15:04:48.281Z"
   },
   "Pub_Note_LarianCinematics": {
     "title": "A Top-Down Look at Our Bottom-Up Approach in 'Baldur's Gate 3'",
     "cover": "game.png",
-    "created_at": "2024-06-14T13:50:18.402Z"
+    "created_at": "2024-06-16T14:56:00.898Z"
   },
   "Pub_Frame_AutomationTest": {
     "title": "游戏自动化测试研究",
     "cover": "game.png",
-    "created_at": "2024-06-21T12:48:43.960Z"
+    "created_at": "2024-06-16T15:04:48.297Z"
   },
   "Pub_Frame_EnglishLearning": {
     "title": "English Learning",
     "cover": "english.png",
-    "created_at": "2024-06-21T12:48:43.952Z"
+    "created_at": "2024-06-29T03:38:44.266Z"
   },
   "Pub_Note_TDD": {
     "title": "TDD 一种改变编程范式的开发方法",
     "cover": "program.png",
     "desc": "...",
-    "created_at": "2024-06-21T12:48:43.962Z"
+    "created_at": "2024-06-16T13:54:37.148Z"
   },
   "Pub_Note_Traits": {
     "title": "什么是Traits？",
     "cover": "program.png",
-    "created_at": "2024-06-09T12:51:32.491Z"
+    "created_at": "2024-06-16T14:51:03.088Z"
   },
   "Pub_Note_MoveSemantics": {
     "title": "C++ 移动语义",
     "cover": "program.png",
-    "created_at": "2024-06-06T13:57:46.160Z"
+    "created_at": "2024-06-16T17:41:29.861Z"
   },
   "Pub_nips_2023_poster_abstract": {
     "title": "NeurIPS 2023 Poster Abstracts(Reinforcement Learning)",
@@ -240,11 +244,11 @@
     "## Pitfall of Optimism": "Distributional Reinforcement Learning by Randomizing Risk Criterion",
     "## On Sample-Efficient Offline Reinforcement Learning": "Data Diversity, Posterior Sampling and Beyond",
     "## SMACv2": "An Improved Benchmark for Cooperative Multi-Agent Reinforcement Learning",
-    "created_at": "2024-06-04T23:46:16.911Z"
+    "created_at": "2024-06-16T15:07:53.773Z"
   },
   "Pub_Frame_ReinforcementLearning": {
     "title": "The Roadmap of Reinforcement Learning",
     "cover": "robot.png",
-    "created_at": "2024-06-28T13:16:14.463Z"
+    "created_at": "2024-06-16T15:05:34.811Z"
   }
 }
