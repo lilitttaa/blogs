@@ -80,7 +80,7 @@ DK 古典音乐大百科: https://book.douban.com/subject/30339303/
 - 吉他手、职业音乐人: [Neo 牛聖戈](https://space.bilibili.com/284825511?spm_id_from=333.788.0.0)
 - Music Theory: [Gracie Terzian](https://www.youtube.com/@GracieTerzian)
 - 吉他: [Lauren Bateman](https://www.youtube.com/@LaurenBateman)
-
+- 吉他教程: [Guitar Compass](https://www.youtube.com/@GuitarCompass)
 ## 专有名词
 
 - sheet music/notation: 五线谱
