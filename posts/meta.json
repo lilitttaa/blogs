@@ -52,9 +52,17 @@
     "title": "Rhythm Practice（节奏练习）",
     "created_at": "2024-06-20T00:45:24.021Z"
   },
+  "Pub_Note_RelativeMode": {
+    "title": "Relative Mode（相对调）",
+    "created_at": "2024-07-04T00:02:55.283Z"
+  },
   "Pub_Note_ReadSheetMusicFast": {
     "title": "Read Sheet Music Fast（快速读谱）",
     "created_at": "2024-06-21T00:21:01.914Z"
+  },
+  "Pub_Note_PowerChords": {
+    "title": "Power Chords（强力和弦）",
+    "created_at": "2024-07-02T23:43:17.841Z"
   },
   "Pub_Note_PianoVSGuitar": {
     "title": "Piano vs Guitar",
@@ -86,8 +94,8 @@
     "created_at": "2024-06-25T23:48:14.745Z"
   },
   "Pub_MemorizePentatonicScale": {
-    "title": "Memorize Pentatoic Scale",
-    "created_at": "2024-07-02T00:06:02.779Z"
+    "title": "Memorize Pentatonic Scale",
+    "created_at": "2024-07-02T23:22:33.964Z"
   },
   "Pub_Note_MajorScales": {
     "title": "Major Scales（大调音阶）",
