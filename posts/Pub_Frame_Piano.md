@@ -19,7 +19,7 @@ cover: piano.png
 
 <https://www.pianote.com/start-here>
 
-### 练习网站
+### 练习网站 8
 
 <https://www.notationtraining.com/treble-clef-practice>
 
@@ -81,6 +81,13 @@ DK 古典音乐大百科: https://book.douban.com/subject/30339303/
 - Music Theory: [Gracie Terzian](https://www.youtube.com/@GracieTerzian)
 - 吉他: [Lauren Bateman](https://www.youtube.com/@LaurenBateman)
 - 吉他教程: [Guitar Compass](https://www.youtube.com/@GuitarCompass)
+- 万青键盘手: [键盘手郑皓荣 Haorong](https://space.bilibili.com/397126929)
+- 现代爵士钢琴教程与乐手分析: [Noah Kellman](https://www.youtube.com/@NoahKellman)
+
+### 很棒的乐手?
+
+- 爵士乐手: McCoy Tyner
+
 ## 专有名词
 
 - sheet music/notation: 五线谱
@@ -433,8 +440,6 @@ https://physiopointtherapy.com/what-is-muscle-memory/
 在实际的音乐作品中，六级和弦可以用来增加和声的色彩和紧张感，常用于过渡到其他和弦，如五级和弦，从而创造一种解决感。在和声进行中，六级和弦的使用可以带来丰富的情感表达和音乐动态。
 
 ### 有哪些钢琴演奏风格?
-
-### 有哪些很棒的乐手?
 
 ### 如何练习视奏?
 

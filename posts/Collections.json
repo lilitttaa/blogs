@@ -75,7 +75,9 @@
 			"Pub_Note_MinorScale",
 			"Pub_Note_WriteChordsInMinorScale",
 			"Pub_Note_MinorPentatonicScale",
-			"Pub_Note_PowerChords"
+			"Pub_Note_PowerChords",
+			"Pub_Note_ImproviseSoloWithChords",
+			"Pub_Note_UseInversionToWriteChordProgression"
 		],
 		"Cover": "music_staff.png"
 	},

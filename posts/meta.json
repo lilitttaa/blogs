@@ -21,6 +21,10 @@
     "title": "Write Chord Progression（和弦进行）",
     "created_at": "2024-06-27T13:20:37.255Z"
   },
+  "Pub_Note_UseInversionToWriteChordProgression": {
+    "title": "Use Inversion To Write Chord Progression（使用转位写和弦进行）",
+    "created_at": "2024-07-05T05:20:34.281Z"
+  },
   "Pub_Note_UnderstandingTheMusicStaff": {
     "title": "Understanding The Music Staff（认识五线谱）",
     "cover": "music_staff.png",
@@ -114,6 +118,10 @@
     "title": "Interval and Emotion（音程与情绪）",
     "created_at": "2024-06-25T00:27:21.272Z"
   },
+  "Pub_Note_ImproviseSoloWithChords": {
+    "title": "Improvise Solo With Chords（和弦即兴solo）",
+    "created_at": "2024-07-05T00:18:56.209Z"
+  },
   "Pub_Note_HowToMemorizeGuitarFretboard": {
     "title": "How to Memorize Guitar Fretboard（如何记忆吉他指板）",
     "cover": "music_staff.png",
@@ -141,7 +149,7 @@
   "Pub_Frame_Piano": {
     "title": "钢琴学习指南",
     "cover": "piano.png",
-    "created_at": "2024-07-04T00:29:04.414Z"
+    "created_at": "2024-07-05T00:45:05.804Z"
   },
   "Pub_Note_TheMapOfMathematics": {
     "title": "The Map of Mathematics（数学地图）",
