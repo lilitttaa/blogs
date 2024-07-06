@@ -82,6 +82,7 @@
 			"Pub_Note_ImproviseSoloWithChords",
 			"Pub_Note_UseInversionToWriteChordProgression",
 			"Pub_Note_7thChords",
+			"Pub_Note_BuildDiatonic7thChords",
 			"Pub_Note_BluesTheory"
 		],
 		"Cover": "music_staff.png"
