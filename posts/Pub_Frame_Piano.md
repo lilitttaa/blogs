@@ -19,7 +19,7 @@ cover: piano.png
 
 <https://www.pianote.com/start-here>
 
-### 练习网站 8
+### 练习网站
 
 <https://www.notationtraining.com/treble-clef-practice>
 
@@ -35,17 +35,36 @@ https://tonesavvy.com/music-practice-exercises/
 
 ### 书籍
 
-音乐与数学：<https://book.douban.com/subject/34812785/>
+- [音乐与数学](https://book.douban.com/subject/34812785/)
 
-钢琴学习指南: https://book.douban.com/subject/1092039/
+- [钢琴学习指南](https://book.douban.com/subject/1092039/)
 
-不朽的钢琴家: https://book.douban.com/subject/25894782/
+- [不朽的钢琴家](https://book.douban.com/subject/25894782/)
 
-DK 古典音乐大百科: https://book.douban.com/subject/30339303/
+- [DK 古典音乐大百科](https://book.douban.com/subject/30339303/)
 
-聆听音乐: https://book.douban.com/subject/10590165/
+- [聆听音乐](https://book.douban.com/subject/10590165/)
 
-现代钢琴演奏技巧: https://book.douban.com/subject/1163193/
+- [现代钢琴演奏技巧](https://book.douban.com/subject/1163193/)
+
+- [爵士乐宝典](https://book.douban.com/subject/27167418/)
+
+- [The Jazz Harmony Book By David Berkman](https://www.goodreads.com/book/show/28239791-the-jazz-harmony-book)
+
+- [An Approach To Comping: The Essentials](https://www.goodreads.com/book/show/22553342-an-approach-to-comping)
+
+- [The Jazz Standards: A Guide to the Repertoire](https://www.goodreads.com/book/show/13690518-the-jazz-standards)
+
+- [New History of Jazz](https://www.goodreads.com/book/show/607880.A_New_History_of_Jazz)
+
+### 学术
+
+- UC Irvine: [加州大学欧文分校](https://docs.google.com/document/d/1eX-DurgMVZt_eCHhW3_GvIyIu5JLsHsLoGJI6VD6s_I/edit)
+- berklee: [伯克利音乐学校](https://www.berklee.edu/registrar/major-grids-search)
+- Amy Bauer 课程归档: [Amy Bauer](https://music.arts.uci.edu/abauer/)
+
+**注：从大学教授的课程归档中可以了解到相关的课程信息、内容、资料等。**
+可以在 https://music.arts.uci.edu/faculty 查看更多教授信息
 
 ### 社交网络教程
 
@@ -83,16 +102,32 @@ DK 古典音乐大百科: https://book.douban.com/subject/30339303/
 - 吉他教程: [Guitar Compass](https://www.youtube.com/@GuitarCompass)
 - 万青键盘手: [键盘手郑皓荣 Haorong](https://space.bilibili.com/397126929)
 - 现代爵士钢琴教程与乐手分析: [Noah Kellman](https://www.youtube.com/@NoahKellman)
+- 吉他教程: [swiftlessons](https://www.youtube.com/@swiftlessons)
+- 乐理、音乐鉴赏: [赫有声](https://space.bilibili.com/401237301/)
+- 爵士、流星乐短视频: [哎呀音乐\_IYAMUSIC](https://space.bilibili.com/108720897/video)
+- 古典、爵士研究生: [任性周儿](https://space.bilibili.com/472056115/)
+- 作曲、和声、音乐分析硕士: [子上音乐](https://space.bilibili.com/352174183/)
+- 爵士科普、爵士钢琴: [键盘韦恩](https://space.bilibili.com/14718376/)
+- 音乐理论博士: [王力舟-音乐理论](https://space.bilibili.com/3494371255126748/)
+- Jazz pianist: [陶什么曦](https://space.bilibili.com/14738371/)
+- 伯克利音乐制作研究生: [刘纪希](https://space.bilibili.com/480840814/)
+- 旅法独立音乐人•唱作人•职业键盘手: [姜姗 Jazz](https://space.bilibili.com/505443358/)
+- 音乐制作: [Jaky 的编曲学习笔记](https://space.bilibili.com/26223919/)
+- 爵士专业: [PennyPengMusic](https://space.bilibili.com/485785046/)
+- 伯克利音乐学院在读学生: [Suyu663](https://space.bilibili.com/30153993/video)
+- 音乐制作: [音乐制作课](https://space.bilibili.com/1197576624)
 
 ### 很棒的乐手?
 
 - 爵士乐手: McCoy Tyner
 
 #### 吉他
+
 - Eric Clapton
 - Jimi Hendrix
 
 #### 爵士
+
 - BB King
 
 ## 专有名词
