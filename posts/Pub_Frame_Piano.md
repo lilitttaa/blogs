@@ -117,9 +117,7 @@ https://tonesavvy.com/music-practice-exercises/
 - 伯克利音乐学院在读学生: [Suyu663](https://space.bilibili.com/30153993/video)
 - 音乐制作: [音乐制作课](https://space.bilibili.com/1197576624)
 
-### 很棒的乐手?
-
-- 爵士乐手: McCoy Tyner
+### 很棒的乐手
 
 #### 吉他
 
@@ -129,6 +127,7 @@ https://tonesavvy.com/music-practice-exercises/
 #### 爵士
 
 - BB King
+- McCoy Tyner
 
 ## 专有名词
 
