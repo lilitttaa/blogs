@@ -1,5 +1,5 @@
 ---
-title: Useage Of Diminished Chord（减和弦）
+title: Usage Of Diminished Chord（减和弦）
 ---
 
 https://www.youtube.com/watch?v=koulaYcijEE
