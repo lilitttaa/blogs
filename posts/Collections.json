@@ -83,7 +83,9 @@
 			"Pub_Note_UseInversionToWriteChordProgression",
 			"Pub_Note_7thChords",
 			"Pub_Note_BuildDiatonic7thChords",
-			"Pub_Note_BluesTheory"
+			"Pub_Note_BluesTheory",
+			"Pub_Note_SecondaryDominant",
+			"Pub_Note_DiminishedChord"
 		],
 		"Cover": "music_staff.png"
 	},
