@@ -88,6 +88,13 @@ DK 古典音乐大百科: https://book.douban.com/subject/30339303/
 
 - 爵士乐手: McCoy Tyner
 
+#### 吉他
+- Eric Clapton
+- Jimi Hendrix
+
+#### 爵士
+- BB King
+
 ## 专有名词
 
 - sheet music/notation: 五线谱
