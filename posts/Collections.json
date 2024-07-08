@@ -85,7 +85,8 @@
 			"Pub_Note_BuildDiatonic7thChords",
 			"Pub_Note_BluesTheory",
 			"Pub_Note_SecondaryDominant",
-			"Pub_Note_DiminishedChord"
+			"Pub_Note_DiminishedChord",
+			"Pub_Note_AugmentedChords"
 		],
 		"Cover": "music_staff.png"
 	},
