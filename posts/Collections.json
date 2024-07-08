@@ -86,7 +86,8 @@
 			"Pub_Note_BluesTheory",
 			"Pub_Note_SecondaryDominant",
 			"Pub_Note_DiminishedChord",
-			"Pub_Note_AugmentedChords"
+			"Pub_Note_AugmentedChords",
+			"Pub_Note_ChromaticPassingTones"
 		],
 		"Cover": "music_staff.png"
 	},
