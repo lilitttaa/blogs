@@ -87,7 +87,8 @@
 			"Pub_Note_SecondaryDominant",
 			"Pub_Note_DiminishedChord",
 			"Pub_Note_AugmentedChords",
-			"Pub_Note_ChromaticPassingTones"
+			"Pub_Note_ChromaticPassingTones",
+			"Pub_Note_Modes"
 		],
 		"Cover": "music_staff.png"
 	},
