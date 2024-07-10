@@ -87,10 +87,12 @@
 			"Pub_Note_SecondaryDominant",
 			"Pub_Note_DiminishedChord",
 			"Pub_Note_AugmentedChords",
+			"Pub_Note_TheModeOfHarmonicMinorScale",
 			"Pub_Note_ChromaticPassingTones",
 			"Pub_Note_Modes",
 			"Pub_Note_Modulate",
-			"Pub_Note_SongStructure"
+			"Pub_Note_SongStructure",
+			"Pub_Note_BorrowedChords"
 		],
 		"Cover": "music_staff.png"
 	},
