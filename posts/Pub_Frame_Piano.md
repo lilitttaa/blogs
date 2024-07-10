@@ -84,8 +84,8 @@ https://tonesavvy.com/music-practice-exercises/
 
 ### 博主
 
-- [Adam Neely](https://www.youtube.com/@AdamNeely)
-- [ANDREW HUANG](https://www.youtube.com/@andrewhuang)
+- Bass player and Composer: [Adam Neely](https://www.youtube.com/@AdamNeely)
+- Music Production: [ANDREW HUANG](https://www.youtube.com/@andrewhuang)
 - Music Theory: [Music Matters](https://www.youtube.com/@MusicMattersGB)
 - A Pianist: [Learn Piano with Jazer Lee](https://www.youtube.com/@jazerleepiano)
 - A Pianist: [Heart of the Keys](https://www.youtube.com/@heartofthekeys)
@@ -104,7 +104,7 @@ https://tonesavvy.com/music-practice-exercises/
 - 现代爵士钢琴教程与乐手分析: [Noah Kellman](https://www.youtube.com/@NoahKellman)
 - 吉他教程: [swiftlessons](https://www.youtube.com/@swiftlessons)
 - 乐理、音乐鉴赏: [赫有声](https://space.bilibili.com/401237301/)
-- 爵士、流星乐短视频: [哎呀音乐\_IYAMUSIC](https://space.bilibili.com/108720897/video)
+- 爵士、流行乐短视频: [哎呀音乐\_IYAMUSIC](https://space.bilibili.com/108720897/video)
 - 古典、爵士研究生: [任性周儿](https://space.bilibili.com/472056115/)
 - 作曲、和声、音乐分析硕士: [子上音乐](https://space.bilibili.com/352174183/)
 - 爵士科普、爵士钢琴: [键盘韦恩](https://space.bilibili.com/14718376/)
@@ -116,6 +116,9 @@ https://tonesavvy.com/music-practice-exercises/
 - 爵士专业: [PennyPengMusic](https://space.bilibili.com/485785046/)
 - 伯克利音乐学院在读学生: [Suyu663](https://space.bilibili.com/30153993/video)
 - 音乐制作: [音乐制作课](https://space.bilibili.com/1197576624)
+- 和弦进行: [和弦进行手册](https://space.bilibili.com/474478910?spm_id_from=333.337.0.0)
+- 和弦进行: [和弦进行备忘录](https://space.bilibili.com/3493104512404013?spm_id_from=333.337.0.0)
+- 音乐分析: [半理性音乐](https://www.youtube.com/@halfrational/videos)
 
 ### 很棒的乐手
 
