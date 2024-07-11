@@ -3,31 +3,6 @@ title: English Learning
 cover: english.png
 ---
 
-## 从话剧中学习
-
-### 话剧片段
-
-从油管[Manhattan Theatre Club](https://www.youtube.com/watch?v=Ud4EAsZamzc) 中找到有趣的话剧片段
-
-找话剧片段的剧本
-
-### 话剧介绍
-
-使用[Monica](https://monica.im/?index=1&from=extension_nav)插件学习[话剧介绍](https://www.manhattantheatreclub.com/)
-
-## 从 Wiki 中学习
-
-<https://en.wikipedia.org/wiki/Main_Page>
-
-## 从电影中学习
-
-爱在系列
-
-## 从书评中学习
-
-刷 Goodreads 的书评
-<https://www.goodreads.com/>
-
 ## 她们几乎以同样方式，英语达到近母语水平
 
 <https://www.youtube.com/watch?v=7nwIBNLYl2o>
@@ -110,14 +85,49 @@ https://www.youtube.com/watch?v=uWQYqcFX8JE
    1. Don't learn grammar.
    2. Listen alot.
    3. Read over and over again.
-   4. 摘抄感兴趣的材料，然后用Google Translate学习发音，同时学习听说读写
+   4. 摘抄感兴趣的材料，然后用 Google Translate 学习发音，同时学习听说读写
    5. 从下上文中学习，获取你想要的单词的上下文，然后大声的读出来
-3. Grammar并非不重要，但你应该在以大量输入学习到一定程度之后再去学习Grammar
-4. 学习说可以从描述自己的一天开始，一开始比较难，写下几句话，然后用Google Translate翻译。之后直接用挪威语写作，然后跟Google Translate的版本做对比。
+3. Grammar 并非不重要，但你应该在以大量输入学习到一定程度之后再去学习 Grammar
+4. 学习说可以从描述自己的一天开始，一开始比较难，写下几句话，然后用 Google Translate 翻译。之后直接用挪威语写作，然后跟 Google Translate 的版本做对比。
 5. 边阅读边听材料的音频
 6. 看电影和各种剧，用不同的字幕反复看多次，摘抄其中重要的单词和句子。
 7. 在不看句子的情况下，自己去表达，让大脑学会如何去组织句子。
 
+## 输入性假设理论
+
+https://en.wikipedia.org/wiki/Input_hypothesis
+
+1. 输入假设。该假设认为，当学习者理解比其当前水平略高一些的语言输入时，他们的语言知识就会进步。克拉申将这一输入水平称为“i+1”，其中“i”是学习者的中介语，“+1”是语言习得的下一阶段。
+2. 习得—学习假说认为习得与学习之间存在严格区分；克拉申将习得视为一个纯粹潜意识的过程，而将学习视为一个有意识的过程，并声称语言能力的提高只依赖于习得，而不依赖于学习。
+3. 监控假设认为，有意识学习的语言只能用来监控语言输出；它永远不能成为自发言语的来源。
+4. 自然顺序假设认为，语言是按照特定的顺序习得的，并且这种顺序不会因学习者的不同而改变，也不会受到明确指导的影响。
+5. 情感过滤假说。该假说认为，如果学习者感受到恐惧或尴尬等负面情绪，他们学习语言的能力就会受到限制。在这种情况下，情感过滤就处于“上升”状态。
+
 ## Cambridge English 分级学习
 
 https://www.cambridgeenglish.org/supporting-learners/?level=basic
+
+## 从话剧中学习
+
+### 话剧片段
+
+从油管[Manhattan Theatre Club](https://www.youtube.com/watch?v=Ud4EAsZamzc) 中找到有趣的话剧片段
+
+找话剧片段的剧本
+
+### 话剧介绍
+
+使用[Monica](https://monica.im/?index=1&from=extension_nav)插件学习[话剧介绍](https://www.manhattantheatreclub.com/)
+
+## 从 Wiki 中学习
+
+<https://en.wikipedia.org/wiki/Main_Page>
+
+## 从电影中学习
+
+爱在系列
+
+## 从书评中学习
+
+刷 Goodreads 的书评
+<https://www.goodreads.com/>
