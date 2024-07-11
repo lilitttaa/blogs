@@ -7,10 +7,10 @@ cover: english.png
 
 <https://www.youtube.com/watch?v=7nwIBNLYl2o>
 
-1. 选择你热爱的材料，小说，美剧，哲学书籍，Youtube 视频
-2. 可理解性，如果你只是阅读但不理解其中的单词意思，并不是真的理解。不过，你也不需要完全理解，只要你能理解大部分内容，就可以了。
-3. 输入比输出重要。足够的输入量，力大砖飞。
-4. 地道，输入垃圾，输出自然也垃圾。
+- 选择你热爱的材料，小说，美剧，哲学书籍，Youtube 视频
+- 可理解性，如果你只是阅读但不理解其中的单词意思，并不是真的理解。不过，你也不需要完全理解，只要你能理解大部分内容，就可以了。
+- 输入比输出重要。足够的输入量，力大砖飞。
+- 地道，输入垃圾，输出自然也垃圾。
 
 ## Learning From Youtube Videos
 
@@ -47,61 +47,61 @@ cover: english.png
 <https://www.youtube.com/watch?v=b4vbS4mJfRY>
 四个阶段：
 
-1. 学校学习，死记硬背，完全没有用
-2. Input by chunk，定期 review，坚持了几个月，但到后面坚持不下来
-3. 大量阅读，发现一些学习方法，Bloom's Taxonomy
-4. Having Fun
+- 学校学习，死记硬背，完全没有用
+- Input by chunk，定期 review，坚持了几个月，但到后面坚持不下来
+- 大量阅读，发现一些学习方法，Bloom's Taxonomy
+- Having Fun
 
 Boom's Taxonomy，学习方法分高低，由低到高：
 
-1. 死记硬背
-2. 理解
-3. 应用，分析，评估，创造
-   高阶方法更有效，且无意识的使用了低阶方法
+- 死记硬背
+- 理解
+- 应用，分析，评估，创造
+  高阶方法更有效，且无意识的使用了低阶方法
 
 ### How to improve your English speaking skills (by yourself)
 
 <https://www.youtube.com/watch?v=CAU2zx2Ri_M>
 
-1. 转述他人的对话
-2. 用自己的方式重新表达接受的信息
-3. 难度逐渐增加，从简单到复杂
+- 转述他人的对话
+- 用自己的方式重新表达接受的信息
+- 难度逐渐增加，从简单到复杂
 
 ### How I Became Fluent in English...FAST
 
 <https://www.youtube.com/watch?v=9nnRLBW76TU>
 
-1. 多说
-2. message focused learning，学好英语的关键是从 form focused learning 转变为 message focused learning。即，更多的关注表达的意思，而不是语法。
-3. Speak english regularly，如果身边没有 native speaker，可以用相机自己录。
-4. 推荐一本英语学习的书：An Introduction to Foreign Language Learning and Teaching
+- 多说
+- message focused learning，学好英语的关键是从 form focused learning 转变为 message focused learning。即，更多的关注表达的意思，而不是语法。
+- Speak english regularly，如果身边没有 native speaker，可以用相机自己录。
+- 推荐一本英语学习的书：An Introduction to Foreign Language Learning and Teaching
 
 ### How I learnt Norwegian on my own
 
 https://www.youtube.com/watch?v=uWQYqcFX8JE
 
-1. Motivation
-2. 向孩子一样学习
-   1. Don't learn grammar.
-   2. Listen alot.
-   3. Read over and over again.
-   4. 摘抄感兴趣的材料，然后用 Google Translate 学习发音，同时学习听说读写
-   5. 从下上文中学习，获取你想要的单词的上下文，然后大声的读出来
-3. Grammar 并非不重要，但你应该在以大量输入学习到一定程度之后再去学习 Grammar
-4. 学习说可以从描述自己的一天开始，一开始比较难，写下几句话，然后用 Google Translate 翻译。之后直接用挪威语写作，然后跟 Google Translate 的版本做对比。
-5. 边阅读边听材料的音频
-6. 看电影和各种剧，用不同的字幕反复看多次，摘抄其中重要的单词和句子。
-7. 在不看句子的情况下，自己去表达，让大脑学会如何去组织句子。
+- Motivation
+- 向孩子一样学习
+  - Don't learn grammar.
+  - Listen alot.
+  - Read over and over again.
+  - 摘抄感兴趣的材料，然后用 Google Translate 学习发音，同时学习听说读写
+  - 从下上文中学习，获取你想要的单词的上下文，然后大声的读出来
+- Grammar 并非不重要，但你应该在以大量输入学习到一定程度之后再去学习 Grammar
+- 学习说可以从描述自己的一天开始，一开始比较难，写下几句话，然后用 Google Translate 翻译。之后直接用挪威语写作，然后跟 Google Translate 的版本做对比。
+- 边阅读边听材料的音频
+- 看电影和各种剧，用不同的字幕反复看多次，摘抄其中重要的单词和句子。
+- 在不看句子的情况下，自己去表达，让大脑学会如何去组织句子。
 
 ## 输入性假设理论
 
 https://en.wikipedia.org/wiki/Input_hypothesis
 
-1. 输入假设。该假设认为，当学习者理解比其当前水平略高一些的语言输入时，他们的语言知识就会进步。克拉申将这一输入水平称为“i+1”，其中“i”是学习者的中介语，“+1”是语言习得的下一阶段。
-2. 习得—学习假说认为习得与学习之间存在严格区分；克拉申将习得视为一个纯粹潜意识的过程，而将学习视为一个有意识的过程，并声称语言能力的提高只依赖于习得，而不依赖于学习。
-3. 监控假设认为，有意识学习的语言只能用来监控语言输出；它永远不能成为自发言语的来源。
-4. 自然顺序假设认为，语言是按照特定的顺序习得的，并且这种顺序不会因学习者的不同而改变，也不会受到明确指导的影响。
-5. 情感过滤假说。该假说认为，如果学习者感受到恐惧或尴尬等负面情绪，他们学习语言的能力就会受到限制。在这种情况下，情感过滤就处于“上升”状态。
+- 输入假设。该假设认为，当学习者理解比其当前水平略高一些的语言输入时，他们的语言知识就会进步。克拉申将这一输入水平称为“i+1”，其中“i”是学习者的中介语，“+1”是语言习得的下一阶段。
+- 习得—学习假说认为习得与学习之间存在严格区分；克拉申将习得视为一个纯粹潜意识的过程，而将学习视为一个有意识的过程，并声称语言能力的提高只依赖于习得，而不依赖于学习。
+- 监控假设认为，有意识学习的语言只能用来监控语言输出；它永远不能成为自发言语的来源。
+- 自然顺序假设认为，语言是按照特定的顺序习得的，并且这种顺序不会因学习者的不同而改变，也不会受到明确指导的影响。
+- 情感过滤假说。该假说认为，如果学习者感受到恐惧或尴尬等负面情绪，他们学习语言的能力就会受到限制。在这种情况下，情感过滤就处于“上升”状态。
 
 ## Cambridge English 分级学习
 
