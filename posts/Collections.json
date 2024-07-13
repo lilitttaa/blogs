@@ -92,7 +92,8 @@
 			"Pub_Note_Modes",
 			"Pub_Note_Modulate",
 			"Pub_Note_SongStructure",
-			"Pub_Note_BorrowedChords"
+			"Pub_Note_BorrowedChords",
+			"Pub_Note_WriteMelodyOverChords"
 		],
 		"Cover": "music_staff.png"
 	},
