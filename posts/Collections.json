@@ -1,111 +1,118 @@
 [
-	{
-		"Name": "Program",
-		"Description": "...",
-		"List": [
-			"Pub_Frame_UnrealTest",
-			"Pub_Note_LarianCinematics",
-			"Pub_Frame_AutomationTest",
-			"Pub_Note_TDD",
-			"Pub_Note_Traits",
-			"Pub_Note_MoveSemantics",
-			"Pub_nips_2023_poster_abstract",
-			"Pub_Frame_ReinforcementLearning",
-			"Pub_Note_Lightmass",
-			"Pub_Note_ShaderCompile"
-		],
-		"Cover": "program.png"
-	},
-	{
-		"Name": "Web Frontend",
-		"Description": "...",
-		"List": [
-			"Pub_Note_Redux",
-			"Pub_Note_React"
-		],
-		"Cover": "web_design.png"
-	},
-	{
-		"Name": "English",
-		"Description": "...",
-		"List": [
-			"Pub_Frame_EnglishLearning"
-		],
-		"Cover": "english.png"
-	},
-	{
-		"Name": "Daily Life",
-		"Description": "...",
-		"List": [
-			"Pub_Note_Routine",
-			"Pub_Note_Productivity",
-			"Pub_Note_DoingWellInYourCourse",
-			"Pub_Note_HowToDoResearch"
-		],
-		"Cover": "life.png"
-	},
-	{
-		"Name": "Music",
-		"Description": "This is a collection about music theory from scratch...",
-		"List": [
-			"Pub_Frame_Piano",
-			"Pub_Note_PianoPractice",
-			"Pub_Frame_MusicTheoryRoadMap",
-			"Pub_Note_UnderstandingTheMusicStaff",
-			"Pub_Note_ChromaticScales",
-			"Pub_Note_MajorScales",
-			"Pub_Note_EnharmonicEquivalents",
-			"Pub_Note_CountRhythms",
-			"Pub_Note_Syncopation",
-			"Pub_Note_Swing",
-			"Pub_Note_HowToMemorizeGuitarFretboard",
-			"Pub_Note_PianoVSGuitar",
-			"Pub_Note_MeterAndTimeSignatures",
-			"Pub_Note_Polyrhythm",
-			"Pub_Note_Polymeter",
-			"Pub_Note_TheDifferenceBetweenPolyrhythmAndPolymeter",
-			"Pub_Note_RhythmPractice",
-			"Pub_Note_LeftRightCoordinatePractice",
-			"Pub_Note_ReadSheetMusicFast",
-			"Pub_Note_KeySignature",
-			"Pub_Note_ScaleDegree",
-			"Pub_Note_IntervalAndEmotion",
-			"Pub_Note_Triads",
-			"Pub_Note_MovableChord",
-			"Pub_Note_WriteChordProgression",
-			"Pub_Note_PentatonicScale",
-			"Pub_Note_SuspendedChords",
-			"Pub_Note_MinorScale",
-			"Pub_Note_WriteChordsInMinorScale",
-			"Pub_Note_MinorPentatonicScale",
-			"Pub_Note_PowerChords",
-			"Pub_Note_RelativeMode",
-			"Pub_Note_MemorizePentatonicScale",
-			"Pub_Note_EarTraining",
-			"Pub_Note_ImproviseSoloWithChords",
-			"Pub_Note_UseInversionToWriteChordProgression",
-			"Pub_Note_7thChords",
-			"Pub_Note_BuildDiatonic7thChords",
-			"Pub_Note_BluesTheory",
-			"Pub_Note_SecondaryDominant",
-			"Pub_Note_DiminishedChord",
-			"Pub_Note_AugmentedChords",
-			"Pub_Note_TheModeOfHarmonicMinorScale",
-			"Pub_Note_ChromaticPassingTones",
-			"Pub_Note_Modes",
-			"Pub_Note_Modulate",
-			"Pub_Note_SongStructure",
-			"Pub_Note_BorrowedChords",
-			"Pub_Note_WriteMelodyOverChords"
-		],
-		"Cover": "music_staff.png"
-	},
-	{
-		"Name": "Mathematics",
-		"Description": "...",
-		"List": [
-			"Pub_Note_TheMapOfMathematics"
-		],
-		"Cover": "math.png"
-	}
+  {
+    "Name": "Game",
+    "Description": "...",
+    "List": [
+      "Pub_Note_Lightmass",
+      "Pub_Note_ShaderCompile",
+      "Pub_Frame_UnrealTest",
+      "Pub_Frame_AutomationTest"
+    ],
+    "Cover": "game.png"
+  },
+  {
+    "Name": "Program",
+    "Description": "...",
+    "List": [
+      "Pub_Note_LarianCinematics",
+      "Pub_Note_TDD",
+      "Pub_Note_Traits",
+      "Pub_Note_MoveSemantics",
+      "Pub_nips_2023_poster_abstract",
+      "Pub_Frame_ReinforcementLearning"
+    ],
+    "Cover": "program.png"
+  },
+  {
+    "Name": "Web Frontend",
+    "Description": "...",
+    "List": [
+      "Pub_Note_Redux",
+      "Pub_Note_React"
+    ],
+    "Cover": "web_design.png"
+  },
+  {
+    "Name": "English",
+    "Description": "...",
+    "List": [
+      "Pub_Frame_EnglishLearning"
+    ],
+    "Cover": "english.png"
+  },
+  {
+    "Name": "Daily Life",
+    "Description": "...",
+    "List": [
+      "Pub_Note_Routine",
+      "Pub_Note_Productivity",
+      "Pub_Note_DoingWellInYourCourse",
+      "Pub_Note_HowToDoResearch"
+    ],
+    "Cover": "life.png"
+  },
+  {
+    "Name": "Music",
+    "Description": "This is a collection about music theory from scratch...",
+    "List": [
+      "Pub_Frame_Piano",
+      "Pub_Note_PianoPractice",
+      "Pub_Frame_MusicTheoryRoadMap",
+      "Pub_Note_UnderstandingTheMusicStaff",
+      "Pub_Note_ChromaticScales",
+      "Pub_Note_MajorScales",
+      "Pub_Note_EnharmonicEquivalents",
+      "Pub_Note_CountRhythms",
+      "Pub_Note_Syncopation",
+      "Pub_Note_Swing",
+      "Pub_Note_HowToMemorizeGuitarFretboard",
+      "Pub_Note_PianoVSGuitar",
+      "Pub_Note_MeterAndTimeSignatures",
+      "Pub_Note_Polyrhythm",
+      "Pub_Note_Polymeter",
+      "Pub_Note_TheDifferenceBetweenPolyrhythmAndPolymeter",
+      "Pub_Note_RhythmPractice",
+      "Pub_Note_LeftRightCoordinatePractice",
+      "Pub_Note_ReadSheetMusicFast",
+      "Pub_Note_KeySignature",
+      "Pub_Note_ScaleDegree",
+      "Pub_Note_IntervalAndEmotion",
+      "Pub_Note_Triads",
+      "Pub_Note_MovableChord",
+      "Pub_Note_WriteChordProgression",
+      "Pub_Note_PentatonicScale",
+      "Pub_Note_SuspendedChords",
+      "Pub_Note_MinorScale",
+      "Pub_Note_WriteChordsInMinorScale",
+      "Pub_Note_MinorPentatonicScale",
+      "Pub_Note_PowerChords",
+      "Pub_Note_RelativeMode",
+      "Pub_Note_MemorizePentatonicScale",
+      "Pub_Note_EarTraining",
+      "Pub_Note_ImproviseSoloWithChords",
+      "Pub_Note_UseInversionToWriteChordProgression",
+      "Pub_Note_7thChords",
+      "Pub_Note_BuildDiatonic7thChords",
+      "Pub_Note_BluesTheory",
+      "Pub_Note_SecondaryDominant",
+      "Pub_Note_DiminishedChord",
+      "Pub_Note_AugmentedChords",
+      "Pub_Note_TheModeOfHarmonicMinorScale",
+      "Pub_Note_ChromaticPassingTones",
+      "Pub_Note_Modes",
+      "Pub_Note_Modulate",
+      "Pub_Note_SongStructure",
+      "Pub_Note_BorrowedChords",
+      "Pub_Note_WriteMelodyOverChords"
+    ],
+    "Cover": "music_staff.png"
+  },
+  {
+    "Name": "Mathematics",
+    "Description": "...",
+    "List": [
+      "Pub_Note_TheMapOfMathematics"
+    ],
+    "Cover": "math.png"
+  }
 ]

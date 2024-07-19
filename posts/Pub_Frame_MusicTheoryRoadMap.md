@@ -64,7 +64,9 @@ https://www.reddit.com/r/musictheory/comments/pse4l/comment/c3rv291/
 7. Music Theory for Dummies
 8. The AB Guide to Music Theory
 9. Berklee Music Theory Book
-10. 爵士乐宝典
+10. Berklee Music Theory Book Answer: https://berkleepress.com/downloads/
+11. 爵士乐宝典
 
 ## Test Resources
+
 - [MyMusicTheory Quizzes and Tests](https://mymusictheory.com/music-theory-quizzes/)
