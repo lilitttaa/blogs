@@ -6,20 +6,38 @@
       "Pub_Note_Lightmass",
       "Pub_Note_ShaderCompile",
       "Pub_Frame_UnrealTest",
-      "Pub_Frame_AutomationTest"
+      "Pub_Frame_AutomationTest",
+      "Pub_Note_LarianCinematics",
+      "Pub_Note_ObjectLifeTime",
+	  "Pub_Note_IntroductionToCharacterAnimation",
+    "Pub_Note_MathBackground"
     ],
     "Cover": "game.png"
+  },
+  {
+    "Name": "Cpp",
+    "Description": "...",
+    "List": [
+      "Pub_Note_CppPrimerChapter1",
+      "Pub_Note_CppPrimerChapter2",
+      "Pub_Note_CppPrimerChapter3",
+      "Pub_Note_CppPrimerChapter4",
+      "Pub_Note_CppPrimerChapter5",
+      "Pub_Note_CppPrimerChapter6",
+      "Pub_Note_CppPrimerChapter8",
+      "Pub_Note_Traits",
+      "Pub_Note_MoveSemantics"
+    ],
+    "Cover": "coffee.png"
   },
   {
     "Name": "Program",
     "Description": "...",
     "List": [
-      "Pub_Note_LarianCinematics",
       "Pub_Note_TDD",
-      "Pub_Note_Traits",
-      "Pub_Note_MoveSemantics",
       "Pub_nips_2023_poster_abstract",
-      "Pub_Frame_ReinforcementLearning"
+      "Pub_Frame_ReinforcementLearning",
+      "Pub_Note_FoundationOfReinforcementLearning"
     ],
     "Cover": "program.png"
   },
@@ -47,7 +65,8 @@
       "Pub_Note_Routine",
       "Pub_Note_Productivity",
       "Pub_Note_DoingWellInYourCourse",
-      "Pub_Note_HowToDoResearch"
+      "Pub_Note_HowToDoResearch",
+	  "Pub_Note_Soul"
     ],
     "Cover": "life.png"
   },

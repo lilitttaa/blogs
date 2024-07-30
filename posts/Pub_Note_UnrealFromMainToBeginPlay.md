@@ -1,11 +1,13 @@
 ---
 title: UE4 从main到BeginPlay
 ---
+
 ## Reference
+
 - https://www.youtube.com/watch?v=IaU2Hue-ApI
 - https://docs.unrealengine.com/4.27/zh-CN/InteractiveExperiences/Framework/GameFlow/
 - https://www.cnblogs.com/shiroe/p/15547566.html
-
+- https://www.zhihu.com/column/c_1687212815599853569
 
 从 Editor 下按下 Play Button 的调用栈如下：
 
@@ -60,7 +62,7 @@ EngineInit() Launch.cpp:48
 GuardedMain(const wchar_t *) Launch.cpp:91
 ```
 
-``` cpp
+```cpp
 int32 GuardedMain(const TCHAR* CmdLine)
 {
     int32 ErrorLevel = EnginePreInit(CmdLine);
@@ -77,12 +79,60 @@ int32 GuardedMain(const TCHAR* CmdLine)
     return ErrorLevel;
 }
 ```
+
 ## 平台入口
 
 ## PreInit
 
+- PreInitPreStartupScreen
+- PreInitPostStartupScreen
+
+### PreInitPreStartupScreen
+
+- LLM(FLowLevelMemTracker::Get().ProcessCommandLine(CmdLine));
+- IFileManager::Get().ProcessCommandLineOptions();
+- FPlatformFileManager::Get().InitializeNewAsyncIO();
+- GIsGameThreadIdInitialized = true;
+- IProjectManager::Get().LoadProjectFile(FPaths::GetProjectFilePath())
+- FTaskGraphInterface::Startup(FPlatformMisc::NumberOfCores());
+- LoadCoreModules()
+- GThreadPool = FQueuedThreadPool::Allocate();
+- LoadPreInitModules();
+- AppInit();
+- IPlatformFeaturesModule::Get();
+- InitGamePhys();
+- FPlatformSplash::Show();
+- RHIInit(bHasEditorToken);
+- RenderUtilsInit();
+- FShaderCodeLibrary::InitForRuntime(GMaxRHIShaderPlatform);
+- GetRendererModule();
+- InitializeShaderTypes();
+- CompileGlobalShaderMap(false);
+- FModuleManager::Get().LoadModuleChecked<ISlateNullRendererModule>("SlateNullRenderer").CreateSlateNullRenderer() / FModuleManager::Get().GetModuleChecked<ISlateRHIRendererModule>("SlateRHIRenderer").CreateSlateRHIRenderer();
+- FSlateApplication& CurrentSlateApp = FSlateApplication::Get();
+- IProjectManager::Get().LoadModulesForProject(ELoadingPhase::PostSplashScreen)
+- IPluginManager::Get().LoadModulesForEnabledPlugins(ELoadingPhase::PostSplashScreen)
+
+从模块的角度看:
+...
+- LoadCoreModules()
+...
+- LoadPreInitModules();
+- AppInit();
+...
+- IPlatformFeaturesModule::Get();
+...
+- GetRendererModule();
+...
+- FModuleManager::Get().LoadModuleChecked<ISlateNullRendererModule>("SlateNullRenderer").CreateSlateNullRenderer() / FModuleManager::Get().GetModuleChecked<ISlateRHIRendererModule>("SlateRHIRenderer").CreateSlateRHIRenderer();
+...
+- IProjectManager::Get().LoadModulesForProject(ELoadingPhase::PostSplashScreen)
+- IPluginManager::Get().LoadModulesForEnabledPlugins(ELoadingPhase::PostSplashScreen)
+
+
 ## StartModule
-``` cpp
+
+```cpp
 /**
  * Phase at which this module should be loaded during startup.
  */
@@ -115,4 +165,8 @@ enum Type
 }
 };
 ```
-EarliestPossible 在 AppInit里加载
+
+EarliestPossible 在 AppInit 里加载
+
+
+![alt text](image-1.png)

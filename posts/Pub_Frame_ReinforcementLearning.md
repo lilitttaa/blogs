@@ -1,7 +1,7 @@
 ---
 title: The Roadmap of Reinforcement Learning
-cover: robot.png
 ---
+
 ## Academic Conference
 
 - [AAAI]<https://aitopics.org/search>
@@ -25,13 +25,19 @@ cover: robot.png
 - [Evolutionary Reinforcement Learning: A Survey]<https://arxiv.org/abs/2303.0415>
 - [Reinforcement Learning for Generative AI: A Survey]<https://arxiv.org/abs/2308.14328>
 
+## Course
+
+- [CS285](https://rail.eecs.berkeley.edu/deeprlcourse/)
+
 ## Awesome list
 
 - <https://github.com/jgvictores/awesome-deep-reinforcement-learning>
 - <https://github.com/wwxFromTju/awesome-reinforcement-learning-lib>
 
 ## Books
-[Reinforcement Learning An Introduction]http://incompleteideas.net/book/RLbook2020.pdf
+
+- [蘑菇书EasyRL](https://datawhalechina.github.io/easy-rl/#/)
+- [Reinforcement Learning An Introduction](http://incompleteideas.net/book/RLbook2020.pdf)
 
 ## Competition
 
