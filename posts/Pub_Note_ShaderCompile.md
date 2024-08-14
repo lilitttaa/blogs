@@ -2,6 +2,15 @@
 title: Unreal Shader Compile
 ---
 
+## Resources
+
+- [UE4 Shader 编译以及变种实现](https://blog.csdn.net/UWA4D/article/details/107689394)
+- [UE 着色器开发文档](https://docs.unrealengine.com/4.27/zh-CN/ProgrammingAndScripting/Rendering/ShaderDevelopment/)
+- [交叉编译](https://docs.unrealengine.com/4.27/zh-CN/ProgrammingAndScripting/Rendering/ShaderDevelopment/HLSLCrossCompiler/)
+- [调试着色器编译过程](https://docs.unrealengine.com/4.27/zh-CN/ProgrammingAndScripting/Rendering/ShaderDevelopment/ShaderCompileProcess/)
+- [Shader 变体大杀器：Specialization constants](https://blog.uwa4d.com/archives/USparkle_SpecializationConstants.html)
+- [剖析虚幻渲染体系（08）- Shader 体系](https://www.cnblogs.com/timlly/p/15092257.html)
+
 ## Prerequisite
 
 ### 怎么才能控制使用哪个编译格式？
@@ -116,7 +125,7 @@ ShaderCompileWorker -> ShaderCompileCommon -> hlslcc
 FGlobalShaderTypeCompiler::BeginCompileShader
 FGlobalShaderTypeCompiler::BeginCompileShaderPipeline
 
-### UE 4.27 的 Shader 跨平台编译流程是怎样的？
+### UE Shader 跨平台编译流程是怎样的？
 
 这是 4.25 的跨平台流程：
 ![alt text](image-9.png)
@@ -125,15 +134,24 @@ FGlobalShaderTypeCompiler::BeginCompileShaderPipeline
 
 Uber Shader：同一个 shader 源文件包含了大量的宏定义，这些宏定义根据不同的值可以组合成各种各样的目标代码。
 
+### global shader 编译后是怎么赋给 material?
+
+![alt text](image-10.png)
+
+### global shader 编译报错
+
+```cpp
+FGlobalShaderTypeCompiler::FinishCompileShader(const FGlobalShaderType _, const FShaderCompileJob &, const FShaderPipelineType _) ShaderCompiler.cpp:5225
+[Inlined] ProcessCompiledJob(FShaderCompileJob _, const FShaderPipelineType _, TArray<…> &, TArray<…> &) ShaderCompiler.cpp:6030
+ProcessCompiledGlobalShaders(const TArray<…> &) ShaderCompiler.cpp:6077
+FShaderCompilingManager::ProcessCompiledShaderMaps(TMap<…> &, float) ShaderCompiler.cpp:3459
+FShaderCompilingManager::ProcessAsyncResults(bool, bool) ShaderCompiler.cpp:4000
+```
+
 ## Important Entities
 
 IShaderFormat 决定了使用哪个着色器格式，也决定了是否使用 hlslcc
 ![alt text](image.png)
 （其中 VectorVM 是 UE 中用于处理 Niagara 的后端格式）
 
-## Reference
 
-- [调试着色器编译过程](https://docs.unrealengine.com/4.27/zh-CN/ProgrammingAndScripting/Rendering/ShaderDevelopment/ShaderCompileProcess/)
-- [HLSL 交叉编译器](https://docs.unrealengine.com/4.27/zh-CN/ProgrammingAndScripting/Rendering/ShaderDevelopment/HLSLCrossCompiler/)
-- [Shader 变体大杀器：Specialization constants](https://blog.uwa4d.com/archives/USparkle_SpecializationConstants.html)
-- [剖析虚幻渲染体系（08）- Shader 体系](https://www.cnblogs.com/timlly/p/15092257.html)

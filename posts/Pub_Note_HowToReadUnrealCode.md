@@ -1,0 +1,335 @@
+---
+title: How To Read Unreal Code
+---
+
+当你希望通过使用 Unreal Engine 的某些功能来解决问题时，你首先需要找到相关的代码。大多数时候我们采用自顶向下的方法，即从 Tool 层和 Function 层入手。这里提供一些快速找到相关代码的思路。
+
+## 通过编辑器提示、文本、或者打印信息进行搜索
+
+![alt text](image-2.png)
+![alt text](image-3.png)
+
+## 相关 Commandlet
+
+可以查看有没有相关的 Commandlet，往往这些 Commandlet 会比较直接的调用模块的重要 API
+![alt text](image.png)
+
+## BlueprintFunctionLibrary
+
+BlueprintFunctionLibrary 是暴露给蓝图的一些函数库，从这里入手可以找到相关的 C++ 代码
+![alt text](image-1.png)
+更多的 BlueprintFunctionLibrary 可以参考附录
+
+## 通过蓝图搜索
+
+![alt text](image-4.png)
+![alt text](image-6.png)
+不过蓝图中的有些节点不是直接通过函数来定义的：
+![alt text](image-7.png)
+![alt text](image-5.png)
+这里描述了这个节点实际执行相关的函数和类：
+![alt text](image-8.png)
+不管怎么这些自定义的蓝图节点都继承自 UK2Node：
+![alt text](image-9.png)
+其中异步节点继承自 UK2Node_BasicAsyncTask：
+![alt text](image-10.png)
+
+## 阅读相关模块的文档
+
+- [Unreal 文档](https://docs.unrealengine.com/4.27/en-US/index.html)
+
+## IDE 工具
+
+使用代码折叠快速浏览代码：
+![alt text](image-11.png)
+或者也可以使用 Structure 来查看代码结构：
+![alt text](image-14.png)
+使用 Bookmark 来标记代码：
+![alt text](image-12.png)
+查看类型继承关系：
+![alt text](image-13.png)
+查看函数调用关系：
+![alt text](image-17.png)
+![alt text](image-15.png)
+![alt text](image-16.png)
+
+## BlueprintFunctionLibrary 附录
+
+UAbilitySystemBlueprintLibrary
+UAchievementBlueprintLibrary
+UActorTypeFunctionLibrary
+UAIBlueprintHelperLibrary
+UAIMovementFunctionLibrary
+UAnalyticsBlueprintLibrary
+UAndroidPermissionFunctionLibrary
+UAnimationBlueprintLibrary
+UAnimationBudgetBlueprintLibrary
+UAnimationFunctionLibrary
+UAnselFunctionLibrary
+UARBlueprintLibrary
+UARTraceResultLibrary
+UArtToolExtra
+UARUtilitiesFunctionLibrary
+UAsyncFunctionLibrary
+UAudioCaptureFunctionLibrary
+UAudioMixerBlueprintLibrary
+UAudioModulationStatics
+UAudioModulationStyle
+UAutomationBlueprintFunctionLibrary
+UAutomationUtilsBlueprintLibrary
+UAzureSpatialAnchorsLibrary
+UBattleFunctionLibrary
+UBinkFunctionLibrary
+UBlueprintFileUtilsBPLibrary
+UBlueprintGameplayTagLibrary
+UBlueprintMapLibrary
+UBlueprintMaterialTextureNodesBPLibrary
+UBlueprintPathsLibrary
+UBlueprintPlatformLibrary
+UBlueprintSetLibrary
+UBTFunctionLibrary
+UCampFunctionLibrary
+UCartesianCoordinatesFunctionLibrary
+UChaosSolverEngineBlueprintLibrary
+UCharacterFunctionLibrary
+UColorWheelHelper
+UComposureBlueprintLibrary
+UContentBrowserItemLibrary
+UConversationContextHelpers
+UConversationLibrary
+UCoreTechBlueprintLibrary
+UDataprepFilterLibrary
+UDataprepOperationsLibrary
+UDataSetFunctionLibrary
+UDatasmithContentBlueprintLibrary
+UDatasmithRuntimeLibrary
+UDatasmithStaticMeshBlueprintLibrary
+UDataTableFunctionLibrary
+UDBTweenUtil
+UDBTweenUtil2
+UDebugDrawService
+UDirectLinkTestLibrary
+UDisplayClusterBlueprintLib
+UDisplayClusterProjectionBlueprintLib
+UDLSSLibrary
+UDMXAttributeNameConversions
+UDMXEntityReferenceConversions
+UDMXNameContainersConversions
+UDMXProtocolBlueprintLibrary
+UDropTimecodeToStringConversion
+UEditorAssetLibrary
+UEditorDataprepAssetLibrary
+UEditorDialogLibrary
+UEditorFilterLibrary
+UEditorLevelLibrary
+UEditorSkeletalMeshLibrary
+UEditorStaticMeshLibrary
+UEditorSubsystemBlueprintLibrary
+UEditorTestsUtilityLibrary
+UEditorUtilityLibrary
+UEnhancedInputLibrary
+UEnvirInfoFunctionLibrary
+UEyeTrackerFunctionLibrary
+UFilterBlueprintFunctionLibrary
+UFlibAssetManageHelper
+UFlibHotCookerHelper
+UFlibHotPatcherCoreHelper
+UFlibHotPatcherEditorHelper
+UFlibPakHelper
+UFlibPatchParserHelper
+UFlibShaderCodeLibraryHelper
+UFlibShaderPipelineCacheHelper
+UFMODBlueprintStatics
+UFoliageStatistics
+UFormulaFunctionLibrary
+UFunctionalTestingManager
+UFunctionalTestUtilityLibrary
+UFXConverterUtilitiesLibrary
+UGameplayStatics
+UGeographicCoordinatesFunctionLibrary
+UGeoReferencingEditorBPLibrary
+UGlobalLuaTableFunctionLibrary
+UGoogleARCoreFrameFunctionLibrary
+UGoogleARCoreServicesFunctionLibrary
+UGoogleARCoreSessionFunctionLibrary
+UGooglePADFunctionLibrary
+UGoogleVRControllerFunctionLibrary
+UGoogleVRHMDFunctionLibrary
+UGoogleVRTransition2DBPLibrary
+UGroomBlueprintLibrary
+UHandKeypointConversion
+UHeadMountedDisplayFunctionLibrary
+UHealthSnapshotBlueprintLibrary
+UHoloLensARFunctionLibrary
+UHotUpdateFunctionLibrary
+UHoudiniPublicAPIBlueprintLib
+UImageWriteBlueprintLibrary
+UImportanceSamplingLibrary
+UImportTool
+UIOSReplayKitControl
+UKismetAnimationLibrary
+UKismetArrayLibrary
+UKismetGuidLibrary
+UKismetInputLibrary
+UKismetInternationalizationLibrary
+UKismetMaterialLibrary
+UKismetMathLibrary
+UKismetNodeHelperLibrary
+UKismetProceduralMeshLibrary
+UKismetRenderingLibrary
+UKismetStringLibrary
+UKismetStringTableLibrary
+UKismetSystemLibrary
+UKismetTextLibrary
+ULandmassBlueprintFunctionLibrary
+ULayersBlueprintLibrary
+ULeaderboardBlueprintLibrary
+ULensDistortionBlueprintLibrary
+ULevelSequenceEditorBlueprintLibrary
+ULevelSnapshotsEditorFunctionLibrary
+ULevelSnapshotsFunctionLibrary
+ULGUIBPLibrary
+ULidarPointCloudBlueprintLibrary
+ULidarPointCloudFileIO_ASCII
+ULiveLinkBlueprintLibrary
+ULiveLinkDebuggerBlueprintLibrary
+ULocationServices
+ULowEntryExtendedStandardLibrary
+ULTweenBPLibrary
+ULuminARFrameFunctionLibrary
+ULuminARImageTrackingFunctionLibrary
+ULuminARSessionFunctionLibrary
+UMagicLeapARPinFunctionLibrary
+UMagicLeapAudioFunctionLibrary
+UMagicLeapCameraFunctionLibrary
+UMagicLeapConnectionsFunctionLibrary
+UMagicLeapContactsFunctionLibrary
+UMagicLeapControllerFunctionLibrary
+UMagicLeapCVCameraFunctionLibrary
+UMagicLeapEyeTrackerFunctionLibrary
+UMagicLeapHandMeshingFunctionLibrary
+UMagicLeapHandTrackingFunctionLibrary
+UMagicLeapHMDFunctionLibrary
+UMagicLeapImageTrackerFunctionLibrary
+UMagicLeapLightEstimationFunctionLibrary
+UMagicLeapLocationFunctionLibrary
+UMagicLeapMusicServiceFunctionLibrary
+UMagicLeapNetworkingFunctionLibrary
+UMagicLeapPlanesFunctionLibrary
+UMagicLeapPrivilegesFunctionLibrary
+UMagicLeapRaycastFunctionLibrary
+UMagicLeapSecureStorage
+UMagicLeapSharedFileFunctionLibrary
+UMagicLeapTabletFunctionLibrary
+UMapSyncHelper
+UMaterialEditingLibrary
+UMatineeCameraShakeFunctionLibrary
+UMediaBlueprintFunctionLibrary
+UMediaFrameworkCapturePanelBlueprintLibrary
+UMediaProfileBlueprintLibrary
+UMeshPaintingToolset
+UMeshPaintModeHelpers
+UMeshProcessingLibrary
+UMeshVertexPainterKismetLibrary
+UMIDIDeviceManager
+UMobilePatchingLibrary
+UModularSynthLibrary
+UMotionTrackedDeviceFunctionLibrary
+UMotionWarpingUtilities
+UMoviePipelineBlueprintLibrary
+UMoviePipelineEditorBlueprintLibrary
+UMovieSceneBindingExtensions
+UMovieSceneEventTrackExtensions
+UMovieSceneFolderExtensions
+UMovieScenePropertyTrackExtensions
+UMovieSceneSectionExtensions
+UMovieSceneSequenceExtensions
+UMovieSceneSequenceFunctions
+UMovieSceneTrackExtensions
+UMovieSceneVectorTrackExtensions
+UMrcUtilLibrary
+UMultiUserClientStatics
+UNameStringFunctionLibrary
+UNavigationFunctionLibrary
+UNeModeFunctionLibrary
+UNetPushModelHelpers
+UNiagaraDataInterfaceArrayFunctionLibrary
+UNiagaraFunctionLibrary
+UNiagaraWaterFunctionLibrary
+UOculusFunctionLibrary
+UOculusInputFunctionLibrary
+UOculusMRFunctionLibrary
+UOpenColorIOBlueprintLibrary
+UOpenCVLensDistortionBlueprintLibrary
+UOptionalMobileFeaturesBPLibrary
+UOSCManager
+UOSCModulationMixingStatics
+UPaperSpriteBlueprintLibrary
+UPFMExporterBlueprintLib
+UPivotToolBlueprintLibrary
+UPropertyBlueprintFunctionLibrary
+UPyAutomationTestLibrary
+UPyTestObjectLibrary
+UPyTestStructLibrary
+UPythonScriptLibrary
+UQTEFuncLib
+URagdollFunctionLibrary
+URawInputFunctionLibrary
+UReflexBlueprintLibrary
+URemoteControlFunctionLibrary
+UReplaySystemBPLibrary
+UResonanceAudioBlueprintFunctionLibrary
+UResourceLibrary
+URuntimeAssetCacheBPHooks
+USequenceRecorderBlueprintLibrary
+USequencerScriptingRangeExtensions
+USequencerToolsFunctionLibrary
+USequenceUtils
+USkillFeatureFunctionLibrary
+USlateBlueprintLibrary
+USoundUtilitiesBPFunctionLibrary
+USoundVisualizationStatics
+USteamVRFunctionLibrary
+USteamVRInputDeviceFunctionLibrary
+UStereoLayerFunctionLibrary
+UStoryPlayableUtils
+USubsystemBlueprintLibrary
+USunPositionFunctionLibrary
+USVONBlueprintStatics
+USynthesisUtilitiesBlueprintFunctionLibrary
+UTakeRecorderBlueprintLibrary
+UTakesCoreBlueprintLibrary
+UTexturePaintToolset
+UTextureShareIBlueprintLib
+UTileMapBlueprintLibrary
+UTimeManagementBlueprintLibrary
+UTurnBasedBlueprintLibrary
+UUIFunctionLibrary
+UUnLuaEditorFunctionLibrary
+UUnLuaFunctionLibrary
+UUsdExporterBlueprintLibrary
+UUserListEntryLibrary
+UUserObjectListEntryLibrary
+UUVGenerationFlattenMapping
+UVariantManagerBlueprintLibrary
+UVCamBlueprintFunctionLibrary
+UVCamEditorLibrary
+UVisualLoggerKismetLibrary
+UVOIPStatics
+UVPBlueprintLibrary
+UVPBookmarkBlueprintLibrary
+UVPBookmarkEditorBlueprintLibrary
+UVPCameraBlueprintLibrary
+UVPRenderingBlueprintLibrary
+UVPUtilitiesEditorBlueprintLibrary
+UWarpUtilsBlueprintLibrary
+UWCEditFunctionLibrary
+UWidgetBlueprintLibrary
+UWidgetLayoutLibrary
+UWindowsMixedRealityFunctionLibrary
+UWindowsMixedRealityHandTrackingFunctionLibrary
+UWindowsMixedRealitySpatialInputFunctionLibrary
+UWorldExtern
+UXRAssetFunctionLibrary
+UXRLoadingScreenFunctionLibrary
+UXRVisualizationFunctionLibrary

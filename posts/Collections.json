@@ -1,18 +1,41 @@
 [
 	{
+		"Name": "Game",
+		"Description": "...",
+		"List": [
+			"Pub_Note_LarianCinematics",
+			"Pub_Note_TheArtOfFirewatch",
+			"Pub_Note_HowToReadUnrealCode",
+			"Pub_Frame_UnrealTest",
+			"Pub_Frame_AutomationTest",
+			"Pub_Note_ShaderCompile",
+			"Pub_Note_Lightmass",
+			"Pub_Note_ObjectLifeTime",
+			"Pub_Note_UnrealKismet",
+			"Pub_Note_IntroductionToCharacterAnimation",
+			"Pub_Note_MathBackground",
+      "Pub_Note_FF16"
+		],
+		"Cover": "game.png"
+	},
+	{
+		"Name": "Cpp",
+		"Description": "...",
+		"List": [
+			"Pub_Note_Traits",
+			"Pub_Note_MoveSemantics"
+		],
+		"Cover": "coffee.png"
+	},
+	{
 		"Name": "Program",
 		"Description": "...",
 		"List": [
-			"Pub_Frame_UnrealTest",
-			"Pub_Note_LarianCinematics",
-			"Pub_Frame_AutomationTest",
 			"Pub_Note_TDD",
-			"Pub_Note_Traits",
-			"Pub_Note_MoveSemantics",
 			"Pub_nips_2023_poster_abstract",
 			"Pub_Frame_ReinforcementLearning",
-			"Pub_Note_Lightmass",
-			"Pub_Note_ShaderCompile"
+			"Pub_Note_FoundationOfReinforcementLearning",
+			"Pub_Note_PythonRegex"
 		],
 		"Cover": "program.png"
 	},
@@ -40,7 +63,8 @@
 			"Pub_Note_Routine",
 			"Pub_Note_Productivity",
 			"Pub_Note_DoingWellInYourCourse",
-			"Pub_Note_HowToDoResearch"
+			"Pub_Note_HowToDoResearch",
+			"Pub_Note_Soul"
 		],
 		"Cover": "life.png"
 	},

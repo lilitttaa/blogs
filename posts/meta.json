@@ -215,6 +215,10 @@
     "cover": "piano.png",
     "created_at": "2024-07-09T23:14:54.762Z"
   },
+  "Pub_Note_Soul": {
+    "title": "Soul（心灵奇旅）",
+    "created_at": "2024-07-29T00:24:54.232Z"
+  },
   "Pub_Note_TheMapOfMathematics": {
     "title": "The Map of Mathematics（数学地图）",
     "cover": "math.png",
@@ -240,25 +244,161 @@
   },
   "Pub_Note_ShaderCompile": {
     "title": "Unreal Shader Compile",
-    "created_at": "2024-06-25T23:46:10.235Z"
+    "created_at": "2024-08-07T12:39:25.526Z"
+  },
+  "Pub_Note_RenderingPipeline": {
+    "title": "Unreal Engine Rendering Pipeline",
+    "created_at": "2024-07-18T13:21:30.867Z"
+  },
+  "Pub_Note_RayTracing": {
+    "title": "Mobile Render Pipeline",
+    "created_at": "2024-08-08T12:25:04.538Z"
+  },
+  "Pub_Note_MobileRenderPipeline": {
+    "title": "Mobile Render Pipeline",
+    "created_at": "2024-08-08T12:25:04.426Z"
+  },
+  "Pub_Note_Material": {
+    "title": "Material",
+    "created_at": "2024-08-08T12:25:04.414Z"
   },
   "Pub_Note_Lightmass": {
     "title": "Lightmass Source Code Analysis",
     "created_at": "2024-06-25T23:47:58.786Z"
+  },
+  "Pub_Note_LightAndShadow": {
+    "title": "Light and Shadow",
+    "created_at": "2024-08-08T12:25:04.581Z"
+  },
+  "Pub_Note_DeferredRenderPipeline": {
+    "title": "Deferred Render Pipeline",
+    "created_at": "2024-08-08T12:25:04.332Z"
+  },
+  "Pub_Note_UnrealPathAndName": {
+    "title": "Unreal Path And Name",
+    "created_at": "2024-08-02T14:21:43.245Z"
+  },
+  "Pub_Note_UnrealKismet": {
+    "title": "Unreal Kismet",
+    "created_at": "2024-08-01T12:17:40.326Z"
+  },
+  "Pub_Note_UnrealFromMainToBeginPlay": {
+    "title": "UE4 从main到BeginPlay",
+    "created_at": "2024-07-20T01:03:03.091Z"
+  },
+  "Pub_Note_UnrealEngineGameFramework": {
+    "title": "Unreal Engine Game Framework",
+    "created_at": "2024-07-17T13:43:03.322Z"
+  },
+  "Pub_Note_Unlua": {
+    "title": "Unlua",
+    "created_at": "2024-07-26T13:07:42.130Z"
+  },
+  "Pub_Note_Sequencer": {
+    "title": "Unreal Sequencer",
+    "created_at": "2024-07-17T13:43:14.807Z"
+  },
+  "Pub_Note_Reflection": {
+    "title": "Unreal Engine Reflection",
+    "created_at": "2024-07-17T13:43:14.415Z"
+  },
+  "Pub_Note_Physics": {
+    "title": "Physics",
+    "created_at": "2024-08-08T12:25:04.715Z"
+  },
+  "Pub_Note_ObjectLifeTime": {
+    "title": "Object Lifetime",
+    "created_at": "2024-07-24T13:36:16.045Z"
+  },
+  "Pub_Note_NetSync": {
+    "title": "Unreal Net Sync",
+    "created_at": "2024-08-08T12:25:01.839Z"
+  },
+  "Pub_Note_MultiThread": {
+    "title": "Multi Thread",
+    "created_at": "2024-08-08T12:25:04.656Z"
+  },
+  "Pub_Note_MemoryManage": {
+    "title": "Memory Manage",
+    "created_at": "2024-08-08T12:25:04.584Z"
+  },
+  "Pub_Note_HowToReadUnrealCode": {
+    "title": "How To Read Unreal Code",
+    "created_at": "2024-08-08T12:25:05.931Z"
+  },
+  "Pub_Note_GameplayFramework": {
+    "title": "Gameplay Framework",
+    "created_at": "2024-08-08T12:25:04.273Z"
+  },
+  "Pub_Note_FromEngineLoopToTick": {
+    "title": "From Engine Loop to Tick",
+    "created_at": "2024-08-08T12:25:04.197Z"
+  },
+  "Pub_Note_Delegate": {
+    "title": "Unreal Delegate 源码解析",
+    "created_at": "2024-07-17T13:43:11.375Z"
+  },
+  "Pub_Note_DebugPackage": {
+    "title": "How to debug package in Unreal Engine",
+    "created_at": "2024-07-17T13:43:11.412Z"
+  },
+  "Pub_Note_AssetManage": {
+    "title": "Asset Manage",
+    "created_at": "2024-08-08T12:25:04.862Z"
+  },
+  "Pub_Note_Animation": {
+    "title": "Animation",
+    "created_at": "2024-08-09T13:20:36.741Z"
   },
   "Pub_Frame_UnrealTest": {
     "title": "Unreal 自动化测试源码分析",
     "cover": "game.png",
     "created_at": "2024-06-21T12:48:43.957Z"
   },
+  "Pub_Note_WeDontNeedSoManyPeople": {
+    "title": "We Don't Need So Many People - 关于游戏开发团队的一些思考",
+    "created_at": "2024-08-04T01:26:51.265Z"
+  },
+  "Pub_Note_GameProfile": {
+    "title": "游戏性能优化",
+    "created_at": "2024-08-09T13:20:36.712Z"
+  },
+  "Pub_Note_UbisoftNarrative": {
+    "title": "Procedural Generation of Cinematic Dialogues in Assassin's Creed Odyssey",
+    "created_at": "2024-07-29T13:29:33.779Z"
+  },
+  "Pub_Note_TheCinematicsOfHorizonForbiddenWest": {
+    "title": "The Cinematics of Horizon Forbidden West",
+    "created_at": "2024-07-26T13:07:42.605Z"
+  },
+  "Pub_Note_TheArtOfFirewatch": {
+    "title": "The Art of Firewatch",
+    "created_at": "2024-08-08T12:25:06.271Z"
+  },
   "Pub_Note_LarianCinematics": {
     "title": "A Top-Down Look at Our Bottom-Up Approach in 'Baldur's Gate 3'",
     "cover": "game.png",
     "created_at": "2024-06-14T13:50:18.402Z"
   },
+  "Pub_Note_FF16": {
+    "title": "Cinematic Workflow and Pipeline of 'FINAL FANTASY XVI'",
+    "created_at": "2024-08-09T13:20:48.704Z"
+  },
+  "Pub_Note_DialogueSystemAndToolsInFirewatch": {
+    "title": "Dialogue System and Tools in Firewatch",
+    "created_at": "2024-08-13T23:37:32.983Z"
+  },
   "Pub_Note_OverviewOfGameEngine": {
     "title": "Overview Of Game Engine",
     "created_at": "2024-07-12T02:35:39.617Z"
+  },
+  "Pub_Note_MathBackground": {
+    "title": "Games105 2.Math Background",
+    "created_at": "2024-08-05T12:41:44.555Z"
+  },
+  "Pub_Note_IntroductionToCharacterAnimation": {
+    "title": "Games105 1.Introduction To Character Animation",
+    "created_at": "2024-07-30T15:15:09.296Z"
   },
   "Pub_Frame_AutomationTest": {
     "title": "游戏自动化测试研究",
@@ -276,6 +416,10 @@
     "desc": "...",
     "created_at": "2024-06-21T12:48:43.962Z"
   },
+  "Pub_Note_PythonRegex": {
+    "title": "Python Regex",
+    "created_at": "2024-08-07T12:39:25.537Z"
+  },
   "Pub_Note_Traits": {
     "title": "什么是Traits？",
     "cover": "program.png",
@@ -286,45 +430,96 @@
     "cover": "program.png",
     "created_at": "2024-06-06T13:57:46.160Z"
   },
+  "Pub_Note_CppPrimerChapter9": {
+    "title": "C++ Primer 9. 顺序容器",
+    "created_at": "2024-08-02T00:54:32.440Z"
+  },
+  "Pub_Note_CppPrimerChapter8": {
+    "title": "C++ Primer 8. IO库",
+    "created_at": "2024-07-25T00:47:50.335Z"
+  },
+  "Pub_Note_CppPrimerChapter7": {
+    "title": "C++ Primer 7.类",
+    "created_at": "2024-07-31T15:15:21.734Z"
+  },
+  "Pub_Note_CppPrimerChapter6": {
+    "title": "C++ Primer 6.函数",
+    "created_at": "2024-07-24T21:52:36.530Z"
+  },
+  "Pub_Note_CppPrimerChapter5": {
+    "title": "C++ Primer 5.语句",
+    "created_at": "2024-07-24T00:55:05.091Z"
+  },
+  "Pub_Note_CppPrimerChapter4": {
+    "title": "C++ Primer 4.表达式",
+    "created_at": "2024-07-23T15:34:19.263Z"
+  },
+  "Pub_Note_CppPrimerChapter3": {
+    "title": "C++ Primer 3.字符串、向量和数组",
+    "created_at": "2024-07-22T12:13:34.481Z"
+  },
+  "Pub_Note_CppPrimerChapter2": {
+    "title": "C++ Primer 2.变量和基本类型",
+    "created_at": "2024-07-21T01:21:15.229Z"
+  },
+  "Pub_Note_CppPrimerChapter19": {
+    "title": "C++ Primer 19.特殊工具与技术",
+    "created_at": "2024-08-04T23:42:47.347Z"
+  },
+  "Pub_Note_CppPrimerChapter18": {
+    "title": "C++ Primer 18.用于大型程序的工具",
+    "created_at": "2024-08-04T23:42:37.438Z"
+  },
+  "Pub_Note_CppPrimerChapter17": {
+    "title": "C++ Primer 17.标准库特殊设施",
+    "created_at": "2024-08-04T23:42:17.831Z"
+  },
+  "Pub_Note_CppPrimerChapter16": {
+    "title": "C++ Primer 16.模板与泛型编程",
+    "created_at": "2024-08-04T23:40:47.374Z"
+  },
+  "Pub_Note_CppPrimerChapter15": {
+    "title": "C++ Primer 15.面向对象程序设计",
+    "created_at": "2024-08-04T23:40:38.344Z"
+  },
+  "Pub_Note_CppPrimerChapter14": {
+    "title": "C++ Primer 14.重载运算与类型转换",
+    "created_at": "2024-08-04T23:40:35.544Z"
+  },
+  "Pub_Note_CppPrimerChapter13": {
+    "title": "C++ Primer 13.拷贝控制",
+    "created_at": "2024-08-04T23:40:34.152Z"
+  },
+  "Pub_Note_CppPrimerChapter12": {
+    "title": "C++ Primer 12.动态内存",
+    "created_at": "2024-08-04T23:40:31.568Z"
+  },
+  "Pub_Note_CppPrimerChapter11": {
+    "title": "C++ Primer 11.关联容器",
+    "created_at": "2024-08-04T23:40:12.654Z"
+  },
+  "Pub_Note_CppPrimerChapter10": {
+    "title": "C++ Primer 10.泛型算法",
+    "created_at": "2024-08-04T23:38:02.946Z"
+  },
+  "Pub_Note_CppPrimerChapter1": {
+    "title": "C++ Primer 1.开始",
+    "created_at": "2024-07-20T10:01:15.629Z"
+  },
   "Pub_nips_2023_poster_abstract": {
     "title": "NeurIPS 2023 Poster Abstracts(Reinforcement Learning)",
-    "cover": "robot.png",
-    "**Author**": "Eric Eaton · Marcel Hussing · Michael Kearns · Jessica Sorrell",
-    "**Abstract**": "The replicability crisis in the social, behavioral, and data sciences has led to the formulation of algorithm frameworks for replicability --- i.e., a requirement that an algorithm produce identical outputs (with high probability) when run on two different samples from the same underlying distribution. While still in its infancy, provably replicable algorithms have been developed for many fundamental tasks in machine learning and statistics, including statistical query learning, the heavy hitters problem, and distribution testing. In this work we initiate the study of replicable reinforcement learning, providing a provably replicable algorithm for parallel value iteration, and a provably replicable version of R-Max in the episodic setting. These are the first formal replicability results for control problems, which present different challenges for replication than batch learning settings.",
-    "**Abstract(Chinese)**": "社会、行为和数据科学领域中的可复制性危机导致了针对可复制性的算法框架的制定 --- 即，要求算法在从相同潜在分布中抽取的两个不同样本上运行时产生相同输出（很高的概率）。虽然这一领域仍处于起步阶段，但已经为许多机器学习和统计学中的基本任务开发了可以证明可复制性的算法，包括统计查询学习、重点问题和分布测试。在这项工作中，我们开始研究可复制性强化学习，提供了并行价值迭代的可证复制算法，并在情景设置中提供了R-Max的可证复制版本。这是控制问题的首个正式可复制性结果，这些问题对复制提出了与批量学习设置不同的挑战。",
-    "**URL**": "https",
-    "## When Demonstrations meet Generative World Models": "A Maximum Likelihood Framework for Offline Inverse Reinforcement Learning",
-    "## Accountability in Offline Reinforcement Learning": "Explaining Decisions with a Corpus of Examples",
-    "## Train Once, Get a Family": "State-Adaptive Balances for Offline-to-Online Reinforcement Learning",
-    "## Interpretable Reward Redistribution in Reinforcement Learning": "A Causal Approach",
-    "## The Benefits of Being Distributional": "Small-Loss Bounds for Reinforcement Learning",
-    "## DIFFER": "Decomposing Individual Reward for Fair Experience Replay in Multi-Agent Reinforcement Learning",
-    "## Train Hard, Fight Easy": "Robust Meta Reinforcement Learning",
-    "## Waypoint Transformer": "Reinforcement Learning via Supervised Learning with Intermediate Targets",
-    "## Two Heads are Better Than One": "A Simple Exploration Framework for Efficient Multi-Agent Reinforcement Learning",
-    "## MAG-GNN": "Reinforcement Learning Boosted Graph Neural Network",
-    "## For SALE": "State-Action Representation Learning for Deep Reinforcement Learning",
-    "## RiskQ": "Risk-sensitive Multi-Agent Reinforcement Learning Value Factorization",
-    "## Reward-agnostic Fine-tuning": "Provable Statistical Benefits of Hybrid Reinforcement Learning",
-    "## Double Pessimism is Provably Efficient for Distributionally Robust Offline Reinforcement Learning": "Generic Algorithm and Robust Partial Coverage",
-    "## Unified Off-Policy Learning to Rank": "a Reinforcement Learning Perspective",
-    "## Seeing is not Believing": "Robust Reinforcement Learning against Spurious Correlation",
-    "## VOCE": "Variational Optimization with Conservative Estimation for Offline Safe Reinforcement Learning",
-    "## BIRD": "Generalizable Backdoor Detection and Removal for Deep Reinforcement Learning",
-    "## Tackling Heavy-Tailed Rewards in Reinforcement Learning with Function Approximation": "Minimax Optimal and Instance-Dependent Regret Bounds",
-    "## Safety Gymnasium": "A Unified Safe Reinforcement Learning Benchmark",
-    "## Semantic HELM": "A Human-Readable Memory for Reinforcement Learning",
-    "## Hokoff": "Real Game Dataset from Honor of Kings and its Offline Reinforcement Learning Benchmarks",
-    "## Decision Stacks": "Flexible Reinforcement Learning via Modular Generative Models",
-    "## RL-ViGen": "A Reinforcement Learning Benchmark for Visual Generalization",
-    "## Pitfall of Optimism": "Distributional Reinforcement Learning by Randomizing Risk Criterion",
-    "## On Sample-Efficient Offline Reinforcement Learning": "Data Diversity, Posterior Sampling and Beyond",
-    "## SMACv2": "An Improved Benchmark for Cooperative Multi-Agent Reinforcement Learning",
     "created_at": "2024-06-04T23:46:16.911Z"
+  },
+  "Pub_Note_MingchaoAIAnalysis": {
+    "title": "\"MingchaoAI\" Analysis",
+    "created_at": "2024-07-30T15:15:09.251Z"
+  },
+  "Pub_Note_FoundationOfReinforcementLearning": {
+    "title": "Easy RL 1.Foundation of Reinforcement Learning",
+    "created_at": "2024-07-30T15:15:01.962Z"
   },
   "Pub_Frame_ReinforcementLearning": {
     "title": "The Roadmap of Reinforcement Learning",
-    "cover": "robot.png",
-    "created_at": "2024-06-28T13:16:14.463Z"
+    "created_at": "2024-07-30T23:25:30.374Z"
   }
 }
